@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getWizardData method from the JobWizardController class, for the Dart programming language.">
+  <title>getWizardData method - JobWizardController class - job_wizard_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_job_wizard_controller_job_wizard_controller/features_job_wizard_controller_job_wizard_controller-library.html">job_wizard_controller</a></li>
+    <li><a href="../../features_job_wizard_controller_job_wizard_controller/JobWizardController-class.html">JobWizardController</a></li>
+    <li class="self-crumb">getWizardData method</li>
+  </ol>
+  <div class="self-name">getWizardData</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_job_wizard_controller_job_wizard_controller&#47;JobWizardController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">getWizardData</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">getWizardData</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getWizardData-param-data"><span class="type-annotation">dynamic</span> <span class="parameter-name">data</span>, </span></li>
+<li><span class="parameter" id="getWizardData-param-initialRequest">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">initialRequest</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; getWizardData(data, {bool initialRequest = false}) async {
+  try {
+    ApiServices()
+        .apiPostCallerFromServices(ApiUrlConstants.JOB_CREATION_VIA_WIZARD,
+            data, context, _keyLoader,
+            isLoader: !initialRequest,
+            isJobWIzard: true)
+        .then((response) {
+      if (response != null) {
+        if(response == 502){
+          DialogsService().toastMessageWithAction(&quot;Something went wrong&quot;, AppColors.errorOpacity, context, 6, AppColors.error,(){
+            createJobWizardPayLoad();
+          });
+        }else{
+          ResponsePayload responsePayload = ResponsePayload.fromMap(response);
+          cid = responsePayload.cid!;
+          status = responsePayload.status!;
+          chatHistory = responsePayload.chatHistory;
+          if (responsePayload.status == &quot;STARTED&quot; &amp;&amp;
+              responsePayload.jobDetails != null) {
+            for (var jobDetail in responsePayload.jobDetails!) {
+              for (int i = 1; i &lt; jobDetail.phrases!.length; i++) {
+                exampleList.add(jobDetail.phrases![i]);
+              }
+              names.add(jobDetail.name!);
+              questionList.add(jobDetail.phrases![0]);
+              &#47;*chatList.add(ChatText());
+            chatList.add(ChatText(chatText: jobDetail.phrases![0]));*&#47;
+            }
+            update();
+          } else if (responsePayload.status == &quot;IN_PROGRESS&quot;) {
+            questionList.clear();
+            answerList.clear();
+            names.clear();
+            payLoadJobDetails.clear();
+            for (var jobDetail in responsePayload.jobDetails!) {
+              for (int i = 0; i &lt; jobDetail.phrases!.length; i++) {
+                questionList.add(jobDetail.phrases![i]);
+              }
+              names.add(jobDetail.name!);
+            }
+            chatList.add(
+                ChatText(chatText: responsePayload.jobDetails![0].phrases![0]));
+            update();
+          } else if (responsePayload.status == &quot;COMPLETED&quot; &amp;&amp;
+              responsePayload.jobDetails != null) {
+            jobsModel = JobsModel.fromMap(responsePayload.jobsDto);
+            var educationDetails = jobsModel
+                .jobEducationalQualificationsDtoList!
+                .map((obj) =&gt; obj.toMap())
+                .toList();
+            var skills = jobsModel.jobSkills!.map((e) =&gt; e.toMap()).toList();
+            var jobType;
+            for (var type in jobsModel.jobType!) {
+              jobType = type;
+            }
+            var payloadToSend = {
+              &quot;allowedToWorkInOtherJobs&quot;: &quot;Y&quot;,
+              &quot;benefits&quot;: &quot;&quot;,
+              &quot;boundary&quot;: &quot;0&quot;,
+              &quot;budgetMaximum&quot;: jobsModel.budgetMaximum,
+              &quot;budgetMinimum&quot;: jobsModel.budgetMinimum,
+              &quot;city&quot;: jobsModel.city,
+              &quot;country&quot;: jobsModel.country,
+              &quot;currency&quot;: jobsModel.currency,
+              &quot;jobCategory&quot;: jobsModel.jobCategory,
+              &quot;jobDescriptionText&quot;: jobsModel.jobDescriptionText,
+              &quot;jobDescriptionUrl&quot;: jobsModel.jobDescriptionUrl,
+              &quot;jobEducationalQualificationsDtoList&quot;: educationDetails,
+              &quot;jobExperienceLevel&quot;: jobsModel.jobExperienceLevel,
+              &quot;jobSkills&quot;: skills,
+              &quot;jobTitle&quot;: jobsModel.jobTitle,
+              &quot;jobType&quot;: jobType,
+              &quot;limitForApplications&quot;: jobsModel.limitForApplications,
+              &quot;limitForShortlists&quot;: jobsModel.limitForShortlists,
+              &quot;maximumBudgetPerPaymentTerm&quot;: jobsModel.budgetMaximum,
+              &quot;minimumBudgetPerPaymentTerm&quot;: jobsModel.budgetMinimum,
+              &quot;mspEnterpriseId&quot;: jobsModel.mspEnterpriseId == &#39;&#39;
+                  ? null
+                  : jobsModel.mspEnterpriseId,
+              &quot;numberOfOpenings&quot;: jobsModel.numberOfOpenings.toString(),
+              &quot;overallExperienceMaximum&quot;: jobsModel.overallExperienceMaximum,
+              &quot;overallExperienceMinimum&quot;: jobsModel.overallExperienceMinimum,
+              &quot;paymentTerm&quot;: jobsModel.paymentTerm,
+              &quot;priorityPoolBoundary&quot;: &quot;B&quot;,
+              &quot;shift&quot;: &quot;&quot;,
+              &quot;socialMediaUrl&quot;: jobsModel.socialMediaUrl,
+              &quot;state&quot;: jobsModel.state,
+              &quot;status&quot;: &quot;O&quot;,
+              &quot;validFrom&quot;: jobsModel.validFrom,
+              &quot;validTill&quot;: jobsModel.validTill,
+              &quot;vendorNeutrality&quot;: &quot;&quot;,
+              &quot;workflowUniqueIdentifier&quot;: null,
+              &quot;workFrom&quot;: jobsModel.workFrom
+            };
+            &#47;&#47;postTheJob(payloadToSend);
+            navigateToPostJobScreen(payloadToSend);
+          }
+        }
+      }
+    });
+  } catch (e) {
+    debugPrint(&quot;JobWizard exception =&gt; $e&quot;);
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_job_wizard_controller_job_wizard_controller/features_job_wizard_controller_job_wizard_controller-library.html">job_wizard_controller</a></li>
+    <li><a href="../../features_job_wizard_controller_job_wizard_controller/JobWizardController-class.html">JobWizardController</a></li>
+    <li class="self-crumb">getWizardData method</li>
+</ol>
+
+
+    <h5>JobWizardController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

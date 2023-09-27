@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the shortlistOrRejectDialogCandidate function from the matching_candidates_common_widgets library, for the Dart programming language.">
+  <title>shortlistOrRejectDialogCandidate function - matching_candidates_common_widgets library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li class="self-crumb">shortlistOrRejectDialogCandidate function</li>
+  </ol>
+  <div class="self-name">shortlistOrRejectDialogCandidate</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matching_candidates_common_widgets&#47;features_matching_candidates_bloc_matching_candidates_common_widgets-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">shortlistOrRejectDialogCandidate</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype">void</span>
+<span class="name ">shortlistOrRejectDialogCandidate</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="shortlistOrRejectDialogCandidate-param-jobId"><span class="type-annotation">dynamic</span> <span class="parameter-name">jobId</span>, </span></li>
+<li><span class="parameter" id="shortlistOrRejectDialogCandidate-param-candidateId"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="shortlistOrRejectDialogCandidate-param-context"><span class="type-annotation">dynamic</span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="shortlistOrRejectDialogCandidate-param-callback"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Function-class.html">Function</a></span> <span class="parameter-name">callback</span>, </span></li>
+<li><span class="parameter" id="shortlistOrRejectDialogCandidate-param-isReject">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isReject</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>This should be out of this file somewhere in common place to use for another screens also</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void shortlistOrRejectDialogCandidate(
+    jobId, candidateId, context, Function callback,
+    {bool isReject = false}) {
+  TextEditingController applicationRemarksController = TextEditingController();
+  showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return Dialog(
+          insetPadding: const EdgeInsets.symmetric(horizontal: 16),
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: &lt;Widget&gt;[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        isReject
+                            ? EnterpriseStrings.viewCandidate_l024
+                            : EnterpriseStrings.viewCandidate_l010,
+                        style: AppStyle().boldStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        applicationRemarksController.clear();
+                        Navigator.of(context, rootNavigator: true).pop();
+                      },
+                      child: const Align(
+                        alignment: Alignment.centerRight,
+                        child: Icon(
+                          Icons.clear_rounded,
+                          color: AppColors.subTitleColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24),
+                CustomTextFormField(
+                  maxLines: 5,
+                  minLines: 5,
+                  controller: applicationRemarksController,
+                  keyboardType: TextInputType.text,
+                  textCapitalization: TextCapitalization.sentences,
+                  hintText: (isReject)
+                      ? EnterpriseStrings.viewCandidate_h007
+                      : EnterpriseStrings.viewCandidate_h002,
+                  hintMaxLines: 8,
+                ),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 42,
+                  child: CustomElevatedButton(
+                    labelText: isReject
+                        ? EnterpriseStrings.viewCandidate_b003
+                        : EnterpriseStrings.viewCandidate_b007,
+                    isWidthInfinity: true,
+                    onPressed: () {
+                      if (isReject) {
+                        InternetConnectivity()
+                            .checkConnectivity()
+                            .then((internet) {
+                          internet
+                              ? MatchingCandidatesCommonMethods()
+                                  .rejectCandidateJob(
+                                      applicationRemarksController.text
+                                          .toString()
+                                          .trim(),
+                                      jobId,
+                                      candidateId,
+                                      context, () {
+                                  callback();
+                                })
+                              : DialogsService().toastMessage(
+                                  EnterpriseStrings.w001,
+                                  AppColors.warningOpacity,
+                                  context,
+                                  8,
+                                  AppColors.warning);
+                        });
+                      } else {
+                        InternetConnectivity()
+                            .checkConnectivity()
+                            .then((internet) {
+                          internet
+                              ? MatchingCandidatesCommonMethods()
+                                  .shortlistCandidate(
+                                      applicationRemarksController.text
+                                          .toString(),
+                                      jobId.toString(),
+                                      candidateId,
+                                      context, () {
+                                  FocusScope.of(context)
+                                      .requestFocus(FocusNode());
+                                  DialogsService().toastMessage(
+                                      EnterpriseStrings.mEnterprise002,
+                                      AppColors.successOpacity,
+                                      context,
+                                      6,
+                                      AppColors.success);
+                                  Navigator.pop(context);
+                                  Navigator.of(context, rootNavigator: true)
+                                      .pop();
+                                })
+                              : DialogsService().toastMessage(
+                                  EnterpriseStrings.w001,
+                                  AppColors.warningOpacity,
+                                  context,
+                                  8,
+                                  AppColors.warning);
+                        });
+                      }
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li class="self-crumb">shortlistOrRejectDialogCandidate function</li>
+</ol>
+
+
+    <h5>matching_candidates_common_widgets library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

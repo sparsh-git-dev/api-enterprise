@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getMyCandidatesList method from the MatchingCandidatesController class, for the Dart programming language.">
+  <title>getMyCandidatesList method - MatchingCandidatesController class - matching_candidates_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_matching_candidates_controller/controllers_matching_candidates_controller_matching_candidates_controller-library.html">matching_candidates_controller</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_matching_candidates_controller/MatchingCandidatesController-class.html">MatchingCandidatesController</a></li>
+    <li class="self-crumb">getMyCandidatesList method</li>
+  </ol>
+  <div class="self-name">getMyCandidatesList</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_matching_candidates_controller_matching_candidates_controller&#47;MatchingCandidatesController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">getMyCandidatesList</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">getMyCandidatesList</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getMyCandidatesList-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="getMyCandidatesList-param-isSaveSearchAndApplyFilter">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isSaveSearchAndApplyFilter</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; getMyCandidatesList(BuildContext context,
+    {bool isSaveSearchAndApplyFilter = false}) async {
+  String enterpriseId =
+      await UserPreferences().getPreferenceValues(UserPreferences.prefId);
+  String _skillsList = &quot;&quot;;
+  String _selectedEducationList = &quot;&quot;;
+  String _selectedTalentPoolTypes = &quot;&quot;;
+  String _cityQueryList = &quot;&quot;;
+  String _stateQueryList = &quot;&quot;;
+  String _countryQueryList = &quot;&quot;;
+  String _jobTitleList = &quot;&quot;;
+  String _companyList = &quot;&quot;;
+  for (int i = 0; i &lt; getSelectedSkills.length; i++) {
+    if (i &gt; 0) {
+      _skillsList = _skillsList + &quot;,&quot;;
+    }
+    _skillsList = _skillsList + (getSelectedSkills[i][&#39;id&#39;].toString());
+  }
+  for (int i = 0; i &lt; _listEducation.length; i++) {
+    if (_listEducation[i][&#39;isSelected&#39;]) {
+      if (i &gt; 0) {
+        _selectedEducationList = _selectedEducationList + &quot;,&quot;;
+      }
+      _selectedEducationList =
+          _selectedEducationList + (_listEducation[i][&#39;short&#39;]);
+    }
+  }
+  for (int i = 0; i &lt; _listTalentPools.length; i++) {
+    if (_listTalentPools[i][&#39;isSelected&#39;]) {
+      if (_selectedTalentPoolTypes.isNotEmpty) {
+        _selectedTalentPoolTypes = _selectedTalentPoolTypes + &quot;,&quot;;
+      }
+      _selectedTalentPoolTypes =
+          _selectedTalentPoolTypes + (_listTalentPools[i][&#39;short&#39;]);
+    }
+  }
+  for (int i = 0; i &lt; _selectedLocation.length; i++) {
+    if (i &gt; 0) {
+      _cityQueryList = _cityQueryList + &quot;,&quot;;
+      _stateQueryList = _stateQueryList + &quot;,&quot;;
+      _countryQueryList = _countryQueryList + &quot;,&quot;;
+    }
+    _cityQueryList = _cityQueryList +
+        (Uri.encodeComponent(_selectedLocation[i][&#39;city&#39;].toString()));
+    _stateQueryList = _stateQueryList +
+        (Uri.encodeComponent(_selectedLocation[i][&#39;state&#39;].toString()));
+    _countryQueryList = _countryQueryList +
+        (Uri.encodeComponent(_selectedLocation[i][&#39;country&#39;].toString()));
+  }
+  for (int i = 0; i &lt; _selectedJobTitle.length; i++) {
+    if (i &gt; 0) {
+      _jobTitleList = _jobTitleList + &quot;,&quot;;
+    }
+    _jobTitleList =
+        _jobTitleList + (Uri.encodeComponent(_selectedJobTitle[i]));
+  }
+  for (final String company in _selectedCompanies) {
+    _companyList = _companyList + (Uri.encodeComponent(company));
+  }
+  final String _minPayRate = _rangeOfCompensation.start.round().toString();
+  final String _maxPayRate = _rangeOfCompensation.end.round().toString();
+  final String _minExp = (getSfRangeValuesForExperience.start.round() == 0)
+      ? &quot;0&quot;
+      : getSfRangeValuesForExperience.start.round().toString();
+  final String _maxExp = (getSfRangeValuesForExperience.end.round() == 30)
+      ? &quot;30&quot;
+      : getSfRangeValuesForExperience.end.round().toString();
+  final String _allQueryParams =
+      &quot;?enterpriseId=$enterpriseId&amp;relevance=false&quot; +
+          (_cityQueryList.isNotEmpty ? &quot;&amp;city=$_cityQueryList&quot; : &quot;&quot;) +
+          (_stateQueryList.isNotEmpty ? &quot;&amp;state=$_stateQueryList&quot; : &quot;&quot;) +
+          (_countryQueryList.isNotEmpty
+              ? &quot;&amp;country=$_countryQueryList&quot;
+              : &quot;&quot;) +
+          (_selectedEducationList.isNotEmpty
+              ? &quot;&amp;levelOfEducation=$_selectedEducationList&quot;
+              : &quot;&quot;) +
+          (_selectedTalentPoolTypes.isEmpty
+              ? &quot;&quot;
+              : &quot;&amp;talentPool=$_selectedTalentPoolTypes&quot;) +
+          (_skillsList.isNotEmpty ? &quot;&amp;skill=$_skillsList&quot; : &quot;&quot;) +
+          &quot;&amp;profileTitle=$_jobTitleList&quot; +
+          &quot;&amp;company=$_companyList&quot; +
+          &quot;&amp;minYearsOfExperience=$_minExp&quot; +
+          &quot;&amp;maxYearsOfExperience=$_maxExp&quot; +
+          &quot;&amp;payRateMin=$_minPayRate&quot; +
+          &quot;&amp;payRateMax=$_maxPayRate&quot;;
+  session.controller.add(_allQueryParams);
+  setIsSelectAll(false);
+  setCandidatesSelected([]);
+  update();
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_matching_candidates_controller/controllers_matching_candidates_controller_matching_candidates_controller-library.html">matching_candidates_controller</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_matching_candidates_controller/MatchingCandidatesController-class.html">MatchingCandidatesController</a></li>
+    <li class="self-crumb">getMyCandidatesList method</li>
+</ol>
+
+
+    <h5>MatchingCandidatesController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

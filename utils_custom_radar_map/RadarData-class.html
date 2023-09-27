@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RadarData class from the custom_radar_map library, for the Dart programming language.">
+  <title>RadarData class - custom_radar_map library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../utils_custom_radar_map/utils_custom_radar_map-library.html">custom_radar_map</a></li>
+    <li class="self-crumb">RadarData class</li>
+  </ol>
+  <div class="self-name">RadarData</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="utils_custom_radar_map&#47;utils_custom_radar_map-library-sidebar.html"
+      data-below-sidebar="utils_custom_radar_map&#47;RadarData-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">RadarData</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p><a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> needs this class to render itself.</p>
+<p>It holds data needed to draw a radar chart,
+including radar dataSets, colors, ...</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData-class.html">BaseChartData</a></li>
+      <li>RadarData</li>
+    </ul>
+  </dd>
+
+        
+        
+  <dt>Mixed in types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin-mixin.html">EquatableMixin</a></li>
+    </ul>
+  </dd>
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="RadarData" class="callable">
+          <span class="name"><a href="../utils_custom_radar_map/RadarData/RadarData.html">RadarData</a></span><span class="signature">(<span class="parameter" id="-param-dataSets">{<span>@<a href="https://pub.dev/documentation/meta/1.9.1/meta/required-constant.html">required</a></span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../utils_custom_radar_map/RadarSetData-class.html">RadarSetData</a></span>&gt;</span>?</span> <span class="parameter-name">dataSets</span>, </span><span class="parameter" id="-param-radarBackgroundColor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">radarBackgroundColor</span>, </span><span class="parameter" id="-param-radarBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">radarBorderData</span>, </span><span class="parameter" id="-param-radarShape"><span class="type-annotation"><a href="../utils_custom_radar_map/RadarShape.html">RadarShape</a>?</span> <span class="parameter-name">radarShape</span>, </span><span class="parameter" id="-param-getTitle"><span class="type-annotation"><a href="../utils_custom_radar_map/GetTitleByIndexFunction.html">GetTitleByIndexFunction</a>?</span> <span class="parameter-name">getTitle</span>, </span><span class="parameter" id="-param-titleTextStyle"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleTextStyle</span>, </span><span class="parameter" id="-param-titlePositionPercentageOffset"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">titlePositionPercentageOffset</span>, </span><span class="parameter" id="-param-tickCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">tickCount</span>, </span><span class="parameter" id="-param-ticksTextStyle"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">ticksTextStyle</span>, </span><span class="parameter" id="-param-tickBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">tickBorderData</span>, </span><span class="parameter" id="-param-gridBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">gridBorderData</span>, </span><span class="parameter" id="-param-radarTouchData"><span class="type-annotation"><a href="../utils_custom_radar_map/RadarTouchData-class.html">RadarTouchData</a>?</span> <span class="parameter-name">radarTouchData</span>, </span><span class="parameter" id="-param-borderData"><span class="type-annotation">dynamic</span> <span class="parameter-name">borderData</span>}</span>)</span>
+        </dt>
+        <dd>
+          <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> draws some <code>dataSets</code> in a radar-shaped chart.
+it fills the radar area with <code>radarBackgroundColor</code>
+and draws radar border with <code>radarBorderData</code>
+then draws a grid over it, you can customize it using <code>gridBorderData</code>.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="borderData" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData/borderData.html">borderData</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/FlBorderData-class.html">FlBorderData</a></span> 
+
+</dt>
+<dd class="inherited">
+  Holds data to drawing border around the chart.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="dataSets" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/dataSets.html">dataSets</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../utils_custom_radar_map/RadarSetData-class.html">RadarSetData</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> draw <a href="../utils_custom_radar_map/RadarData/dataSets.html">dataSets</a> that each of them showing a list of <a href="../utils_custom_radar_map/RadarEntry-class.html">RadarEntry</a>
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="getTitle" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/getTitle.html">getTitle</a></span>
+  <span class="signature">&#8594; <a href="../utils_custom_radar_map/GetTitleByIndexFunction.html">GetTitleByIndexFunction</a>?</span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarData/getTitle.html">getTitle</a> is used to draw titles outside the <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a>
+<a href="../utils_custom_radar_map/RadarData/getTitle.html">getTitle</a> is type of <a href="../utils_custom_radar_map/GetTitleByIndexFunction.html">GetTitleByIndexFunction</a> so you should return a valid <a href="../utils_custom_radar_map/RadarChartTitle-class.html">RadarChartTitle</a>
+for each <code>index</code> (we provide a default <code>angle</code> = index * 360 / titleCount)
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="gridBorderData" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/gridBorderData.html">gridBorderData</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a></span> 
+
+</dt>
+<dd>
+  Defines style of showing <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> grid borders.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="maxEntry" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/maxEntry.html">maxEntry</a></span>
+  <span class="signature">&#8594; <a href="../utils_custom_radar_map/RadarEntry-class.html">RadarEntry</a></span> 
+
+</dt>
+<dd>
+  defines the maximum <a href="../utils_custom_radar_map/RadarEntry-class.html">RadarEntry</a> value in all <a href="../utils_custom_radar_map/RadarData/dataSets.html">dataSets</a>
+we use this value to calculate the maximum value of ticks.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="minEntry" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/minEntry.html">minEntry</a></span>
+  <span class="signature">&#8594; <a href="../utils_custom_radar_map/RadarEntry-class.html">RadarEntry</a></span> 
+
+</dt>
+<dd>
+  defines the minimum <a href="../utils_custom_radar_map/RadarEntry-class.html">RadarEntry</a> value in all <a href="../utils_custom_radar_map/RadarData/dataSets.html">dataSets</a>
+we use this value to calculate the minimum value of ticks.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="props" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/props.html">props</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Used for equality check, see <a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin-mixin.html">EquatableMixin</a>.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="radarBackgroundColor" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/radarBackgroundColor.html">radarBackgroundColor</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarData/radarBackgroundColor.html">radarBackgroundColor</a> draw the background color of the <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a>
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="radarBorderData" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/radarBorderData.html">radarBorderData</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a></span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarData/radarBorderData.html">radarBorderData</a> is used to draw <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> border
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="radarShape" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/radarShape.html">radarShape</a></span>
+  <span class="signature">&#8594; <a href="../utils_custom_radar_map/RadarShape.html">RadarShape</a></span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarData/radarShape.html">radarShape</a> is used to draw <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> border and background
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="radarTouchData" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/radarTouchData.html">radarTouchData</a></span>
+  <span class="signature">&#8594; <a href="../utils_custom_radar_map/RadarTouchData-class.html">RadarTouchData</a></span> 
+
+</dt>
+<dd>
+  Handles touch behaviors and responses.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stringify" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin/stringify.html">stringify</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  If set to <code>true</code>, the <a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin/toString.html">toString</a> method will be overridden to output
+this instance's <a href="../utils_custom_radar_map/RadarData/props.html">props</a>.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="tickBorderData" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/tickBorderData.html">tickBorderData</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a></span> 
+
+</dt>
+<dd>
+  Defines style of showing <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> tick borders.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tickCount" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/tickCount.html">tickCount</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  Defines the number of ticks that should be paint in <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a>
+the default &amp; minimum value of this field is 1.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="ticksTextStyle" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/ticksTextStyle.html">ticksTextStyle</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  Defines style of showing <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> tick titles.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="titleCount" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/titleCount.html">titleCount</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  <a href="../utils_custom_radar_map/RadarData/titleCount.html">titleCount</a> we use this value to determine number of <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> grid or lines.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="titlePositionPercentageOffset" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/titlePositionPercentageOffset.html">titlePositionPercentageOffset</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  the <a href="../utils_custom_radar_map/RadarData/titlePositionPercentageOffset.html">titlePositionPercentageOffset</a> is the place of showing title on the <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a>
+The higher the value of this field, the more titles move away from the chart.
+this field should be between 0 and 1,
+if it is 0 the title will be drawn near the inside section,
+if it is 1 the title will be drawn near the outside of section,
+the default value is 0.2.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="titleTextStyle" class="property">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/titleTextStyle.html">titleTextStyle</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  Defines style of showing <a href="../utils_custom_radar_map/RadarChart-class.html">RadarChart</a> titles.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="touchData" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData/touchData.html">touchData</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/FlTouchData-class.html">FlTouchData</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseTouchResponse-class.html">BaseTouchResponse</a></span>&gt;</span></span> 
+
+</dt>
+<dd class="inherited">
+  Holds data needed to touch behavior and responses.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="copyWith" class="callable">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/copyWith.html">copyWith</a></span><span class="signature">(<wbr><span class="parameter" id="copyWith-param-dataSets">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../utils_custom_radar_map/RadarSetData-class.html">RadarSetData</a></span>&gt;</span>?</span> <span class="parameter-name">dataSets</span>, </span><span class="parameter" id="copyWith-param-radarBackgroundColor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">radarBackgroundColor</span>, </span><span class="parameter" id="copyWith-param-radarBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">radarBorderData</span>, </span><span class="parameter" id="copyWith-param-radarShape"><span class="type-annotation"><a href="../utils_custom_radar_map/RadarShape.html">RadarShape</a>?</span> <span class="parameter-name">radarShape</span>, </span><span class="parameter" id="copyWith-param-getTitle"><span class="type-annotation"><a href="../utils_custom_radar_map/GetTitleByIndexFunction.html">GetTitleByIndexFunction</a>?</span> <span class="parameter-name">getTitle</span>, </span><span class="parameter" id="copyWith-param-titleTextStyle"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleTextStyle</span>, </span><span class="parameter" id="copyWith-param-titlePositionPercentageOffset"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">titlePositionPercentageOffset</span>, </span><span class="parameter" id="copyWith-param-tickCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">tickCount</span>, </span><span class="parameter" id="copyWith-param-ticksTextStyle"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">ticksTextStyle</span>, </span><span class="parameter" id="copyWith-param-tickBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">tickBorderData</span>, </span><span class="parameter" id="copyWith-param-gridBorderData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">gridBorderData</span>, </span><span class="parameter" id="copyWith-param-radarTouchData"><span class="type-annotation"><a href="../utils_custom_radar_map/RadarTouchData-class.html">RadarTouchData</a>?</span> <span class="parameter-name">radarTouchData</span>, </span><span class="parameter" id="copyWith-param-borderData"><span class="type-annotation"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/FlBorderData-class.html">FlBorderData</a>?</span> <span class="parameter-name">borderData</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../utils_custom_radar_map/RadarData-class.html">RadarData</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Copies current <a href="../utils_custom_radar_map/RadarData-class.html">RadarData</a> to a new <a href="../utils_custom_radar_map/RadarData-class.html">RadarData</a>,
+and replaces provided values.
+  
+
+</dd>
+
+        <dt id="lerp" class="callable">
+  <span class="name"><a href="../utils_custom_radar_map/RadarData/lerp.html">lerp</a></span><span class="signature">(<wbr><span class="parameter" id="lerp-param-a"><span class="type-annotation"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData-class.html">BaseChartData</a></span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerp-param-b"><span class="type-annotation"><a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData-class.html">BaseChartData</a></span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerp-param-t"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../utils_custom_radar_map/RadarData-class.html">RadarData</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lerps a <a href="https://pub.dev/documentation/fl_chart/0.61.0/fl_chart/BaseChartData-class.html">BaseChartData</a> based on <code>t</code> value, check <a href="https://api.flutter.dev/flutter/animation/Tween/lerp.html">Tween.lerp</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.5/equatable/EquatableMixin/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../utils_custom_radar_map/utils_custom_radar_map-library.html">custom_radar_map</a></li>
+    <li class="self-crumb">RadarData class</li>
+</ol>
+
+
+    <!--<h5>custom_radar_map library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

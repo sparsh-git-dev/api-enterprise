@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the SkillsDetailsBreakdown class, for the Dart programming language.">
+  <title>build method - SkillsDetailsBreakdown class - skill_details_breakdown library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown/features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown-library.html">skill_details_breakdown</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown/SkillsDetailsBreakdown-class.html">SkillsDetailsBreakdown</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown&#47;SkillsDetailsBreakdown-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown/SkillsDetailsBreakdown/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  &#47;&#47; List _reqSkills = [{&quot;skill&quot;: &quot;Java&quot;, &quot;isMatched&quot;: true},{&quot;skill&quot;: &quot;Dart&quot;, &quot;isMatched&quot;: true}, {&quot;skill&quot;: &quot;HTML&#47;CSS&quot;, &quot;isMatched&quot;: false}];
+  &#47;&#47; List _candidateSkills = [{&quot;skill&quot;: &quot;Javascript&quot;, &quot;isMatched&quot;: true},{&quot;skill&quot;: &quot;Dart&quot;, &quot;isMatched&quot;: true},{&quot;skill&quot;: &quot;Not available&quot;, &quot;isMatched&quot;: false}];
+  List _reqSkill = requiredColumn;
+  List _candidateSkill = candidateColumn;
+  const double verticalSpace = 12;
+
+
+  Color getColorWithOpacityForSkillAgeing(String? lastUsed){
+    final ThemeController themeController = Get.find();
+    try {
+      if(lastUsed == null || lastUsed.trim().isEmpty || lastUsed == &#39;0&#39;){
+        return themeController.getSelectedPrimaryThemeColor.withOpacity(0.083);
+        &#47;&#47; return AppColors.primaryButtonColor.withOpacity(0.083);
+      }
+      int? diff;
+      diff = DateTime.now().year - int.parse(lastUsed.substring(0,4));
+      if(diff &gt; 0 &amp;&amp; diff &lt; 10){
+        return themeController.getSelectedPrimaryThemeColor.withOpacity(diff&#47;10);
+      }
+      if(diff == 0){
+        int? diffMonth;
+        diffMonth = DateTime.now().month - int.parse(lastUsed.substring(4,6));
+        if(diffMonth==0){
+          return themeController.getSelectedPrimaryThemeColor.withOpacity(0.083);
+        }
+        return themeController.getSelectedPrimaryThemeColor.withOpacity(diffMonth * 0.083);
+      }
+      if(diff &gt;= 10) {
+        return themeController.getSelectedPrimaryThemeColor.withOpacity(1.0);
+      }
+    } catch(e){
+      return themeController.getSelectedPrimaryThemeColor.withOpacity(0.15);
+    }
+    return themeController.getSelectedPrimaryThemeColor.withOpacity(0.15);
+  }
+  Widget _getMatchCandidateRow(int index) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0, bottom: 0.0),&#47;&#47;_candidateSkill[index][&#39;isMatched&#39;]?0:6.0),
+      child: Row(
+        children: [
+          Transform.translate(
+              offset: const Offset(0, 0),
+              &#47;&#47; offset: Offset(_candidateSkill[index][&#39;isMatched&#39;]?0: -3, 0),
+          child: Tooltip(
+            message: (_candidateSkill[index][&#39;lastUsed&#39;]==null)?&#39;&#39;:(_candidateSkill[index][&#39;isMatched&#39;]?(&#39;Last used: ${(_candidateSkill[index][&#39;lastUsed&#39;]==&#39;0&#39;)?
+            &quot;Currently in use&quot;:(_candidateSkill[index][&#39;lastUsed&#39;].substring(0,4)+&quot;&#47;&quot;+
+                (int.parse(_candidateSkill[index][&#39;lastUsed&#39;].substring(4,6))&gt;10?&quot;0&quot;+_candidateSkill[index][&#39;lastUsed&#39;].substring(4,5):
+                _candidateSkill[index][&#39;lastUsed&#39;].substring(4,6)))}&#39;): &#39;&#39;),
+            triggerMode: TooltipTriggerMode.tap,
+              showDuration: const Duration(seconds: 11),
+              child: _candidateSkill[index][&#39;isMatched&#39;] || (_candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;])? SvgPicture.asset(
+                ImagePaths.ic_ageingSVG,&#47;&#47;ImagePaths.ic_successAlertSVG,
+                height: 20, width: 20,
+                color: _candidateSkill[index][&#39;isMatched&#39;]? getColorWithOpacityForSkillAgeing(_candidateSkill[index][&#39;lastUsed&#39;]):getColorWithOpacityForSkillAgeing(_candidateSkill[index][&#39;lastUsed&#39;]),
+                fit: BoxFit.contain):const SizedBox.shrink())),
+          const SizedBox(width: 4.0),
+          Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0),
+              child: Text(
+                (_candidateSkill[index][&#39;lastUsed&#39;]==null)?&#39;&#39;:((_candidateSkill[index][&#39;isMatched&#39;] || (_candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;]))?(&#39;${(_candidateSkill[index][&#39;lastUsed&#39;]==&#39;0&#39;)?
+                &quot;In use&quot;:(_candidateSkill[index][&#39;lastUsed&#39;].substring(0,4))}&#39;): &#39;&#39;),
+              style: AppStyle().regularStyle.copyWith(
+                color: AppColors.subTitleColor,
+                fontSize: AppStyle.fontSize14
+              ),),),
+        ],
+      ),
+    );
+  }
+  return Column(
+    children: List.generate(_reqSkill.length +1 , (index) {
+      if(index==0){
+        return Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Row(
+            children: [
+              Expanded(
+                  flex: 3,
+                  child: Text(&quot;Required&quot;,
+                  style: AppStyle().regularStyle.copyWith(
+                    fontWeight: FontWeight.w700,
+                    fontSize: AppStyle.fontSize12,
+
+                  ),)),
+              Expanded(
+                  flex: 1,
+                  child: Text(&quot;Ageing&quot;,
+                    style: AppStyle().regularStyle.copyWith(
+                      fontWeight: FontWeight.w700,
+                      fontSize: AppStyle.fontSize12,
+                    ),),),
+              Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(&quot;Remarks&quot;,
+                      style: AppStyle().regularStyle.copyWith(
+                        fontWeight: FontWeight.w700,
+                        fontSize: AppStyle.fontSize12,
+                      ),),
+                  ),),
+            ],
+          ),
+        );
+      }
+      index = index-1;
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: GetBuilder&lt;ThemeController&gt;(
+                                  builder: (themeLogic) {
+                                    return Container(
+                                      margin: const EdgeInsets.only(top: 6.0),
+                                        decoration: BoxDecoration(
+                                            color: (_reqSkill[index][&#39;isMatched&#39;])? themeLogic.getSelectedPrimaryThemeColor: (!_reqSkill[index][&#39;isMatched&#39;] &amp;&amp; (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?themeLogic.getSelectedPrimaryThemeColor.withOpacity(0.5):
+                                            AppColors.transparent,
+                                          borderRadius: BorderRadius.circular(20.0),
+                                          border: Border.all(
+                                            color: (_reqSkill[index][&#39;isMatched&#39;] || (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?AppColors.transparent:AppColors.black
+                                          )
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
+                                          child: Text(_reqSkill[index][&#39;required&#39;],
+                                          style: TextStyle(
+                                            color: (_reqSkill[index][&#39;isMatched&#39;] || (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?AppColors.white:AppColors.subTitleColor,
+                                            fontSize: AppStyle.fontSize14
+                                          ),
+                                          ),
+                                        ),
+                                    );
+                                  }
+                                ),
+                              ),
+                            ),
+                          ),
+              Expanded(
+                flex: 1,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: _getMatchCandidateRow(index),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 0.0),
+                      child: (_candidateSkill[index][&#39;isMatched&#39;])?Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+                        child: Text(
+                            (_candidateSkill[index][&#39;isMatched&#39;])?EnterpriseStrings.breakDownMatched:(!_candidateSkill[index][&#39;isMatched&#39;] &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;])?&quot;Partial Match&quot;:&#39;Unmatched&#39;,
+                            style: AppStyle()
+                                .regularStyle
+                                .copyWith(fontSize: 12.0,color: AppColors.subTitleColor, fontWeight: FontWeight.w700)),
+                      ):(!_candidateSkill[index][&#39;isMatched&#39;] &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;])?
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+                        child: Row(
+                          children: [
+                            Text(EnterpriseStrings.breakDownPartialMatched,
+                                style: AppStyle()
+                                    .regularStyle
+                                    .copyWith(fontSize: 12.0,color: AppColors.subTitleColor, fontWeight: FontWeight.w700)),
+                            const Spacer(),
+                            Tooltip(
+                              message: _candidateSkill[index][&#39;reason&#39;],&#47;&#47;&quot;This is Partial Matched&quot;,
+                              triggerMode: TooltipTriggerMode.tap,
+                              showDuration: const Duration(seconds: 11),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 6.0),
+                                child: SvgPicture.asset(
+                                  ImagePaths.ic_msgMatchingBreakdown,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ):(!_candidateSkill[index][&#39;isMatched&#39;])?
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+                        child: Row(
+                          children: [
+                            Text(EnterpriseStrings.breakDownUnmatched,
+                                style: AppStyle()
+                                    .regularStyle
+                                    .copyWith(fontSize: 12.0,
+                                  color: AppColors.subTitleColor,
+                                  fontWeight: FontWeight.w700,
+                                )),
+                            &#47;*const Spacer(),
+                                Tooltip(
+                                  message: &quot;This skill is not present&quot;,
+                                  triggerMode: TooltipTriggerMode.tap,
+                                  showDuration: const Duration(seconds: 11),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 6.0),
+                                    child: SvgPicture.asset(
+                                      ImagePaths.ic_msgMatchingBreakdown,
+                                    ),
+                                  ),
+                                )*&#47;
+                          ],
+                        ),
+                      ):const SizedBox.shrink(),
+                    ),
+                  ),
+                ),
+              ),
+        ],
+      );
+    }),
+    &#47;&#47; children: [
+&#47;*      Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Row(
+          children: [
+            Expanded(
+                flex: 3,
+                child: Text(&quot;Required&quot;,
+                style: AppStyle().regularStyle.copyWith(
+                  fontWeight: FontWeight.w700,
+                  fontSize: AppStyle.fontSize12,
+
+                ),)),
+            Expanded(
+                flex: 1,
+                child: Text(&quot;Ageing&quot;,
+                  style: AppStyle().regularStyle.copyWith(
+                    fontWeight: FontWeight.w700,
+                    fontSize: AppStyle.fontSize12,
+                  ),),),
+            Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(&quot;Remarks&quot;,
+                    style: AppStyle().regularStyle.copyWith(
+                      fontWeight: FontWeight.w700,
+                      fontSize: AppStyle.fontSize12,
+                    ),),
+                ),),
+          ],
+        ),
+      ),*&#47;
+
+      &#47;&#47; Row(
+      &#47;&#47;   crossAxisAlignment: CrossAxisAlignment.start,
+      &#47;&#47;   children: [
+      &#47;&#47;     Expanded(
+      &#47;&#47;       flex: 3,
+      &#47;&#47;       child: Padding(
+      &#47;&#47;         padding: const EdgeInsets.only(top: 8.0),
+      &#47;&#47;         child: Column(
+      &#47;&#47;           crossAxisAlignment: CrossAxisAlignment.start,
+      &#47;&#47;           children: List.generate(_reqSkill.length, (index) {
+      &#47;&#47;             return GetBuilder&lt;ThemeController&gt;(
+      &#47;&#47;               builder: (themeLogic) {
+      &#47;&#47;                 return Container(
+      &#47;&#47;                   margin: const EdgeInsets.only(top: 6.0),
+      &#47;&#47;                     decoration: BoxDecoration(
+      &#47;&#47;                         color: (_reqSkill[index][&#39;isMatched&#39;])? themeLogic.getSelectedPrimaryThemeColor: (!_reqSkill[index][&#39;isMatched&#39;] &amp;&amp; (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?AppColors.primaryButtonColor.withOpacity(0.5):AppColors.transparent,
+      &#47;&#47;                       borderRadius: BorderRadius.circular(20.0),
+      &#47;&#47;                       border: Border.all(
+      &#47;&#47;                         color: (_reqSkill[index][&#39;isMatched&#39;] || (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?AppColors.transparent:AppColors.black
+      &#47;&#47;                       )
+      &#47;&#47;                     ),
+      &#47;&#47;                     child: Padding(
+      &#47;&#47;                       padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
+      &#47;&#47;                       child: Text(_reqSkill[index][&#39;required&#39;],
+      &#47;&#47;                       style: TextStyle(
+      &#47;&#47;                         color: (_reqSkill[index][&#39;isMatched&#39;] || (_reqSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _reqSkill[index][&#39;isPartialMatched&#39;]))?AppColors.white:AppColors.subTitleColor,
+      &#47;&#47;                         fontSize: AppStyle.fontSize14
+      &#47;&#47;                       ),),
+      &#47;&#47;                     ));
+      &#47;&#47;               }
+      &#47;&#47;             );
+      &#47;&#47;           }),
+      &#47;&#47;         ),
+      &#47;&#47;       ),
+      &#47;&#47;     ),
+      &#47;&#47;     Expanded(
+      &#47;&#47;       flex: 1,
+      &#47;&#47;       child: Padding(
+      &#47;&#47;         padding: const EdgeInsets.only(top: 8.0),
+      &#47;&#47;         child: Column(
+      &#47;&#47;           crossAxisAlignment: CrossAxisAlignment.start,
+      &#47;&#47;           children: List.generate(_candidateSkill.length, (index) {
+      &#47;&#47;             return _getMatchCandidateRow(index);
+      &#47;&#47;           }),
+      &#47;&#47;         ),
+      &#47;&#47;       ),
+      &#47;&#47;     ),
+      &#47;&#47;     Expanded(
+      &#47;&#47;       flex: 2,
+      &#47;&#47;       child: Padding(
+      &#47;&#47;         padding: const EdgeInsets.only(top: 8.0),
+      &#47;&#47;         child: Column(
+      &#47;&#47;           crossAxisAlignment: CrossAxisAlignment.start,
+      &#47;&#47;           children: List.generate(_candidateSkill.length, (index) {
+      &#47;&#47;             &#47;&#47; return _getMatchCandidateRow(index);
+      &#47;&#47;             const double verticalSpace = 12;
+      &#47;&#47;             return Align(
+      &#47;&#47;               alignment: Alignment.centerLeft,
+      &#47;&#47;               child: Padding(
+      &#47;&#47;                 padding: const EdgeInsets.symmetric(vertical: 0.0),
+      &#47;&#47;                 child: (_candidateSkill[index][&#39;isMatched&#39;])?Padding(
+      &#47;&#47;                   padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+      &#47;&#47;                   child: Text(
+      &#47;&#47;                       (_candidateSkill[index][&#39;isMatched&#39;])?EnterpriseStrings.breakDownMatched:(!_candidateSkill[index][&#39;isMatched&#39;] &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;])?&quot;Partial Match&quot;:&#39;Unmatched&#39;,
+      &#47;&#47;                       style: AppStyle()
+      &#47;&#47;                       .regularStyle
+      &#47;&#47;                       .copyWith(fontSize: 12.0,color: AppColors.subTitleColor, fontWeight: FontWeight.w700)),
+      &#47;&#47;                 ):(!_candidateSkill[index][&#39;isMatched&#39;] &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;] != null &amp;&amp; _candidateSkill[index][&#39;isPartialMatched&#39;])?
+      &#47;&#47;                 Padding(
+      &#47;&#47;                   padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+      &#47;&#47;                   child: Row(
+      &#47;&#47;                     children: [
+      &#47;&#47;                       Text(EnterpriseStrings.breakDownPartialMatched,
+      &#47;&#47;                           style: AppStyle()
+      &#47;&#47;                               .regularStyle
+      &#47;&#47;                               .copyWith(fontSize: 12.0,color: AppColors.subTitleColor, fontWeight: FontWeight.w700)),
+      &#47;&#47;                       const Spacer(),
+      &#47;&#47;                       Tooltip(
+      &#47;&#47;                         message: _candidateSkill[index][&#39;reason&#39;],&#47;&#47;&quot;This is Partial Matched&quot;,
+      &#47;&#47;                         triggerMode: TooltipTriggerMode.tap,
+      &#47;&#47;                         showDuration: const Duration(seconds: 11),
+      &#47;&#47;                         child: Padding(
+      &#47;&#47;                           padding: const EdgeInsets.only(left: 6.0),
+      &#47;&#47;                           child: SvgPicture.asset(
+      &#47;&#47;                             ImagePaths.ic_msgMatchingBreakdown,
+      &#47;&#47;                           ),
+      &#47;&#47;                         ),
+      &#47;&#47;                       )
+      &#47;&#47;                     ],
+      &#47;&#47;                   ),
+      &#47;&#47;                 ):(!_candidateSkill[index][&#39;isMatched&#39;])?
+      &#47;&#47;                 Padding(
+      &#47;&#47;                   padding: const EdgeInsets.only(left: 8.0, top: verticalSpace, bottom: verticalSpace),
+      &#47;&#47;                   child: Row(
+      &#47;&#47;                     children: [
+      &#47;&#47;                       Text(EnterpriseStrings.breakDownUnmatched,
+      &#47;&#47;                           style: AppStyle()
+      &#47;&#47;                               .regularStyle
+      &#47;&#47;                               .copyWith(fontSize: 12.0,
+      &#47;&#47;                             color: AppColors.subTitleColor,
+      &#47;&#47;                             fontWeight: FontWeight.w700,
+      &#47;&#47;                           )),
+      &#47;&#47;                       &#47;*const Spacer(),
+      &#47;&#47;                       Tooltip(
+      &#47;&#47;                         message: &quot;This skill is not present&quot;,
+      &#47;&#47;                         triggerMode: TooltipTriggerMode.tap,
+      &#47;&#47;                         showDuration: const Duration(seconds: 11),
+      &#47;&#47;                         child: Padding(
+      &#47;&#47;                           padding: const EdgeInsets.only(left: 6.0),
+      &#47;&#47;                           child: SvgPicture.asset(
+      &#47;&#47;                             ImagePaths.ic_msgMatchingBreakdown,
+      &#47;&#47;                           ),
+      &#47;&#47;                         ),
+      &#47;&#47;                       )*&#47;
+      &#47;&#47;                     ],
+      &#47;&#47;                   ),
+      &#47;&#47;                 ):const SizedBox.shrink(),
+      &#47;&#47;               ),
+      &#47;&#47;             );
+      &#47;&#47;           }),
+      &#47;&#47;         ),
+      &#47;&#47;       ),
+      &#47;&#47;     ),
+      &#47;&#47;   ],
+      &#47;&#47; ),
+    &#47;&#47; ],
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown/features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown-library.html">skill_details_breakdown</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_match_score_breakdown_details_skill_details_breakdown/SkillsDetailsBreakdown-class.html">SkillsDetailsBreakdown</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>SkillsDetailsBreakdown class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

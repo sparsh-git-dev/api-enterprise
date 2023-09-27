@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the toJson method from the CreateJobModel class, for the Dart programming language.">
+  <title>toJson method - CreateJobModel class - create_job_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_create_job_model/model_create_job_model-library.html">create_job_model</a></li>
+    <li><a href="../../model_create_job_model/CreateJobModel-class.html">CreateJobModel</a></li>
+    <li class="self-crumb">toJson method</li>
+  </ol>
+  <div class="self-name">toJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="model_create_job_model&#47;CreateJobModel-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">toJson</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+<span class="name ">toJson</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Map&lt;String, dynamic&gt; toJson() {
+  final Map&lt;String, dynamic&gt; data = new Map&lt;String, dynamic&gt;();
+  data[&#39;benefits&#39;] = this.benefits;
+  data[&#39;boundary&#39;] = this.boundary;
+  data[&#39;budgetMaximum&#39;] = this.budgetMaximum;
+  data[&#39;budgetMinimum&#39;] = this.budgetMinimum;
+  data[&#39;city&#39;] = this.city;
+  data[&#39;country&#39;] = this.country;
+  data[&#39;currency&#39;] = this.currency;
+  data[&#39;customWeightage&#39;] = this.customWeightage;
+  data[&#39;id&#39;] = this.id;
+  data[&#39;jobCategory&#39;] = this.jobCategory;
+  data[&#39;jobDescriptionText&#39;] = this.jobDescriptionText;
+  data[&#39;jobDescriptionUrl&#39;] = this.jobDescriptionUrl;
+  data[&quot;jobEducationalQualificationsDtoList&quot;] =
+      jobEducationalQualificationsDtoList == null
+          ? []
+          : List&lt;dynamic&gt;.from(
+              jobEducationalQualificationsDtoList!.map((x) =&gt; x.toMap()));
+
+  data[&#39;jobExperienceLevel&#39;] = this.jobExperienceLevel;
+  data[&#39;jobTitle&#39;] = this.jobTitle;
+  data[&#39;jobType&#39;] = this.jobType;
+  data[&#39;workflowUniqueIdentifier&#39;] = this.workflowUniqueIdentifier;
+  data[&#39;limitForApplications&#39;] = this.limitForApplications;
+  data[&#39;limitForShortlists&#39;] = this.limitForShortlists;
+  data[&#39;maximumBudgetPerPaymentTerm&#39;] = this.maximumBudgetPerPaymentTerm;
+  data[&#39;minimumBudgetPerPaymentTerm&#39;] = this.minimumBudgetPerPaymentTerm;
+  data[&#39;minimumEducation&#39;] = this.minimumEducation;
+  data[&#39;mspEnterpriseId&#39;] = this.mspEnterpriseId;
+  data[&#39;neuroClassification&#39;] = this.neuroClassification;
+  data[&#39;numberOfOpenings&#39;] = this.numberOfOpenings;
+  data[&#39;overallExperienceMaximum&#39;] = this.overallExperienceMaximum;
+  data[&#39;overallExperienceMinimum&#39;] = this.overallExperienceMinimum;
+  data[&#39;paymentTerm&#39;] = this.paymentTerm;
+  data[&#39;priorityPoolBoundary&#39;] = this.priorityPoolBoundary;
+  data[&#39;questions&#39;] = this.questions;
+  data[&#39;shift&#39;] = this.shift;
+  data[&#39;socialMediaUrl&#39;] = this.socialMediaUrl;
+  data[&#39;state&#39;] = this.state;
+  data[&#39;status&#39;] = this.status;
+  data[&#39;validFrom&#39;] = this.validFrom;
+  data[&#39;validTill&#39;] = this.validTill;
+  data[&#39;vendorNeutrality&#39;] = this.vendorNeutrality;
+  data[&#39;allowedToWorkInOtherJobs&#39;] = this.allowedToWorkInOtherJobs;
+  data[&#39;workFrom&#39;] = this.workFrom;
+  return data;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_create_job_model/model_create_job_model-library.html">create_job_model</a></li>
+    <li><a href="../../model_create_job_model/CreateJobModel-class.html">CreateJobModel</a></li>
+    <li class="self-crumb">toJson method</li>
+</ol>
+
+
+    <h5>CreateJobModel class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

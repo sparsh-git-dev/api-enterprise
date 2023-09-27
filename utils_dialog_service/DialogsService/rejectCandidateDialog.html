@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the rejectCandidateDialog method from the DialogsService class, for the Dart programming language.">
+  <title>rejectCandidateDialog method - DialogsService class - dialog_service library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../utils_dialog_service/utils_dialog_service-library.html">dialog_service</a></li>
+    <li><a href="../../utils_dialog_service/DialogsService-class.html">DialogsService</a></li>
+    <li class="self-crumb">rejectCandidateDialog method</li>
+  </ol>
+  <div class="self-name">rejectCandidateDialog</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="utils_dialog_service&#47;DialogsService-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">rejectCandidateDialog</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>&gt;</span></span>
+<span class="name ">rejectCandidateDialog</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="rejectCandidateDialog-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="rejectCandidateDialog-param-controller"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/TextEditingController-class.html">TextEditingController</a></span> <span class="parameter-name">controller</span>, </span></li>
+<li><span class="parameter" id="rejectCandidateDialog-param-candidateId"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="rejectCandidateDialog-param-isTerminateJob">{<span class="type-annotation">dynamic</span> <span class="parameter-name">isTerminateJob</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;bool&gt;&gt; rejectCandidateDialog(
+    BuildContext context, TextEditingController controller, candidateId,
+    {isTerminateJob = false}) async {
+  bool action = false;
+  bool isRequestedToGoPublic = false;
+  await showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          insetPadding: const EdgeInsets.symmetric(horizontal: 16),
+          backgroundColor: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: &lt;Widget&gt;[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        isTerminateJob
+                            ? EnterpriseStrings.talent_pool_l029
+                            : EnterpriseStrings.talent_pool_l020,
+                        style: AppStyle().boldStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        action = false;
+                        Navigator.of(context, rootNavigator: true).pop();
+                      },
+                      child: const Align(
+                        alignment: Alignment.centerRight,
+                        child: Icon(
+                          Icons.clear_rounded,
+                          color: AppColors.subTitleColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 14),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    isTerminateJob
+                        ? EnterpriseStrings.talent_pool_l030
+                        : EnterpriseStrings.talent_pool_l021,
+                    style: AppStyle().regularStyle.copyWith(
+                          fontSize: AppStyle.fontSize14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.black,
+                        ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    isTerminateJob
+                        ? EnterpriseStrings.talent_pool_l031
+                        : EnterpriseStrings.talent_pool_l022,
+                    style: AppStyle().regularStyle.copyWith(
+                          fontSize: AppStyle.fontSize12,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.subTitleColor,
+                        ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Transform.translate(
+                  offset: const Offset(-15, 0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      StatefulBuilder(builder: (context, setStater) {
+                        return Transform.scale(
+                          scale: 0.6,
+                          child: CupertinoSwitch(
+                              trackColor: AppColors.grey,
+                              activeColor: AppColors.primaryPurple,
+                              value: isRequestedToGoPublic,
+                              onChanged: (bool value) {
+                                print(value);
+                                setStater(() {
+                                  isRequestedToGoPublic = value;
+                                });
+                              }),
+                        );
+                      }),
+                      Text(
+                        EnterpriseStrings.talent_pool_l023,
+                        style: AppStyle().textStyleLabel.copyWith(
+                              color: AppColors.black,
+                              fontSize: AppStyle.fontSize13,
+                            ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2.0),
+                      child: SizedBox(
+                        height: 15,
+                        width: 15,
+                        child: SvgPicture.asset(
+                          ImagePaths.ic_infoSVG,
+                          fit: BoxFit.fitHeight,
+                          color: AppColors.subTitleColor,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    SizedBox(
+                      width: Get.width - 120,
+                      child: Text(
+                        EnterpriseStrings.talent_pool_l025,
+                        maxLines: 4,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppStyle().regularStyle.copyWith(
+                              fontSize: AppStyle.fontSize12,
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.subTitleColor,
+                            ),
+                      ),
+                    ),
+                  ],
+                ),
+                if (!isTerminateJob) const SizedBox(height: 14),
+                if (!isTerminateJob)
+                  if (!isTerminateJob) const SizedBox(height: 6),
+                if (!isTerminateJob)
+                  CustomTextFormField(
+                    title: EnterpriseStrings.viewCandidate_l024,
+                    maxLines: 5,
+                    minLines: 5,
+                    controller: controller,
+                    keyboardType: TextInputType.text,
+                    textCapitalization: TextCapitalization.sentences,
+                    hintText: EnterpriseStrings.viewCandidate_h007,
+                    hintMaxLines: 8,
+                  ),
+                const SizedBox(height: 24),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Spacer(),
+                    GestureDetector(
+                      onTap: () async {
+                        action = false;
+                        Navigator.of(context, rootNavigator: true).pop();
+                      },
+                      child: Text(EnterpriseStrings.alert002,
+                          style: AppStyle().regularStyle.copyWith(
+                                fontSize: AppStyle.fontSize16,
+                                fontWeight: FontWeight.w700,
+                                color: AppColors.subTitleColor,
+                              )),
+                    ),
+                    const SizedBox(width: 40),
+                    GestureDetector(
+                      onTap: () {
+                        action = true;
+                        Navigator.of(context, rootNavigator: true).pop();
+                      },
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(EnterpriseStrings.alert001,
+                            style: AppStyle().regularStyle.copyWith(
+                                  fontSize: AppStyle.fontSize16,
+                                  fontWeight: FontWeight.w700,
+                                  color: AppColors.primaryPurple,
+                                )),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      });
+
+  return [action, isRequestedToGoPublic];
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../utils_dialog_service/utils_dialog_service-library.html">dialog_service</a></li>
+    <li><a href="../../utils_dialog_service/DialogsService-class.html">DialogsService</a></li>
+    <li class="self-crumb">rejectCandidateDialog method</li>
+</ol>
+
+
+    <h5>DialogsService class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

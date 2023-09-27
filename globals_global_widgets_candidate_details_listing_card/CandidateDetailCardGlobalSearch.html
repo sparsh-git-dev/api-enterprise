@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CandidateDetailCardGlobalSearch function from the candidate_details_listing_card library, for the Dart programming language.">
+  <title>CandidateDetailCardGlobalSearch function - candidate_details_listing_card library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../globals_global_widgets_candidate_details_listing_card/globals_global_widgets_candidate_details_listing_card-library.html">candidate_details_listing_card</a></li>
+    <li class="self-crumb">CandidateDetailCardGlobalSearch function</li>
+  </ol>
+  <div class="self-name">CandidateDetailCardGlobalSearch</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="globals_global_widgets_candidate_details_listing_card&#47;globals_global_widgets_candidate_details_listing_card-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">CandidateDetailCardGlobalSearch</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Container-class.html">Container</a></span>
+<span class="name ">CandidateDetailCardGlobalSearch</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-candidatesModel"><span class="type-annotation"><a href="../model_global_search_candidate_model/CandidateDataModel-class.html">CandidateDataModel</a></span> <span class="parameter-name">candidatesModel</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-index"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">index</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-fromTalentPool"><span class="type-annotation">dynamic</span> <span class="parameter-name">fromTalentPool</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-candidatesSelected"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidatesSelected</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-context"><span class="type-annotation">dynamic</span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-navigateToScreen"><span class="type-annotation">dynamic</span> <span class="parameter-name">navigateToScreen</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-setState"><span class="type-annotation">dynamic</span> <span class="parameter-name">setState</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-shortlistCandidate"><span class="type-annotation">dynamic</span> <span class="parameter-name">shortlistCandidate</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-addToTalentPoolDialog"><span class="type-annotation">dynamic</span> <span class="parameter-name">addToTalentPoolDialog</span>, </span></li>
+<li><span class="parameter" id="CandidateDetailCardGlobalSearch-param-unselectSelectAllCheckbox"><span class="type-annotation">dynamic</span> <span class="parameter-name">unselectSelectAllCheckbox</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Container CandidateDetailCardGlobalSearch(
+    CandidateDataModel candidatesModel,
+    int index,
+    fromTalentPool,
+    candidatesSelected,
+    context,
+    navigateToScreen,
+    setState,
+    shortlistCandidate,
+    addToTalentPoolDialog,
+    unselectSelectAllCheckbox) {
+  return Container(
+      padding: EdgeInsets.only(left: fromTalentPool ? 5 : 10, right: 10),
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          navigateToScreen(candidatesModel);
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              &#47;&#47; height: 200,
+              width: MediaQuery.of(context).size.width - 32,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16),
+                    child: Row(
+                      mainAxisAlignment: fromTalentPool
+                          ? MainAxisAlignment.start
+                          : MainAxisAlignment.spaceBetween,
+                      children: [
+                        if (fromTalentPool)
+                          Transform.translate(
+                            offset: const Offset(-2, 0),
+                            child: Checkbox(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4)),
+                              visualDensity: const VisualDensity(
+                                horizontal: -4,
+                                vertical: -3,
+                              ),
+                              fillColor:
+                                  MaterialStateProperty.resolveWith&lt;Color&gt;(
+                                      (Set&lt;MaterialState&gt; states) {
+                                return AppColors.primaryPurple;
+                              }),
+                              value: candidatesSelected
+                                  .contains(candidatesModel.id),
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value!) {
+                                    candidatesSelected.add(candidatesModel.id);
+                                  } else {
+                                    candidatesSelected
+                                        .remove(candidatesModel.id);
+                                  }
+                                  unselectSelectAllCheckbox(value);
+                                  print(candidatesSelected);
+                                });
+                              },
+                            ),
+                          ),
+                        Row(
+                          children: [
+                            (candidatesModel.mediaFile!.isEmpty ||
+                                    candidatesModel.mediaFile == null)
+                                ? Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Container(
+                                      decoration: AppStyle().imageBorderStyle,
+                                      padding: AppStyle().imageBorderPadding,
+                                      child: CircleAvatar(
+                                          backgroundColor:
+                                              AppColors.imageBackgroundGrey,
+                                          radius: 27,
+                                          child:
+                                              getDefaultProfileImageWithInitials(
+                                                  name: candidatesModel
+                                                      .firstName
+                                                      .toString())
+                                          &#47;&#47; backgroundImage:
+                                          &#47;&#47;     NetworkImage(AppUrl
+                                          &#47;&#47;         .DEFAULT_PROFILE_IMAGE_URL)
+                                          ),
+                                    ))
+                                : ConstantMethods.isImage(
+                                        candidatesModel.mediaFile)
+                                    ? Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Container(
+                                          decoration:
+                                              AppStyle().imageBorderStyle,
+                                          padding:
+                                              AppStyle().imageBorderPadding,
+                                          child: CircleAvatar(
+                                            backgroundColor: AppColors.white,
+                                            radius: 27,
+                                            backgroundImage: NetworkImage(
+                                                candidatesModel.mediaFileSigned!
+                                                    .toString()),
+                                          ),
+                                        ))
+                                    : getVideoView(
+                                        candidatesModel.mediaFileSigned!,
+                                        context,
+                                        62,
+                                        EnterpriseStrings.video_profile_video),
+                            const SizedBox(width: 8),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: candidatesModel.talentPool != &#39;&#39;
+                                      ? MediaQuery.of(context).size.width - 210
+                                      : MediaQuery.of(context).size.width - 160,
+                                  child: Text(
+                                    candidatesModel.firstName!.isNotEmpty
+                                        ? candidatesModel.firstName.toString() +
+                                            &quot; &quot; +
+                                            candidatesModel.lastName.toString()
+                                        : &#39;-&#39;,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: AppStyle().regularStyle.copyWith(
+                                        fontSize: AppStyle.fontSize16,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: candidatesModel.talentPool != &#39;&#39;
+                                      ? MediaQuery.of(context).size.width - 210
+                                      : MediaQuery.of(context).size.width - 145,
+                                  child: Text(
+                                    candidatesModel.profileTitle!.isNotEmpty
+                                        ? candidatesModel.profileTitle
+                                            .toString()
+                                        : &#39;-&#39;,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: AppStyle().regularStyle.copyWith(
+                                        fontSize: AppStyle.fontSize14,
+                                        fontWeight: FontWeight.w400,
+                                        color: AppColors.subTitleColor),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    getRatingDisplay(
+                                        candidateId:
+                                            candidatesModel.id.toString(),
+                                        candidateRating:
+                                            candidatesModel.candidateRating,
+                                        noOfRatings:
+                                            candidatesModel.noOfRatings,
+                                        ratingSectionCallback: () {
+                                          navigateToScreen(candidatesModel);
+                                        },
+                                        styleVisibility: false),
+                                  ],
+                                )
+                              ],
+                            ),
+                            if (candidatesModel.talentPool != &#39;&#39;)
+                              Tooltip(
+                                showDuration: const Duration(seconds: 10),
+                                textStyle: AppStyle().textStyleLabel.copyWith(
+                                      color: AppColors.white,
+                                      fontWeight: FontWeight.w100,
+                                      fontSize: AppStyle.fontSize16,
+                                    ),
+                                padding: const EdgeInsets.only(
+                                    left: 10, right: 10, bottom: 5, top: 5),
+                                margin:
+                                    const EdgeInsets.only(left: 10, right: 10),
+                                triggerMode: TooltipTriggerMode.tap,
+                                message:
+                                    candidatesModel.talentPool.toString() == &quot;P&quot;
+                                        ? EnterpriseStrings.talent_pool_m022
+                                        : EnterpriseStrings.talent_pool_m023,
+                                child: Container(
+                                    transform: Matrix4.translationValues(
+                                        0.0, -2.0, 0.0),
+                                    child: getStatusChip(
+                                      candidatesModel.talentPool.toString(),
+                                      fromTalentPoolChanges: true,
+                                      context: context,
+                                    )),
+                              ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  candidatesModel.ratePerHour != 0
+                      ? const SizedBox(height: 16)
+                      : const SizedBox.shrink(),
+                  candidatesModel.ratePerHour != 0
+                      ? Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Align(
+                                alignment: Alignment.centerLeft,
+                                child: getPayment(
+                                    &#39;\$&#39;,
+                                    candidatesModel.ratePerHour!
+                                        .toInt()
+                                        .toString(),
+                                    ConstantMethods().paymentTerm(&#39;HR&#39;))),
+                          ],
+                        )
+                      : const SizedBox.shrink(),
+                  const SizedBox(height: 16),
+
+                  &#47;&#47;&#47;This below one is for showing Available status
+                  if ((!fromTalentPool &amp;&amp;
+                          (candidatesModel.availableToRehire?.isNotEmpty ??
+                              false) &amp;&amp;
+                          (candidatesModel.availableToRehire! == &#39;Y&#39;) ||
+                      !candidatesModel.availableDate!.isNotEmpty))
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 0, top: 8),
+                      alignment: Alignment.centerLeft,
+                      child: Tooltip(
+                        showDuration: const Duration(seconds: 10),
+                        textStyle: AppStyle().textStyleLabel.copyWith(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.w100,
+                              fontSize: AppStyle.fontSize16,
+                            ),
+                        padding: const EdgeInsets.only(
+                            left: 10, right: 10, bottom: 5, top: 5),
+                        margin: const EdgeInsets.only(left: 10, right: 10),
+                        triggerMode: TooltipTriggerMode.tap,
+                        message: &#39;&#39;,
+                        child: Container(
+                            transform:
+                                Matrix4.translationValues(0.0, -2.0, 0.0),
+                            child: getStatusChip(
+                              &#39;MCA&#39;,
+                              context: context,
+                              isAvailableStatus: true,
+                            )),
+                      ),
+                    ),
+                  if ((!fromTalentPool &amp;&amp;
+                          (candidatesModel.availableToRehire?.isNotEmpty ??
+                              false) &amp;&amp;
+                          (candidatesModel.availableToRehire! == &#39;Y&#39;) ||
+                      !candidatesModel.availableDate!.isNotEmpty))
+                    const SizedBox(height: 16),
+                  const SizedBox.shrink(),
+
+                  &#47;&#47;&#47;This below widget is for showing Rehire candidate if available immediately
+                  if (!fromTalentPool &amp;&amp;
+                      (candidatesModel.availableToRehire?.isNotEmpty ??
+                          false) &amp;&amp;
+                      (candidatesModel.availableToRehire! == &#39;Y&#39;))
+                    InkWell(
+                      onTap: () async {
+                        List? result = await showShortlistDialog(
+                            context, candidatesModel.id.toString(),
+                            candidateName: (candidatesModel.firstName) ??
+                                &quot;&quot; + (candidatesModel.lastName ?? &quot;&quot;) ??
+                                &quot;&quot;,
+                            profileUrl: candidatesModel.mediaFileSigned ?? &quot;&quot;,
+                            fromMyCandidates: true,
+                            availableDate:
+                                candidatesModel.availableDate.toString(),
+                            mediaFileSignedUrl:
+                                candidatesModel.mediaFileSigned ?? &quot;&quot;,
+                            talentPoolStatus:
+                                candidatesModel.talentPool.toString(),
+                            location: candidatesModel.city! +
+                                (candidatesModel.city!.isNotEmpty &amp;&amp;
+                                        candidatesModel.country!.isNotEmpty
+                                    ? &quot;, &quot;
+                                    : &#39;&#39;) +
+                                candidatesModel.country!);
+                      },
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            ImagePaths.ic_rehireSVG,
+                            fit: BoxFit.contain,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Text(
+                              EnterpriseStrings.talent_pool_b012,
+                              style: AppStyle()
+                                  .regularStyle
+                                  .copyWith(color: AppColors.midBlue),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  else
+                    Row(
+                      children: [
+                        Container(
+                          transform: Matrix4.translationValues(-3.0, 0.0, 0.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 2.0),
+                                child: SizedBox(
+                                  width: 20,
+                                  child: SvgPicture.asset(
+                                    ImagePaths.ic_availabilityLogoSVG,
+                                    fit: BoxFit.none,
+                                    color: AppColors.black,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 7),
+                              Text(
+                                candidatesModel.availableDate!.isNotEmpty
+                                    ? EnterpriseStrings.private_pool_l001 +
+                                        DateConvertions().availableTime(
+                                            candidatesModel.availableDate
+                                                .toString())
+                                    : candidatesModel.inCandidatePool!
+                                        ? EnterpriseStrings.private_pool_l003
+                                        : EnterpriseStrings.private_pool_l007,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
+                                style: AppStyle().regularStyle.copyWith(
+                                      fontSize: AppStyle.fontSize14,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Tooltip(
+                            showDuration: const Duration(seconds: 10),
+                            textStyle: AppStyle().textStyleLabel.copyWith(
+                                  color: AppColors.white,
+                                  fontWeight: FontWeight.w100,
+                                  fontSize: AppStyle.fontSize16,
+                                ),
+                            padding: const EdgeInsets.only(
+                                left: 10, right: 10, bottom: 5, top: 5),
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            triggerMode: TooltipTriggerMode.tap,
+                            message: EnterpriseStrings.private_pool_l006,
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 0, right: 10, top: 2, bottom: 2),
+                              height: 15,
+                              width: 15,
+                              child: SvgPicture.asset(
+                                ImagePaths.ic_infoSVG,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  const SizedBox(height: 8),
+                  candidatesModel.city!.isNotEmpty
+                      ? Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SvgPicture.asset(
+                              ImagePaths.ic_locationLogoSVG,
+                              fit: BoxFit.contain,
+                              height: 15,
+                              width: 15,
+                              color: AppColors.black,
+                            ),
+                            const SizedBox(width: 12),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width - 70,
+                              child: Text(
+                                candidatesModel.city.toString().isNotEmpty
+                                    ? candidatesModel.city.toString() +
+                                        &quot;, &quot; +
+                                        candidatesModel.country.toString()
+                                    : &#39;&#39;,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppStyle().regularStyle.copyWith(
+                                      fontSize: AppStyle.fontSize14,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        )
+                      : const SizedBox.shrink(),
+                  if (candidatesModel.city!.isNotEmpty)
+                    const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SvgPicture.asset(
+                        ImagePaths.ic_degreeLogoSVG,
+                        fit: BoxFit.fitHeight,
+                        height: 14,
+                        color: AppColors.subTitleColor,
+                        width: 14,
+                      ),
+                      const SizedBox(width: 10),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width - 70,
+                        child: Text(
+                          candidatesModel.education!.isNotEmpty
+                              ? candidatesModel.education![0].nameOfDegree!
+                                      .toString() +
+                                  &quot; ,&quot; +
+                                  candidatesModel.education![0].nameOfInstitute
+                                      .toString()
+                              : EnterpriseStrings.search_candidate_h001,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppStyle().regularStyle.copyWith(
+                                fontSize: AppStyle.fontSize14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SvgPicture.asset(
+                        ImagePaths.ic_overallExperienceLogoSVG,
+                        fit: BoxFit.contain,
+                        color: AppColors.black,
+                      ),
+                      const SizedBox(width: 10),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width - 80,
+                        child: Text(
+                          candidatesModel.overallYearsOfExperience != 0.0
+                              ? &#39;${candidatesModel.overallYearsOfExperience.toString().replaceAll(&#39;.0&#39;, &#39;&#39;)}&#39;
+                                      &#39; &#39; +
+                                  (candidatesModel.overallYearsOfExperience!
+                                              .toInt() &lt;=
+                                          1
+                                      ? EnterpriseStrings.profile_l074
+                                      : EnterpriseStrings.profile_l073)
+                              : &#39;${candidatesModel.overallYearsOfExperience!.toString().replaceAll(&#39;.0&#39;, &#39;&#39;)}&#39;
+                                      &#39; &#39; +
+                                  (candidatesModel.overallYearsOfExperience!
+                                              .toInt() &lt;=
+                                          1
+                                      ? EnterpriseStrings.profile_l074
+                                      : EnterpriseStrings.profile_l073),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppStyle().regularStyle.copyWith(
+                                fontSize: AppStyle.fontSize14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  (candidatesModel.hidePhoneEmail == &#39;N&#39; &amp;&amp;
+                          candidatesModel.mobileNumber!.isNotEmpty)
+                      ? const SizedBox(height: 8)
+                      : const SizedBox.shrink(),
+                  (candidatesModel.hidePhoneEmail == &#39;N&#39; &amp;&amp;
+                          candidatesModel.mobileNumber!.isNotEmpty)
+                      ? Container(
+                          transform: Matrix4.translationValues(-5.0, 0.0, 0.0),
+                          child: contactInfoMobileNumber(
+                              candidatesModel.mobileNumber, 6, 9))
+                      : const SizedBox.shrink(),
+                  (candidatesModel.hidePhoneEmail == &#39;N&#39; &amp;&amp;
+                          candidatesModel.emailAddress!.isNotEmpty)
+                      ? const SizedBox(height: 8)
+                      : const SizedBox.shrink(),
+                  candidatesModel.hidePhoneEmail == &#39;N&#39;
+                      ? Container(
+                          transform: Matrix4.translationValues(-3.0, 0.0, 0.0),
+                          child: Row(
+                            children: [
+                              const SizedBox(width: 4),
+                              SvgPicture.asset(
+                                ImagePaths.ic_emailLogoSVG,
+                                fit: BoxFit.none,
+                                color: AppColors.black,
+                              ),
+                              const SizedBox(width: 10),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  candidatesModel.emailAddress.toString(),
+                                  style: AppStyle().regularStyle.copyWith(
+                                        fontSize: AppStyle.fontSize14,
+                                        fontWeight: FontWeight.w400,
+                                        color: AppColors.black,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ))
+                      : const SizedBox.shrink(),
+                  candidatesModel.brief!.isNotEmpty
+                      ? const SizedBox(height: 16)
+                      : const SizedBox.shrink(),
+                  candidatesModel.brief!.isNotEmpty
+                      ? Align(
+                          alignment: Alignment.centerLeft,
+                          child: GetBuilder&lt;ThemeController&gt;(
+                              builder: (themeLogic) {
+                            return CustomReadMoreText(
+                              Validations()
+                                  .removeAllHtmlTags(candidatesModel.brief!),
+                              trimLines: 2,
+                              colorClickableText: AppColors.midBlue,
+                              moreStyle: AppStyle().viewMoreLessStyle.copyWith(
+                                    color:
+                                        themeLogic.getSelectedPrimaryThemeColor,
+                                  ),
+                              lessStyle: AppStyle().viewMoreLessStyle.copyWith(
+                                    color:
+                                        themeLogic.getSelectedPrimaryThemeColor,
+                                  ),
+                              trimMode: TrimMode.Line,
+                              trimCollapsedText: EnterpriseStrings.b033,
+                              style: AppStyle().regularStyle.copyWith(
+                                  color: AppColors.subTitleColor,
+                                  fontSize: AppStyle.fontSize14,
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.5),
+                              trimExpandedText: EnterpriseStrings.b034,
+                            );
+                          }))
+                      : const SizedBox.shrink(),
+                  const SizedBox(height: 16),
+                  candidatesModel.skills!.isNotEmpty
+                      ? Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child:
+                                      _buildChipList(candidatesModel.skills)),
+                            ),
+                            const SizedBox(width: 8),
+                            GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () {
+                                  List&lt;String&gt;? skillsList = [];
+                                  for (int i = 0;
+                                      i &lt; candidatesModel.skills!.length;
+                                      i++) {
+                                    skillsList.add(candidatesModel
+                                        .skills![i].skills!.keyword
+                                        .toString());
+                                  }
+                                  Get.dialog(SkillsView(
+                                    listSkills: skillsList,
+                                  ));
+                                },
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: GetBuilder&lt;ThemeController&gt;(
+                                      builder: (themeLogic) {
+                                    return Text(
+                                      candidatesModel.skills!.length &gt; 3
+                                          ? &#39;+${candidatesModel.skills!.length - 3} more&#39;
+                                          : &#39;&#39;,
+                                      style: AppStyle()
+                                          .viewMoreLessStyle
+                                          .copyWith(
+                                              color: themeLogic
+                                                  .getSelectedPrimaryThemeColor),
+                                    );
+                                  }),
+                                )),
+                          ],
+                        )
+                      : Container(),
+                  if (!fromTalentPool) const SizedBox(height: 16),
+                  if (!fromTalentPool)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: fromTalentPool
+                              ? MediaQuery.of(context).size.width - 40
+                              : MediaQuery.of(context).size.width &#47; 2 - 25,
+                          height: 42,
+                          child: CustomElevatedButton(
+                            onPressed: () async {
+                              List? result = await showShortlistDialog(
+                                context,
+                                candidatesModel.id.toString(),
+                                availableDate:
+                                    candidatesModel.availableDate.toString(),
+                                candidateName:
+                                    (candidatesModel.firstName ?? &quot;&quot;) +
+                                        &quot; &quot; +
+                                        (candidatesModel.lastName ?? &quot;&quot;),
+                                mediaFileSignedUrl:
+                                    candidatesModel.portfolioUrl1.toString(),
+                                talentPoolStatus:
+                                    candidatesModel.talentPool.toString(),
+                                location: candidatesModel.city.toString() +
+                                    (candidatesModel.city!.isNotEmpty &amp;&amp;
+                                            candidatesModel.country!.isNotEmpty
+                                        ? &quot;, &quot;
+                                        : &#39;&#39;) +
+                                    candidatesModel.country.toString(),
+                              );
+                              if (result!.isNotEmpty) {
+                                &#47;&#47; shortlist button is clicked
+                                String firstName = candidatesModel.firstName
+                                        .toString()
+                                        .isNotEmpty
+                                    ? candidatesModel.firstName.toString()
+                                    : &#39;&#39;;
+                                String lastName = candidatesModel.lastName
+                                        .toString()
+                                        .isNotEmpty
+                                    ? candidatesModel.lastName.toString()
+                                    : &#39;&#39;;
+                                InternetConnectivity()
+                                    .checkConnectivity()
+                                    .then((internet) {
+                                  internet
+                                      ? shortlistCandidate(
+                                          candidatesModel.id.toString(),
+                                          firstName + &quot; &quot; + lastName,
+                                          candidatesModel,
+                                          index,
+                                          result)
+                                      : DialogsService().toastMessage(
+                                          EnterpriseStrings.w001,
+                                          AppColors.warningOpacity,
+                                          context,
+                                          8,
+                                          AppColors.warning);
+                                });
+                              }
+                            },
+                            isEnable: true,
+                            labelText:
+                                EnterpriseStrings.viewCandidate_b007 + &quot; +&quot;,
+                            isWidthInfinity: true,
+                            buttonType: ButtonTypes.opaque,
+                          ),
+                        ),
+                        if (!fromTalentPool)
+                          Container(
+                              width: MediaQuery.of(context).size.width &#47; 2 - 25,
+                              constraints: const BoxConstraints(
+                                minHeight: 42,
+                              ),
+                              child: CustomElevatedButton(
+                                isWidthInfinity: true,
+                                labelText: EnterpriseStrings.talent_pool_b005,
+                                onPressed: () async {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =&gt;
+                                          AddToTalentPoolScreen(
+                                        totalCount: candidatesModel.totalCount,
+                                        candidateId:
+                                            candidatesModel.id.toString(),
+                                        candidateName:
+                                            &quot;${candidatesModel.firstName} ${candidatesModel.lastName}&quot;,
+                                      ),
+                                    ),
+                                  );
+                                  &#47;&#47; List? result = await addToTalentPoolDialog(
+                                  &#47;&#47;     context,
+                                  &#47;&#47;     candidatesModel.id.toString(),
+                                  &#47;&#47;     candidatesModel.id.toString());
+                                  &#47;&#47; if (result!.isNotEmpty) {
+                                  &#47;&#47;   &#47;&#47; shortlist button is clicked
+                                  &#47;&#47;   String firstName = candidatesModel.firstName
+                                  &#47;&#47;           .toString()
+                                  &#47;&#47;           .isNotEmpty
+                                  &#47;&#47;       ? candidatesModel.firstName.toString()
+                                  &#47;&#47;       : &#39;&#39;;
+                                  &#47;&#47;   String lastName = candidatesModel.lastName
+                                  &#47;&#47;           .toString()
+                                  &#47;&#47;           .isNotEmpty
+                                  &#47;&#47;       ? candidatesModel.lastName.toString()
+                                  &#47;&#47;       : &#39;&#39;;
+                                  &#47;&#47;   InternetConnectivity()
+                                  &#47;&#47;       .checkConnectivity()
+                                  &#47;&#47;       .then((internet) {
+                                  &#47;&#47;     internet
+                                  &#47;&#47;         ? shortlistCandidate(
+                                  &#47;&#47;             candidatesModel.id.toString(),
+                                  &#47;&#47;             firstName + &quot; &quot; + lastName,
+                                  &#47;&#47;             candidatesModel,
+                                  &#47;&#47;             index,
+                                  &#47;&#47;             result)
+                                  &#47;&#47;         : DialogsService().toastMessage(
+                                  &#47;&#47;             EnterpriseStrings.w001,
+                                  &#47;&#47;             AppColors.warningOpacity,
+                                  &#47;&#47;             context,
+                                  &#47;&#47;             8,
+                                  &#47;&#47;             AppColors.warning);
+                                  &#47;&#47;   });
+                                },
+                              )),
+                      ],
+                    ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 15),
+            const Divider(thickness: 1),
+          ],
+        ),
+      ));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../globals_global_widgets_candidate_details_listing_card/globals_global_widgets_candidate_details_listing_card-library.html">candidate_details_listing_card</a></li>
+    <li class="self-crumb">CandidateDetailCardGlobalSearch function</li>
+</ol>
+
+
+    <h5>candidate_details_listing_card library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

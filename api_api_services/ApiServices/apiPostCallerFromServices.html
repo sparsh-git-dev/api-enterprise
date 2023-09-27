@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the apiPostCallerFromServices method from the ApiServices class, for the Dart programming language.">
+  <title>apiPostCallerFromServices method - ApiServices class - api_services library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../api_api_services/api_api_services-library.html">api_services</a></li>
+    <li><a href="../../api_api_services/ApiServices-class.html">ApiServices</a></li>
+    <li class="self-crumb">apiPostCallerFromServices method</li>
+  </ol>
+  <div class="self-name">apiPostCallerFromServices</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="api_api_services&#47;ApiServices-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">apiPostCallerFromServices</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
+<span class="name ">apiPostCallerFromServices</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="apiPostCallerFromServices-param-url"><span class="type-annotation">dynamic</span> <span class="parameter-name">url</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-data"><span class="type-annotation">dynamic</span> <span class="parameter-name">data</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-context"><span class="type-annotation">dynamic</span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-_keyLoader"><span class="type-annotation">dynamic</span> <span class="parameter-name">_keyLoader</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-isPublicAPI">{<span class="type-annotation">dynamic</span> <span class="parameter-name">isPublicAPI</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-isXFormEncoded"><span class="type-annotation">dynamic</span> <span class="parameter-name">isXFormEncoded</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-isLoader"><span class="type-annotation">dynamic</span> <span class="parameter-name">isLoader</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="apiPostCallerFromServices-param-isJobWIzard"><span class="type-annotation">dynamic</span> <span class="parameter-name">isJobWIzard</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future apiPostCallerFromServices(url, data, context, _keyLoader,
+    {isPublicAPI = false, isXFormEncoded = false, isLoader = true,isJobWIzard = false}) async {
+  if (isLoader) {
+    DialogsService().showLoadingDialog(context, _keyLoader);
+  }
+  var responseJson;
+  try {
+    print(&quot;----URL-&gt;&gt;${(isPublicAPI ? BASE_URL_PUBLIC : BASE_URL) + url}&quot;);
+    var headers = await createAuthorizationHeader(context,
+        isXFormEncoded: isXFormEncoded);
+    var body = &#39;&#39;;
+    if (!isXFormEncoded) {
+      body = json.encode(data);
+    }
+    var response = await http.post(
+      Uri.parse((isPublicAPI ? BASE_URL_PUBLIC : BASE_URL) + url),
+      headers: headers,
+      body: body.isNotEmpty ? body : data,
+    );
+    if (isLoader) {
+      Navigator.of(_keyLoader.currentContext, rootNavigator: true).pop();
+    }
+    if(isJobWIzard == true &amp;&amp; response.statusCode == 502){
+      return 502;
+    }
+    responseJson = returnResponse(response, context);
+    return responseJson;
+  } catch (e) {
+    throw Exception(&#39;Error==========$e&#39;);
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../api_api_services/api_api_services-library.html">api_services</a></li>
+    <li><a href="../../api_api_services/ApiServices-class.html">ApiServices</a></li>
+    <li class="self-crumb">apiPostCallerFromServices method</li>
+</ol>
+
+
+    <h5>ApiServices class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

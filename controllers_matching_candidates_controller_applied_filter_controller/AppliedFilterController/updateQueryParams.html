@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the updateQueryParams method from the AppliedFilterController class, for the Dart programming language.">
+  <title>updateQueryParams method - AppliedFilterController class - applied_filter_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_applied_filter_controller/controllers_matching_candidates_controller_applied_filter_controller-library.html">applied_filter_controller</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_applied_filter_controller/AppliedFilterController-class.html">AppliedFilterController</a></li>
+    <li class="self-crumb">updateQueryParams method</li>
+  </ol>
+  <div class="self-name">updateQueryParams</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_matching_candidates_controller_applied_filter_controller&#47;AppliedFilterController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">updateQueryParams</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">updateQueryParams</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; updateQueryParams() async {
+  _appliedFilterQueryParams = &#39;&#39;;
+
+  String _enterpriseId = await UserPreferences().getPreferenceValues(UserPreferences.prefId);
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;?enterpriseId=$_enterpriseId&#39;;
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;minYearsOfExperience=0&#39;;
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;maxYearsOfExperience=${Uri.encodeComponent(&quot;30+&quot;)}&#39;;
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;relevance=false&#39;;
+  List&lt;Map&lt;String, dynamic&gt;&gt; _loc = getSelectedLocation;
+  List&lt;String&gt; _cities = [];
+  List&lt;String&gt; _states = [];
+  List&lt;String&gt; _countries = [];
+  List&lt;String&gt; _workTypeList = &lt;String&gt;[];
+  List&lt;String&gt; _workPlaceList = &lt;String&gt;[];
+
+  for (int i =0; i&lt;_loc.length;i++) {
+    _cities.add(_loc[i][&#39;city&#39;]!);
+    _states.add(_loc[i][&#39;state&#39;]!);
+    _countries.add(_loc[i][&#39;country&#39;]!);
+    getSelectedLocation[i][&quot;isApplied&quot;] = true;
+  }
+  for(int i = 0; i &lt; _candidateTypes.length; i++) {
+    if(_candidateTypes[i][&#39;isSelected&#39;]) {
+      _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;talentPool=&#39; +_candidateTypes[i][&#39;short&#39;];
+      appliedFilters[&#39;candidateTypeIndex&#39;] = i;
+      break;
+    }
+  }
+  for (var element in workTypeList) {
+    if(element[&#39;isSelected&#39;]==true) {
+      _workTypeList.add(element[&#39;value&#39;]);
+    }
+  }
+  appliedFilters[&#39;workTypeList&#39;] = &lt;String&gt;[];
+  appliedFilters[&#39;workTypeList&#39;].addAll(_workTypeList); &#47;&#47;&#47;Retaining Filter
+
+  for (var element in workPlaceList) {
+    if(element[&#39;isSelected&#39;]==true){
+      _workPlaceList.add(element[&#39;value&#39;]);
+    }
+  }
+  appliedFilters[&#39;workPlaceList&#39;] = &lt;String&gt;[];
+  appliedFilters[&#39;workPlaceList&#39;].addAll(_workPlaceList); &#47;&#47;&#47;Retaining Filter
+  if(_workTypeList.isNotEmpty){
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;workType=&#39; + _workTypeList.join(&#39;,&#39;);
+  }
+  if(_workPlaceList.isNotEmpty){
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;workPlace=&#39; + _workPlaceList.join(&#39;,&#39;);
+  }
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &quot;&amp;payRateMin=&quot; + _rangeOfCompensation.start.round().toString();
+  _appliedFilterQueryParams = _appliedFilterQueryParams + &quot;&amp;payRateMax=&quot; + (_rangeOfCompensation.end.round() == 100000?Uri.encodeComponent(&#39;100000+&#39;):
+  Uri.encodeComponent(_rangeOfCompensation.end.toString()));
+  appliedFilters[&#39;payRate&#39;] = _rangeOfCompensation; &#47;&#47;&#47;Retaining Filter
+  if (_cities.isNotEmpty) {
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;city=&#39; + _cities.join(&quot;,&quot;);
+  }
+  if (_states.isNotEmpty) {
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;state=&#39; + _states.join(&quot;,&quot;);
+  }
+  if (_countries.isNotEmpty) {
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;country=&#39; + _countries.join(&quot;,&quot;);
+  }
+  if(_isReferredCandidate){
+    _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;referredBy=&#39; + _isReferredCandidate.toString();
+    appliedFilters[&#39;referredBy&#39;] = _isReferredCandidate;
+    if(_referredBySelectedFromSuggestion?.id != null
+        &amp;&amp; _referredBySelectedFromSuggestion!.id!.isNotEmpty) {
+      _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;referrerId=&#39; + _referredBySelectedFromSuggestion!.id!;
+    } else if(_referredBySelectedFromSuggestion?.id?.isEmpty??false){
+      &#47;&#47; _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;referrerId=null&#39;;
+    } else {
+      &#47;&#47; _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;referrerId=null&#39;;
+    }
+  }
+  appliedFilters[&#39;referrerFromSuggestion&#39;] = _referredBySelectedFromSuggestion;
+  _ratingsList.forEach((element) {
+    if(element[&#39;isSelected&#39;]){
+      _appliedFilterQueryParams = _appliedFilterQueryParams + &#39;&amp;minRating=&#39; + element[&#39;value&#39;].toString()+
+          &#39;&amp;maxRating=&#39; + &#39;5&#39;;
+    }
+  });
+  debugPrint(&quot;Line264: $_appliedFilterQueryParams&quot;);
+  Get.back(result: _appliedFilterQueryParams);
+
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_applied_filter_controller/controllers_matching_candidates_controller_applied_filter_controller-library.html">applied_filter_controller</a></li>
+    <li><a href="../../controllers_matching_candidates_controller_applied_filter_controller/AppliedFilterController-class.html">AppliedFilterController</a></li>
+    <li class="self-crumb">updateQueryParams method</li>
+</ol>
+
+
+    <h5>AppliedFilterController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

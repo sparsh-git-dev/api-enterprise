@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the downloadProfileDialogCandidate method from the DownloadProfileWidgets class, for the Dart programming language.">
+  <title>downloadProfileDialogCandidate method - DownloadProfileWidgets class - matching_candidates_common_widgets library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matching_candidates_common_widgets/DownloadProfileWidgets-class.html">DownloadProfileWidgets</a></li>
+    <li class="self-crumb">downloadProfileDialogCandidate method</li>
+  </ol>
+  <div class="self-name">downloadProfileDialogCandidate</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matching_candidates_common_widgets&#47;DownloadProfileWidgets-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">downloadProfileDialogCandidate</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">downloadProfileDialogCandidate</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="downloadProfileDialogCandidate-param-skillChecklistModel"><span class="type-annotation">dynamic</span> <span class="parameter-name">skillChecklistModel</span>, </span></li>
+<li><span class="parameter" id="downloadProfileDialogCandidate-param-candidatesModel"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidatesModel</span>, </span></li>
+<li><span class="parameter" id="downloadProfileDialogCandidate-param-candidateId"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="downloadProfileDialogCandidate-param-parentContext"><span class="type-annotation">dynamic</span> <span class="parameter-name">parentContext</span>, </span></li>
+<li><span class="parameter" id="downloadProfileDialogCandidate-param-mode"><span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span>, </span></li>
+<li><span class="parameter" id="downloadProfileDialogCandidate-param-jobId"><span class="type-annotation">dynamic</span> <span class="parameter-name">jobId</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; downloadProfileDialogCandidate(skillChecklistModel,
+    candidatesModel, candidateId, parentContext, mode, jobId) async {
+  final List&lt;NameBoolIDModel&gt; checkListSelectedValues = [];
+  final List&lt;NameBoolIDModel&gt; resumeSelectedValues = [];
+  bool profileCheckboxSelected = true;
+  List buttonEnabledList = [true];
+  for (int i = 0; i &lt; skillChecklistModel!.data!.length; i++) {
+    checkListSelectedValues.add(NameBoolIDModel(
+        value: false,
+        name:
+            skillChecklistModel!.data![i].checkList!.checkListName.toString(),
+        id: skillChecklistModel!.data![i].checkList!.id.toString()));
+  }
+  if (candidatesModel!.resume != null) {
+    for (int i = 0; i &lt; candidatesModel!.resume!.length; i++) {
+      resumeSelectedValues.add(NameBoolIDModel(
+          value: false,
+          name: candidatesModel!.resume![i].title.toString(),
+          id: candidatesModel!.resume![i].resumeId.toString(),
+          url: candidatesModel!.resume![i].urlSigned.toString()));
+    }
+  }
+  if (checkListSelectedValues.isEmpty &amp;&amp; resumeSelectedValues.isEmpty) {
+    await createFolderAndCheckPermission(&quot;DSaaS.ai&quot;, true, [], [],
+        candidateId, candidatesModel!.firstName!, parentContext, mode, jobId,
+        doNotPop: true);
+    return;
+  }
+
+  checkDownloadButtonEnabled() {
+    buttonEnabledList.clear();
+    buttonEnabledList.add(profileCheckboxSelected);
+    for (var element in checkListSelectedValues) {
+      buttonEnabledList.add(element.value);
+    }
+    for (var element in resumeSelectedValues) {
+      buttonEnabledList.add(element.value);
+    }
+  }
+
+  showDialog(
+      context: parentContext,
+      barrierDismissible: false,
+      builder: (context) {
+        return Dialog(
+          insetPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          elevation: 4,
+          child: StatefulBuilder(
+              builder: (BuildContext context, StateSetter setStater) {
+            return Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: &lt;Widget&gt;[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            EnterpriseStrings.viewCandidate_b018,
+                            style: AppStyle().boldStyle.copyWith(
+                                  fontSize: AppStyle.fontSize16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context, rootNavigator: true).pop();
+                          },
+                          child: const Align(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.clear_rounded,
+                              color: AppColors.subTitleColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    &#47;&#47; const SizedBox(height: 8),
+                    &#47;&#47; Align(
+                    &#47;&#47;   alignment: Alignment.centerLeft,
+                    &#47;&#47;   child: Text(
+                    &#47;&#47;     EnterpriseStrings.viewCandidate_l025,
+                    &#47;&#47;     style: AppStyle().regularStyle.copyWith(
+                    &#47;&#47;           fontSize: AppStyle.fontSize16,
+                    &#47;&#47;         ),
+                    &#47;&#47;   ),
+                    &#47;&#47; ),
+                    const SizedBox(height: 14),
+
+                    &#47;&#47;&#47;Profile
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        EnterpriseStrings.viewCandidate_l026,
+                        style: AppStyle().boldStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: 1,
+                        itemBuilder: (context, index) {
+                          return buildCheckBoxWithTitle(
+                              context,
+                              candidatesModel!.firstName! +
+                                  &quot;&#39;s &quot; +
+                                  EnterpriseStrings.viewCandidate_l026,
+                              profileCheckboxSelected, (selected) {
+                            setStater(() {
+                              profileCheckboxSelected = selected;
+                              checkDownloadButtonEnabled();
+                            });
+                          });
+                        }),
+                    &#47;&#47; const SizedBox(height: 6),
+                    const Divider(thickness: 1),
+                    const SizedBox(height: 10),
+                    &#47;&#47;Checklist
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        EnterpriseStrings.l058,
+                        style: AppStyle().boldStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    checkListSelectedValues.isNotEmpty
+                        ? ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: checkListSelectedValues.length,
+                            itemBuilder: (context, index) {
+                              return buildCheckBoxWithTitle(
+                                  context,
+                                  checkListSelectedValues[index].name,
+                                  checkListSelectedValues[index].value,
+                                  (selected) {
+                                setStater(() {
+                                  checkListSelectedValues[index].value =
+                                      selected;
+                                  checkDownloadButtonEnabled();
+                                });
+                              });
+                            })
+                        : Container(
+                            padding: const EdgeInsets.only(top: 5, bottom: 5),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              EnterpriseStrings.l060,
+                              maxLines: 3,
+                              softWrap: false,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppStyle().regularStyle.copyWith(
+                                  color: AppColors.subTitleColor,
+                                  fontSize: AppStyle.fontSize14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                    &#47;&#47; const SizedBox(height: 6),
+                    const Divider(thickness: 1),
+                    const SizedBox(height: 10),
+                    &#47;&#47;Resume
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        EnterpriseStrings.profile_l056,
+                        style: AppStyle().boldStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    resumeSelectedValues.isNotEmpty
+                        ? ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: resumeSelectedValues.length,
+                            itemBuilder: (context, index) {
+                              return buildCheckBoxWithTitle(
+                                  context,
+                                  resumeSelectedValues[index].name,
+                                  resumeSelectedValues[index].value,
+                                  (selected) {
+                                setStater(() {
+                                  resumeSelectedValues[index].value =
+                                      selected;
+                                  checkDownloadButtonEnabled();
+                                });
+                              });
+                            })
+                        : Container(
+                            padding: const EdgeInsets.only(top: 5, bottom: 5),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              EnterpriseStrings.l061,
+                              maxLines: 3,
+                              softWrap: false,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppStyle().regularStyle.copyWith(
+                                  color: AppColors.subTitleColor,
+                                  fontSize: AppStyle.fontSize14,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ),
+                    const SizedBox(height: 24),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width &#47; 2,
+                      height: 42,
+                      child: CustomElevatedButton(
+                        isWidthInfinity: true,
+                        isEnable: buttonEnabledList.contains(true),
+                        onPressed: () async {
+                          List selectedChecklists = [];
+                          for (int i = 0;
+                              i &lt; checkListSelectedValues.length;
+                              i++) {
+                            if (checkListSelectedValues[i].value) {
+                              selectedChecklists
+                                  .add(checkListSelectedValues[i].id);
+                            }
+                          }
+                          if (buttonEnabledList.contains(true)) {
+                            await createFolderAndCheckPermission(
+                                &quot;DSaaS.ai&quot;,
+                                profileCheckboxSelected,
+                                selectedChecklists,
+                                resumeSelectedValues,
+                                candidateId,
+                                candidatesModel!.firstName!,
+                                parentContext,
+                                mode,
+                                jobId);
+                          }
+                        },
+                        labelText: EnterpriseStrings.viewCandidate_b019,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          }),
+        );
+      });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matching_candidates_common_widgets/DownloadProfileWidgets-class.html">DownloadProfileWidgets</a></li>
+    <li class="self-crumb">downloadProfileDialogCandidate method</li>
+</ol>
+
+
+    <h5>DownloadProfileWidgets class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

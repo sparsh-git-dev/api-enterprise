@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the onOffer method from the NewCandidatePublicProfileScreenController class, for the Dart programming language.">
+  <title>onOffer method - NewCandidatePublicProfileScreenController class - new_public_profile_screen_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_new_public_profile_screen_controller_new_public_profile_screen_controller/controllers_new_public_profile_screen_controller_new_public_profile_screen_controller-library.html">new_public_profile_screen_controller</a></li>
+    <li><a href="../../controllers_new_public_profile_screen_controller_new_public_profile_screen_controller/NewCandidatePublicProfileScreenController-class.html">NewCandidatePublicProfileScreenController</a></li>
+    <li class="self-crumb">onOffer method</li>
+  </ol>
+  <div class="self-name">onOffer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_new_public_profile_screen_controller_new_public_profile_screen_controller&#47;NewCandidatePublicProfileScreenController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">onOffer</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">dynamic</span>
+<span class="name ">onOffer</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="onOffer-param-jobId"><span class="type-annotation">dynamic</span> <span class="parameter-name">jobId</span>, </span></li>
+<li><span class="parameter" id="onOffer-param-candidateId"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="onOffer-param-context"><span class="type-annotation">dynamic</span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="onOffer-param-dormantFlag"><span class="type-annotation">dynamic</span> <span class="parameter-name">dormantFlag</span>, </span></li>
+<li><span class="parameter" id="onOffer-param-workflowUniqueIdentifier"><span class="type-annotation">dynamic</span> <span class="parameter-name">workflowUniqueIdentifier</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">onOffer(jobId, candidateId, context, dormantFlag,
+    workflowUniqueIdentifier) async {
+  if (dormantFlag.toString().isNotEmpty &amp;&amp; dormantFlag.toString() != &#39;N&#39;) {
+    String offerDate = await DialogsService().offerCandidateDialog(
+        context,
+        offerExpiryDateController,
+        ApiServices.integrateCredentialing == &quot;N&quot;
+            ? null
+            :
+            &#47;&#47; externalWidget
+            null,
+        (offerDate, startDate, endDate, payrate, _documents,
+            _filePath) async {
+      String? invitationCode = &#39;&#39;;
+
+      final GlobalKey&lt;State&gt; _keyLoader2 = GlobalKey&lt;State&gt;();
+      var data = {
+        &quot;workflowId&quot;: workflowUniqueIdentifier ?? &#39;&#39;,
+        &quot;externalRefId&quot;: jobId,
+        &quot;candidateDetail&quot;: {
+          &quot;firstName&quot;: candidatesModel.firstName!,
+          &quot;lastName&quot;: candidatesModel.lastName,
+          &quot;displayName&quot;:
+              candidatesModel.firstName! + &quot; &quot; + candidatesModel.lastName!,
+          &quot;emailId&quot;: candidatesModel.emailAddress ?? &#39;&#39;,
+          &quot;phoneNo&quot;: 0,
+          &quot;authType&quot;: &quot;link&quot;,
+          &quot;password&quot;: &quot;link&quot;
+        }
+      };
+
+      String tokenFromStorage =
+          await GetStorage().read(UserPreferences.credentialingToken);
+      Map&lt;String, String&gt; header = {
+        &#39;Content-Type&#39;: &#39;application&#47;json&#39;,
+        &#39;Accept&#39;: &#39;application&#47;json&#39;,
+        &#39;Authorization&#39;: &quot;Bearer &quot; + tokenFromStorage.toString(),
+      };
+      await ApiServices()
+          .apiCallerFromServices(
+              ApiUrlConstants.CREDENTIALING_ASSIGN_WORKFLOW,
+              data,
+              context,
+              _keyLoader2,
+              method: &quot;POST&quot;,
+              isLoader: true,
+              isPublicAPI: false,
+              header: header,
+              useReturnResponse: false)
+          .then((value) async {
+        print(&quot;_________&quot; + value.toString());
+        WorkflowInvitationCodeData workflowInvitationCodeData =
+            workflowInvitationCodeDataFromMap(value);
+        invitationCode =
+            workflowInvitationCodeData.payload!.invitationCode.toString();
+        print(&quot;_________&quot; + invitationCode.toString());
+      });
+      InternetConnectivity().checkConnectivity().then((internet) {
+        internet
+            ? MatchingCandidatesCommonMethods().offerCandidateJob(
+                offerDate, jobId, candidateId, context, (data) {
+                FocusScope.of(context).requestFocus(FocusNode());
+                DialogsService().toastMessage(
+                    EnterpriseStrings.mEnterprise004,
+                    AppColors.successOpacity,
+                    context,
+                    6,
+                    AppColors.success);
+                Navigator.pop(context);
+                update();
+
+                Navigator.pop(context);
+              }, _filePath, _documents.isNotEmpty, startDate, endDate,
+                payrate, invitationCode)
+            : DialogsService().toastMessage(EnterpriseStrings.w001,
+                AppColors.warningOpacity, context, 8, AppColors.warning);
+      });
+    });
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_new_public_profile_screen_controller_new_public_profile_screen_controller/controllers_new_public_profile_screen_controller_new_public_profile_screen_controller-library.html">new_public_profile_screen_controller</a></li>
+    <li><a href="../../controllers_new_public_profile_screen_controller_new_public_profile_screen_controller/NewCandidatePublicProfileScreenController-class.html">NewCandidatePublicProfileScreenController</a></li>
+    <li class="self-crumb">onOffer method</li>
+</ol>
+
+
+    <h5>NewCandidatePublicProfileScreenController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getNewRatingDisplay function from the get_rating library, for the Dart programming language.">
+  <title>getNewRatingDisplay function - get_rating library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../globals_global_widgets_get_rating/globals_global_widgets_get_rating-library.html">get_rating</a></li>
+    <li class="self-crumb">getNewRatingDisplay function</li>
+  </ol>
+  <div class="self-name">getNewRatingDisplay</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="globals_global_widgets_get_rating&#47;globals_global_widgets_get_rating-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">getNewRatingDisplay</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">getNewRatingDisplay</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getNewRatingDisplay-param-candidateRating">{<span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">candidateRating</span>, </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-noOfRatings"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">noOfRatings</span>, </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-styleVisibility"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">styleVisibility</span>, </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-ratingSectionCallback"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">ratingSectionCallback</span>(<ol class="parameter-list"></ol>
+), </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-candidateId"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-fromPublicProfile"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">fromPublicProfile</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="getNewRatingDisplay-param-textWidth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">textWidth</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Widget getNewRatingDisplay(
+    {required candidateRating,
+    required noOfRatings,
+    required styleVisibility,
+    required Function() ratingSectionCallback,
+    required candidateId,
+    bool fromPublicProfile = false,
+    double? textWidth}) {
+  return GestureDetector(
+    onTap: () {
+      if (noOfRatings != null) {
+        if (fromPublicProfile) {
+          ratingSectionCallback();
+        } else {
+          if (noOfRatings &gt; 0) {
+            Get.dialog(Material(
+                borderOnForeground: false,
+                type: MaterialType.transparency,
+                child: GetRatingDetails(candidateId: candidateId)));
+          }
+        }
+      }
+    },
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        getRatingBarWithRating(
+          14,
+          candidateRating != null
+              ? double.parse(candidateRating!.toString())
+              : 0.0,
+          false,
+        ),
+        const SizedBox(width: 4),
+        if (candidateRating != 0)
+          Flexible(
+            child: SizedBox(
+              width: textWidth,
+              child: GestureDetector(
+                onTap: () {
+                  if (fromPublicProfile) {
+                    ratingSectionCallback();
+                  } else {
+                    if (noOfRatings &gt; 0) {
+                      Get.dialog(Material(
+                          borderOnForeground: false,
+                          type: MaterialType.transparency,
+                          child: GetRatingDetails(candidateId: candidateId)));
+                    }
+                  }
+                },
+                child: GetBuilder&lt;ThemeController&gt;(builder: (themeLogic) {
+                  return Text(
+                    noOfRatings != null
+                        ? &#39;(${noOfRatings!})&#39;
+                        &#47;&#47; &#39;${noOfRatings &lt;= 1 ? EnterpriseStrings.rating_l023.replaceAll(&quot;s&quot;, &quot;&quot;) : EnterpriseStrings.rating_l023})&#39;
+                        : &quot;&quot;,
+                    style: AppStyle().newRatingsStyle.copyWith(
+                        fontWeight:
+                            styleVisibility ? FontWeight.w600 : FontWeight.w500,
+                        color: themeLogic.getSelectedPrimaryThemeColor),
+                    overflow: TextOverflow.ellipsis,
+                  );
+                }),
+              ),
+            ),
+          )
+      ],
+    ),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../globals_global_widgets_get_rating/globals_global_widgets_get_rating-library.html">get_rating</a></li>
+    <li class="self-crumb">getNewRatingDisplay function</li>
+</ol>
+
+
+    <h5>get_rating library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

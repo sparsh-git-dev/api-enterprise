@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the clearButtonOnpress method from the MatchingCandidateController class, for the Dart programming language.">
+  <title>clearButtonOnpress method - MatchingCandidateController class - matching_candidate_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/controllers_matching_candidate_controller_matching_candidate_controller-library.html">matching_candidate_controller</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/MatchingCandidateController-class.html">MatchingCandidateController</a></li>
+    <li class="self-crumb">clearButtonOnpress method</li>
+  </ol>
+  <div class="self-name">clearButtonOnpress</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_matching_candidate_controller_matching_candidate_controller&#47;MatchingCandidateController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">clearButtonOnpress</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">clearButtonOnpress</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void clearButtonOnpress() {
+  _selectedLocation.clear();
+  _selectedCities.clear();
+  sortValue = previousAppliedSelection[&quot;sortValue&quot;];
+  updateFilterApplied(previousAppliedSelection[&quot;isFilterApplied&quot;]);
+  sortValue = previousAppliedSelection[&quot;sortValue&quot;];
+  for (final Map&lt;String, String&gt; location
+      in previousAppliedSelection[&quot;selectedLocationList&quot;]!) {
+    _selectedLocation.add(location);
+    _selectedCities.add(
+        &quot;${location[&quot;city&quot;] != &#39;&#39; ? (location[&quot;city&quot;].toString() + &quot;,&quot;) : &#39;&#39;} ${location[&quot;state&quot;] != &#39;&#39; ? (location[&quot;state&quot;].toString() + &quot;,&quot;) : &#39;&#39;} ${location[&quot;country&quot;]}&quot;);
+  }
+  _rangeOfCompensation = SfRangeValues(
+      previousAppliedSelection[&quot;payRateList&quot;]![0],
+      previousAppliedSelection[&quot;payRateList&quot;]![1]);
+  _selectedCompanies.clear();
+  for (final company in previousAppliedSelection[&quot;companyList&quot;]!) {
+    _selectedCompanies.add(company);
+  }
+
+  for (int i = 0; i &lt; _candidateTypes.length; i++) {
+    _candidateTypes[i][&quot;isSelected&quot;] = false;
+  }
+  if (previousAppliedSelection[&quot;candidateTypeList&quot;]!.isNotEmpty) {
+    for (int i = 0;
+        i &lt; previousAppliedSelection[&quot;candidateTypeList&quot;]!.length;
+        i++) {
+      int _index = previousAppliedSelection[&quot;candidateTypeList&quot;]![i];
+      _candidateTypes[_index][&quot;isSelected&quot;] = true;
+    }
+  }
+  for (int i = 0; i &lt; _candidateAvailabilityMenuList.length; i++) {
+    _candidateAvailabilityMenuList[i][&quot;isSelected&quot;] = false;
+  }
+  if (previousAppliedSelection[&quot;candidateAvailabilityList&quot;]!.isNotEmpty) {
+    for (int i = 0;
+        i &lt; previousAppliedSelection[&quot;candidateAvailabilityList&quot;]!.length;
+        i++) {
+      int _index = previousAppliedSelection[&quot;candidateAvailabilityList&quot;]![i];
+      _candidateAvailabilityMenuList[_index][&quot;isSelected&quot;] = true;
+    }
+  }
+  for (var element in workTypeList) {
+    element[&#39;isSelected&#39;]=false;
+  }
+  if (previousAppliedSelection[&quot;workTypeList&quot;]!.isNotEmpty) {
+    for (var element in workTypeList) {
+      previousAppliedSelection[&quot;workTypeList&quot;].forEach((e) {
+        if(element[&#39;value&#39;]==e){
+          element[&#39;isSelected&#39;]=true;
+        }
+      });
+    }
+  }else{
+    for (var element in workPlaceList) {
+      element[&#39;isSelected&#39;]=false;
+    }
+  }
+
+  for (var element in workPlaceList) {
+    element[&#39;isSelected&#39;]=false;
+  }
+  if (previousAppliedSelection[&quot;workPlaceList&quot;]!.isNotEmpty) {
+    for (int i=0;i&lt;workPlaceList.length;i++) {
+      previousAppliedSelection[&quot;workPlaceList&quot;].forEach((e) {
+        if(workPlaceList[i][&#39;value&#39;]==e){
+          workPlaceList[i][&#39;isSelected&#39;]=true;
+          workPalceValue = i+1;
+        }
+      });
+    }
+  }else{
+    for (var element in workPlaceList) {
+      element[&#39;isSelected&#39;]=false;
+    }
+    workPalceValue=0;
+  }
+
+  update();
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/controllers_matching_candidate_controller_matching_candidate_controller-library.html">matching_candidate_controller</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/MatchingCandidateController-class.html">MatchingCandidateController</a></li>
+    <li class="self-crumb">clearButtonOnpress method</li>
+</ol>
+
+
+    <h5>MatchingCandidateController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

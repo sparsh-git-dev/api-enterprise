@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the ThemeSelectionScreen class, for the Dart programming language.">
+  <title>build method - ThemeSelectionScreen class - theme_selection_screen library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_theme_selection_screens_theme_selection_screen/features_theme_selection_screens_theme_selection_screen-library.html">theme_selection_screen</a></li>
+    <li><a href="../../features_theme_selection_screens_theme_selection_screen/ThemeSelectionScreen-class.html">ThemeSelectionScreen</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_theme_selection_screens_theme_selection_screen&#47;ThemeSelectionScreen-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../features_theme_selection_screens_theme_selection_screen/ThemeSelectionScreen/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  final GlobalKey _previewContainer = GlobalKey();
+  final ThemeController themeController = Get.find();
+  WidgetsBinding.instance.addPostFrameCallback((_) async {
+    await themeController.getEnterpriseDetails(context);
+  });
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 30),
+    child: GetBuilder&lt;ThemeController&gt;(builder: (themeLogic) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(EnterpriseStrings.settings_l010,
+              style: AppStyle().regularStyle.copyWith(
+                  fontSize: AppStyle.fontSize16,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.grey11)),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: Text(
+              EnterpriseStrings.settings_l020,
+              style: AppStyle().regularStyle.copyWith(
+                  color: AppColors.grey11,
+                  fontWeight: FontWeight.w400,
+                  fontSize: AppStyle.fontSize14),
+            ),
+          ),
+          GridView.count(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            childAspectRatio: Responsive.isTablet(context) ? 4 : 1.4,
+            crossAxisCount: 2,
+            crossAxisSpacing: 0.0,
+            mainAxisSpacing: 0.0,
+            children: List.generate(7, (index) {
+              return ThemeCard(
+                enterpriseThemeColor:
+                    themeLogic.getListOfThemeColors[(index)],
+                index: index,
+              );
+            }),
+          ),
+          InkWell(
+            onTap: () =&gt; themeLogic.setCustomThemeAsTrue(),
+            child: Row(
+              children: [
+                (themeLogic.isCustomThemeSelected)
+                    ? Icon(Icons.radio_button_checked_rounded,
+                        color: themeLogic.getCustomThemeColor.primaryColor)
+                    : const Icon(
+                        Icons.radio_button_off_rounded,
+                        color: AppColors.grey6,
+                      ),
+                const SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  &quot;You can select and create your own theme&quot;,
+                  style: AppStyle().regularStyle.copyWith(
+                      color: AppColors.grey11,
+                      fontSize: AppStyle.fontSize14,
+                      fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16.0),
+
+          &#47;&#47;&#47;Primary color selection from here
+          InkWell(
+            onTap: () async {
+              &#47;&#47; raise the [showDialog] widget
+              themeController.setCustomThemeAsTrue();
+              showDialog(
+                context: context,
+                builder: (_) {
+                  return AlertDialog(
+                    title: const Text(&#39;Pick a color!&#39;),
+                    content: SingleChildScrollView(
+                      child: ColorPicker(
+                        hexInputBar: true,
+                        enableAlpha: false,
+                        pickerColor:
+                            themeLogic.getCustomThemeColor.primaryColor,
+                        onColorChanged: themeLogic.setCustomPrimaryThemeColor,
+                      ),
+                    ),
+                    actions: &lt;Widget&gt;[
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 12.0, bottom: 12.0),
+                        child: InkWell(
+                          onTap: () {
+                            &#47;&#47; setState(() =&gt; currentColor = pickerColor);
+                            &#47;&#47;
+                            Navigator.of(context).pop();
+                          },
+                          child: Text(&quot;Confirm&quot;,
+                              style: AppStyle().regularStyle.copyWith(
+                                  color: themeController
+                                                  .getEnterpriseDetailsFromDB[
+                                              &#39;primaryColor&#39;] !=
+                                          null
+                                      ? Color(int.parse(
+                                          &#39;FF&#39; +
+                                              themeController
+                                                      .getEnterpriseDetailsFromDB[
+                                                  &#39;primaryColor&#39;],
+                                          radix: 16))
+                                      : themeLogic
+                                          .getSelectedPrimaryThemeColor)),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            child: Row(
+              &#47;&#47; crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 55,
+                  width: 55,
+                  decoration: BoxDecoration(
+                      color: (themeLogic.isCustomThemeSelected)
+                          ? themeLogic.getCustomThemeColor.primaryColor
+                          : themeLogic.getSelectedPrimaryThemeColor,
+                      borderRadius: BorderRadius.circular(12.0)),
+                ),
+                const SizedBox(width: 8.0),
+                Container(
+                  height: 55,
+                  width: 200,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                      color: AppColors.grey3,
+                      borderRadius: BorderRadius.circular(4.0),
+                      border: Border.all(color: AppColors.grey6)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Text(
+                      (!themeLogic.isCustomThemeSelected)
+                          ? (&quot;#&quot; +
+                              themeLogic.getSelectedPrimaryThemeColor.value
+                                  .toRadixString(16)
+                                  .substring(2)
+                                  .toUpperCase())
+                          : (&quot;#&quot; +
+                              themeLogic
+                                  .getCustomThemeColor.primaryColor.value
+                                  .toRadixString(16)
+                                  .substring(2)
+                                  .toUpperCase()),
+                      style: AppStyle().regularStyle.copyWith(
+                          fontSize: AppStyle.fontSize14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.grey9),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8.0),
+          Text(
+            &quot;Opting for a hue as your primary color can greately enhance contrast for a more visually striking effect.&quot;,
+            style: AppStyle().regularStyle.copyWith(
+                color: AppColors.grey7,
+                fontSize: AppStyle.fontSize12,
+                fontWeight: FontWeight.w400),
+          ),
+          const SizedBox(height: 16.0),
+
+          &#47;&#47;&#47;Secondary color selection from here
+          InkWell(
+            onTap: () async {
+              &#47;&#47; raise the [showDialog] widget
+              themeController.setCustomThemeAsTrue();
+              showDialog(
+                context: context,
+                builder: (_) {
+                  return AlertDialog(
+                    title: const Text(&#39;Pick a color!&#39;),
+                    content: SingleChildScrollView(
+                      child: ColorPicker(
+                        hexInputBar: true,
+                        enableAlpha: false,
+                        pickerColor:
+                            themeLogic.getCustomThemeColor.secondaryColor,
+                        onColorChanged:
+                            themeLogic.setCustomSecondaryThemeColor,
+                      ),
+                    ),
+                    actions: &lt;Widget&gt;[
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 12.0, bottom: 12.0),
+                        child: InkWell(
+                          onTap: () {
+                            &#47;&#47; setState(() =&gt; currentColor = pickerColor);
+                            &#47;&#47;
+                            Navigator.of(context).pop();
+                          },
+                          child: Text(&quot;Confirm&quot;,
+                              style: AppStyle().regularStyle.copyWith(
+                                  color: themeLogic
+                                      .getSelectedPrimaryThemeColor)),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            child: Row(
+              children: [
+                Container(
+                  height: 55,
+                  width: 55,
+                  decoration: BoxDecoration(
+                    color: (themeLogic.isCustomThemeSelected)
+                        ? themeLogic.getCustomThemeColor.secondaryColor
+                        : themeLogic.getSelectedSecondaryThemeColor,
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                ),
+                const SizedBox(width: 8.0),
+                Container(
+                  height: 55,
+                  width: 200,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                      color: AppColors.grey3,
+                      borderRadius: BorderRadius.circular(4.0),
+                      border: Border.all(color: AppColors.grey6)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Text(
+                      (!themeLogic.isCustomThemeSelected)
+                          ? (&quot;#&quot; +
+                              themeLogic.getSelectedSecondaryThemeColor.value
+                                  .toRadixString(16)
+                                  .substring(2)
+                                  .toUpperCase())
+                          : (&quot;#&quot; +
+                              themeLogic
+                                  .getCustomThemeColor.secondaryColor.value
+                                  .toRadixString(16)
+                                  .substring(2)
+                                  .toUpperCase()),
+                      style: AppStyle().regularStyle.copyWith(
+                          fontSize: AppStyle.fontSize14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.grey9),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8.0),
+          Text(
+            &quot;Incorporating a lighter shade as your secondary color can enhance contrast, leading to a more visually appealing result.&quot;,
+            style: AppStyle().regularStyle.copyWith(
+                color: AppColors.grey7,
+                fontSize: AppStyle.fontSize12,
+                fontWeight: FontWeight.w400),
+          ),
+          const SizedBox(height: 16.0),
+          SizedBox(
+            height: 55,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 16.0),
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: ElevatedButton(
+                  onPressed: () {
+                    InternetConnectivity()
+                        .checkConnectivity()
+                        .then((internet) {
+                      internet
+                          ? themeController.updateThemeInDB(context)
+                          : DialogsService().toastMessage(
+                              EnterpriseStrings.w001,
+                              AppColors.warningOpacity,
+                              context,
+                              8,
+                              AppColors.warning);
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    backgroundColor: themeController
+                                .getEnterpriseDetailsFromDB[&#39;primaryColor&#39;] !=
+                            null
+                        ? Color(int.parse(
+                            &#39;FF&#39; +
+                                themeController.getEnterpriseDetailsFromDB[
+                                    &#39;primaryColor&#39;],
+                            radix: 16))
+                        : null, &#47;&#47;themeController.getEnterpriseDetailsFromDB,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    child: Text(EnterpriseStrings.settings_l014,
+                        style: AppStyle().textStyleLabel.copyWith(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: AppStyle.fontSize16,
+                            )),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+    }),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_theme_selection_screens_theme_selection_screen/features_theme_selection_screens_theme_selection_screen-library.html">theme_selection_screen</a></li>
+    <li><a href="../../features_theme_selection_screens_theme_selection_screen/ThemeSelectionScreen-class.html">ThemeSelectionScreen</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>ThemeSelectionScreen class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

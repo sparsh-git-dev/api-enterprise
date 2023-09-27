@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the candidateRatingDialog function from the matching_candidates_common_widgets library, for the Dart programming language.">
+  <title>candidateRatingDialog function - matching_candidates_common_widgets library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li class="self-crumb">candidateRatingDialog function</li>
+  </ol>
+  <div class="self-name">candidateRatingDialog</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matching_candidates_common_widgets&#47;features_matching_candidates_bloc_matching_candidates_common_widgets-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">candidateRatingDialog</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype">dynamic</span>
+<span class="name ">candidateRatingDialog</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="candidateRatingDialog-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-candidateName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">candidateName</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-jobTitle"><span class="type-annotation">dynamic</span> <span class="parameter-name">jobTitle</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-jobId"><span class="type-annotation">dynamic</span> <span class="parameter-name">jobId</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-candidateId"><span class="type-annotation">dynamic</span> <span class="parameter-name">candidateId</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-onCompleteCallback"><span class="type-annotation">dynamic</span> <span class="parameter-name">onCompleteCallback</span>, </span></li>
+<li><span class="parameter" id="candidateRatingDialog-param-showPriorityCandidateSection">{<span class="type-annotation">dynamic</span> <span class="parameter-name">showPriorityCandidateSection</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">candidateRatingDialog(BuildContext context, String candidateName, jobTitle,
+    jobId, candidateId, onCompleteCallback,
+    {showPriorityCandidateSection = false}) {
+  bool proceedSubmit = false;
+  double overallRating = 0;
+  double deliveryQualityRating = 0;
+  double scheduleRating = 0;
+  double stickingToCommitmentRating = 0;
+  double valueForMoneyRating = 0;
+  TextEditingController reviewController = TextEditingController();
+  showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        bool isRequestedToGoPublic = false;
+        return StatefulBuilder(
+          builder: (context, setState) =&gt; SingleChildScrollView(
+            reverse: true,
+            child: Dialog(
+              insetPadding: const EdgeInsets.only(
+                  left: 10, right: 10, top: 24, bottom: 24),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 24, right: 10, top: 24, bottom: 24),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            EnterpriseStrings.rating_m001 +
+                                candidateName +
+                                EnterpriseStrings.rating_m002 +
+                                jobTitle.toString(),
+                            maxLines: 3,
+                            style: AppStyle().boldStyle.copyWith(
+                                fontSize: AppStyle.fontSize18,
+                                fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Icon(
+                              Icons.clear_rounded,
+                              color: AppColors.subTitleColor,
+                            ))
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.width &#47; 1,
+                      child: ListView(
+                        children: [
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l001,
+                              isRequired: true),
+                          const SizedBox(height: 5),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: getRating(24, (value) {
+                                setState(() {
+                                  overallRating = value;
+                                  if (overallRating &gt; 0) {
+                                    proceedSubmit = true;
+                                  } else {
+                                    proceedSubmit = false;
+                                  }
+                                });
+                              })),
+                          const SizedBox(height: 12),
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l003,
+                              isRequired: false),
+                          const SizedBox(height: 8),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: getRating(24, (value) {
+                                setState(() {
+                                  deliveryQualityRating = value;
+                                });
+                              })),
+                          const SizedBox(height: 16),
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l004,
+                              isRequired: false),
+                          const SizedBox(height: 8),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: getRating(24, (value) {
+                                setState(() {
+                                  scheduleRating = value;
+                                });
+                              })),
+                          const SizedBox(height: 16),
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l005,
+                              isRequired: false),
+                          const SizedBox(height: 8),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: getRating(24, (value) {
+                                setState(() {
+                                  stickingToCommitmentRating = value;
+                                });
+                              })),
+                          const SizedBox(height: 16),
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l006,
+                              isRequired: false),
+                          const SizedBox(height: 8),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: getRating(24, (value) {
+                                setState(() {
+                                  valueForMoneyRating = value;
+                                });
+                              })),
+                          const SizedBox(height: 25),
+                          const TextLabel(
+                              label: EnterpriseStrings.rating_l007,
+                              isRequired: false),
+                          const SizedBox(height: 16),
+                          CustomTextFormField(
+                            maxLines: 5,
+                            controller: reviewController,
+                            keyboardType: TextInputType.text,
+                            textCapitalization: TextCapitalization.sentences,
+                            validator: (text) {
+                              return Validations().singleValidation(
+                                  text.toString().trim(), 256);
+                            },
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
+                            onChanged: (value) {
+                              setState(() {
+                                if (value[0].endsWith(&#39; &#39;)) {
+                                  reviewController.selection =
+                                      const TextSelection(
+                                          baseOffset: 0, extentOffset: 0);
+                                  reviewController.text = value.trim();
+                                } else {
+                                  Validations().singleValidation(
+                                      value.toString().trim(), 256);
+                                }
+                              });
+                            },
+                            hintText: EnterpriseStrings.rating_h001,
+                            filled: true,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    if (showPriorityCandidateSection)
+                      Column(
+                        children: [
+                          Transform.translate(
+                            offset: const Offset(-15, 0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                StatefulBuilder(builder: (context, setStater) {
+                                  return Transform.scale(
+                                    scale: 0.6,
+                                    child: CupertinoSwitch(
+                                        trackColor: AppColors.grey,
+                                        activeColor: AppColors.primaryPurple,
+                                        value: isRequestedToGoPublic,
+                                        onChanged: (bool value) {
+                                          setState(() {
+                                            isRequestedToGoPublic = value;
+                                          });
+                                        }),
+                                  );
+                                }),
+                                Text(
+                                  EnterpriseStrings.talent_pool_l023,
+                                  style: AppStyle().textStyleLabel.copyWith(
+                                        color: AppColors.black,
+                                        fontSize: AppStyle.fontSize13,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 2.0),
+                                child: SizedBox(
+                                  height: 15,
+                                  width: 15,
+                                  child: SvgPicture.asset(
+                                    ImagePaths.ic_infoSVG,
+                                    fit: BoxFit.fitHeight,
+                                    color: AppColors.subTitleColor,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 6),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width - 120,
+                                child: Text(
+                                  EnterpriseStrings.talent_pool_l025,
+                                  maxLines: 4,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: AppStyle().regularStyle.copyWith(
+                                        fontSize: AppStyle.fontSize12,
+                                        fontWeight: FontWeight.w400,
+                                        color: AppColors.subTitleColor,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    const SizedBox(height: 18),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            &#47;&#47; onCancelCallback();
+                            InternetConnectivity()
+                                .checkConnectivity()
+                                .then((internet) {
+                              if (internet) {
+                                if (isRequestedToGoPublic) {
+                                  final TalentPoolController
+                                      talentPoolController =
+                                      Get.put(TalentPoolController());
+                                  final data = [candidateId];
+                                  talentPoolController
+                                      .putRequestsTalentPool(data, &quot;S&quot;, context)
+                                      .then((value) {
+                                    MatchingCandidatesCommonMethods()
+                                        .rateYourExperienceDialog(
+                                            jobId,
+                                            candidateId,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            &quot;&quot;,
+                                            context, () {
+                                      onCompleteCallback();
+                                    });
+                                  });
+                                } else {
+                                  MatchingCandidatesCommonMethods()
+                                      .rateYourExperienceDialog(
+                                          jobId,
+                                          candidateId,
+                                          0,
+                                          0,
+                                          0,
+                                          0,
+                                          0,
+                                          &quot;&quot;,
+                                          context, () {
+                                    onCompleteCallback();
+                                  });
+                                }
+                              } else {
+                                DialogsService().toastMessage(
+                                    EnterpriseStrings.w001,
+                                    AppColors.warningOpacity,
+                                    context,
+                                    8,
+                                    AppColors.warning);
+                              }
+                            });
+                          },
+                          child: Container(
+                            constraints: const BoxConstraints(maxWidth: 100),
+                            child: Text(
+                              EnterpriseStrings.b047,
+                              style: AppStyle().regularStyleLink.copyWith(
+                                    fontSize: AppStyle.fontSize14,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(right: 5),
+                          height: 55,
+                          width: MediaQuery.of(context).size.width &#47; 2,
+                          child: CustomElevatedButton(
+                            isEnable: proceedSubmit &amp;&amp;
+                                reviewController.text.length &lt;= 256,
+                            onPressed: () {
+                              if (proceedSubmit &amp;&amp;
+                                  reviewController.text.length &lt;= 256) {
+                                InternetConnectivity()
+                                    .checkConnectivity()
+                                    .then((internet) {
+                                  if (internet) {
+                                    if (isRequestedToGoPublic) {
+                                      final TalentPoolController
+                                          talentPoolController =
+                                          Get.put(TalentPoolController());
+                                      final data = [candidateId];
+                                      talentPoolController
+                                          .putRequestsTalentPool(
+                                              data, &quot;S&quot;, context)
+                                          .then((value) {
+                                        MatchingCandidatesCommonMethods()
+                                            .rateYourExperienceDialog(
+                                                jobId,
+                                                candidateId,
+                                                overallRating,
+                                                deliveryQualityRating,
+                                                scheduleRating,
+                                                stickingToCommitmentRating,
+                                                valueForMoneyRating,
+                                                reviewController.text
+                                                    .toString(),
+                                                context, () {
+                                          onCompleteCallback();
+                                        });
+                                      });
+                                    } else {
+                                      MatchingCandidatesCommonMethods()
+                                          .rateYourExperienceDialog(
+                                              jobId,
+                                              candidateId,
+                                              overallRating,
+                                              deliveryQualityRating,
+                                              scheduleRating,
+                                              stickingToCommitmentRating,
+                                              valueForMoneyRating,
+                                              reviewController.text.toString(),
+                                              context, () {
+                                        onCompleteCallback();
+                                      });
+                                    }
+                                  } else {
+                                    DialogsService().toastMessage(
+                                        EnterpriseStrings.w001,
+                                        AppColors.warningOpacity,
+                                        context,
+                                        8,
+                                        AppColors.warning);
+                                  }
+                                });
+                              }
+                            },
+                            labelText: EnterpriseStrings.b009,
+                            isWidthInfinity: false,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">dsaas</a></li>
+    <li><a href="../features_matching_candidates_bloc_matching_candidates_common_widgets/features_matching_candidates_bloc_matching_candidates_common_widgets-library.html">matching_candidates_common_widgets</a></li>
+    <li class="self-crumb">candidateRatingDialog function</li>
+</ol>
+
+
+    <h5>matching_candidates_common_widgets library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

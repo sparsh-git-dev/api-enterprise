@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the applyFilter method from the MatchingCandidateController class, for the Dart programming language.">
+  <title>applyFilter method - MatchingCandidateController class - matching_candidate_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/controllers_matching_candidate_controller_matching_candidate_controller-library.html">matching_candidate_controller</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/MatchingCandidateController-class.html">MatchingCandidateController</a></li>
+    <li class="self-crumb">applyFilter method</li>
+  </ol>
+  <div class="self-name">applyFilter</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_matching_candidate_controller_matching_candidate_controller&#47;MatchingCandidateController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">applyFilter</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">applyFilter</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="applyFilter-param-modeOfSort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">modeOfSort</span>, </span></li>
+<li><span class="parameter" id="applyFilter-param-savePreviousData">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">savePreviousData</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; applyFilter(String modeOfSort,
+    {bool savePreviousData = false}) async {
+  _queryParams = &#39;&#39;;
+  String _enterpriseId =
+      await UserPreferences().getPreferenceValues(UserPreferences.prefId);
+  List&lt;Map&lt;String, String&gt;&gt; _loc = getSelectedLocation;
+  List&lt;String&gt; _cities = [];
+  List&lt;String&gt; _states = [];
+  List&lt;String&gt; _countries = [];
+  List&lt;String&gt; _workTypeList = &lt;String&gt;[];
+  List&lt;String&gt; _workPlaceList = &lt;String&gt;[];
+  if (savePreviousData) {
+    previousAppliedSelection[&quot;isFilterApplied&quot;] = isFilter;
+    previousAppliedSelection[&quot;isSortApplied&quot;] = isSort;
+    previousAppliedSelection[&quot;sortValue&quot;] = sortValue;
+    if(previousAppliedSelection[&quot;selectedLocationList&quot;]!=null){
+      previousAppliedSelection[&quot;selectedLocationList&quot;].clear();
+    }
+    if(previousAppliedSelection[&quot;candidateTypeList&quot;]!=null){
+    previousAppliedSelection[&quot;candidateTypeList&quot;].clear();
+    }
+    if(previousAppliedSelection[&quot;workTypeList&quot;]!=null){
+      previousAppliedSelection[&quot;workTypeList&quot;].clear();
+    }
+    if(previousAppliedSelection[&quot;workPlaceList&quot;]!=null){
+      previousAppliedSelection[&quot;workPlaceList&quot;].clear();
+    }
+    if(previousAppliedSelection[&quot;candidateAvailabilityList&quot;]!=null){
+    previousAppliedSelection[&quot;candidateAvailabilityList&quot;]!.clear();
+    }
+    if(previousAppliedSelection[&quot;companyList&quot;]!=null){
+    previousAppliedSelection[&quot;companyList&quot;]!.clear();}
+    if(previousAppliedSelection[&quot;payRateList&quot;]!=null){
+    previousAppliedSelection[&quot;payRateList&quot;]!.clear();
+    }
+    previousAppliedSelection[&quot;payRateList&quot;].add(_rangeOfCompensation.start);
+    previousAppliedSelection[&quot;payRateList&quot;].add(_rangeOfCompensation.end);
+  }
+
+  for (Map&lt;String, String&gt; loc in _loc) {
+    _cities.add(loc[&#39;city&#39;]!);
+    _states.add(loc[&#39;state&#39;]!);
+    _countries.add(loc[&#39;country&#39;]!);
+    if (savePreviousData) {
+      previousAppliedSelection[&quot;selectedLocationList&quot;]!.add(loc);
+    }
+  }
+
+  List&lt;String&gt; _myCandidates = &lt;String&gt;[];
+  List&lt;String&gt; _myCandidatesAvailabilityList = &lt;String&gt;[];
+  List&lt;String&gt; _myCompanyList = &lt;String&gt;[];
+
+  for (Map&lt;String, dynamic&gt; candidate in getCandidateTypes) {
+    _myCandidates.add(candidate[&#39;type&#39;]!);
+  }
+
+  for (Map&lt;String, dynamic&gt; loc in getCandidateAvailabilityMenuList) {
+    _myCandidatesAvailabilityList.add(loc[&#39;type&#39;]!);
+  }
+ List&lt;String&gt; _candidateForUrl = &lt;String&gt;[];
+
+  for (int i = 0; i &lt; getCandidateTypes.length; i++) {
+    var candidate = getCandidateTypes[i];
+    if (candidate[&#39;isSelected&#39;]) {
+      _candidateForUrl.add(candidate[&#39;short&#39;]);
+      if (savePreviousData) {
+        previousAppliedSelection[&quot;candidateTypeList&quot;]!.add(i);
+      }
+    }
+  }
+  for (var element in workPlaceList) {
+    if(element[&#39;isSelected&#39;]==true){
+      previousAppliedSelection[&quot;workPlaceList&quot;].add(element[&#39;value&#39;].toString());
+    }
+  }
+  for (var element in workTypeList) {
+    if(element[&#39;isSelected&#39;]==true){
+      previousAppliedSelection[&quot;workTypeList&quot;].add(element[&#39;value&#39;].toString());
+    }
+  }
+  for (var element in workTypeList) {
+    if(element[&#39;isSelected&#39;]==true){
+      _workTypeList.add(element[&#39;value&#39;]);
+    }
+  }
+  for (var element in workPlaceList) {
+    if(element[&#39;isSelected&#39;]==true){
+      _workPlaceList.add(element[&#39;value&#39;]);
+    }
+  }
+
+  List&lt;String&gt; _candidateAvailabilityForUrl = &lt;String&gt;[];
+
+  for (int i = 0; i &lt; getCandidateAvailabilityMenuList.length; i++) {
+    var candidate = getCandidateAvailabilityMenuList[i];
+    if (candidate[&#39;isSelected&#39;]) {
+      _candidateAvailabilityForUrl
+          .add(Uri.encodeComponent(candidate[&#39;availabilityStatus&#39;]));
+      if (savePreviousData) {
+        previousAppliedSelection[&quot;candidateAvailabilityList&quot;]!.add(i);
+      }
+
+      &#47;&#47;&#47;HERE NEED TO ENCODE
+    }
+  }
+  _myCompanyList.addAll(_selectedCompanies);
+  if (savePreviousData) {
+    previousAppliedSelection[&quot;companyList&quot;]!.addAll(_selectedCompanies);
+  }
+  _queryParams =
+      _queryParams + &#39;?enterpriseId=$_enterpriseId&amp;relevance=false&#39;;
+  if(isFilter){
+  if (_candidateForUrl.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;talentPool=&#39; + _candidateForUrl.join(&quot;,&quot;);
+  }
+  if (_cities.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;city=&#39; + _cities.join(&quot;,&quot;);
+  }
+  if (_states.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;state=&#39; + _states.join(&quot;,&quot;);
+  }
+  if (_countries.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;country=&#39; + _countries.join(&#39;,&#39;);
+  }
+  ratingsList.forEach((element) {
+    if(element[&#39;isSelected&#39;]==true){
+      _queryParams = _queryParams + &#39;&amp;minRating=&#39; + element[&#39;value&#39;].toString()+
+          &#39;&amp;maxRating=&#39; + &#39;5&#39;;
+    }
+  });
+  if (_workTypeList.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;workType=&#39; + _workTypeList.join(&#39;,&#39;);
+  }
+  if (_workPlaceList.isNotEmpty) {
+    _queryParams = _queryParams + &#39;&amp;workPlace=&#39; + _workPlaceList.join(&#39;,&#39;);
+  }
+  if (_candidateAvailabilityForUrl.isNotEmpty &amp;&amp;
+      _candidateAvailabilityForUrl.length != 2) {
+    _queryParams = _queryParams +
+        &quot;&amp;availabilityStatus=&quot; +
+        _candidateAvailabilityForUrl.join(&quot;,&quot;);
+  }
+  if (_myCompanyList.isNotEmpty) {
+    _queryParams = _queryParams + &quot;&amp;company=&quot; + _myCompanyList.join(&quot;,&quot;);
+  }
+  &#47;&#47; if(_rangeOfCompensation.start.round()!=0 &amp;&amp;
+  &#47;&#47;     _rangeOfCompensation.end.round()!=100000){
+    _queryParams = _queryParams +
+        &quot;&amp;payRateMin=${_rangeOfCompensation.start.round().toString()}&quot; +
+        &quot;&amp;payRateMax=&quot; +
+        _rangeOfCompensation.end.round().toString();
+ &#47;&#47; }
+  if (modeOfSort.isNotEmpty) {
+    _queryParams = _queryParams + modeOfSort.replaceFirst(&quot;?&quot;, &quot;&amp;&quot;);
+  }
+  debugPrint(&quot;queryParams: $_queryParams&quot;);
+  isFilterApplied = true;
+  update();
+  session.controller.add(_queryParams);
+  &#47;&#47; resetBulkSelectedCandidatesList();
+  Get.back();
+  }else{
+    if (modeOfSort.isNotEmpty) {
+      _queryParams = _queryParams + modeOfSort.replaceFirst(&quot;?&quot;, &quot;&amp;&quot;);
+    }
+    debugPrint(&quot;queryParams: $_queryParams&quot;);
+    isFilterApplied = true;
+    update();
+    session.controller.add(_queryParams);
+    &#47;&#47; resetBulkSelectedCandidatesList();
+    Get.back();
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/controllers_matching_candidate_controller_matching_candidate_controller-library.html">matching_candidate_controller</a></li>
+    <li><a href="../../controllers_matching_candidate_controller_matching_candidate_controller/MatchingCandidateController-class.html">MatchingCandidateController</a></li>
+    <li class="self-crumb">applyFilter method</li>
+</ol>
+
+
+    <h5>MatchingCandidateController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

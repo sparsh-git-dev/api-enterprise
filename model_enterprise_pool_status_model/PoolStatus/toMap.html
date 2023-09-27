@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the toMap method from the PoolStatus class, for the Dart programming language.">
+  <title>toMap method - PoolStatus class - enterprise_pool_status_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_enterprise_pool_status_model/model_enterprise_pool_status_model-library.html">enterprise_pool_status_model</a></li>
+    <li><a href="../../model_enterprise_pool_status_model/PoolStatus-class.html">PoolStatus</a></li>
+    <li class="self-crumb">toMap method</li>
+  </ol>
+  <div class="self-name">toMap</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="model_enterprise_pool_status_model&#47;PoolStatus-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">toMap</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+<span class="name ">toMap</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Map&lt;String, dynamic&gt; toMap() =&gt; {
+      &quot;mobileNumber&quot;: mobileNumber,
+      &quot;emailAddress&quot;: emailAddress,
+      &quot;firstName&quot;: firstName,
+      &quot;lastName&quot;: lastName,
+      &quot;city&quot;: city,
+      &quot;state&quot;: state,
+      &quot;country&quot;: country,
+      &quot;applyMediaFileSigned&quot;: applyMediaFileSigned,
+      &quot;workflowUniqueIdentifier&quot;: workflowUniqueIdentifier,
+      &quot;knownAs&quot;: knownAs,
+      &quot;dormantFlag&quot;: dormantFlag,
+      &quot;profileTitle&quot;: profileTitle,
+      &quot;address&quot;: address,
+      &quot;zipCode&quot;: zipCode,
+      &quot;nationality&quot;: nationality,
+      &quot;delistingRemarks&quot;: delistingRemarks,
+      &quot;mediaFile&quot;: mediaFile,
+      &quot;mediaFileSigned&quot;: mediaFileSigned,
+      &quot;talentPool&quot;: talentPool,
+      &quot;source&quot;: source,
+      &quot;brief&quot;: brief,
+      &quot;pageKey&quot;: pageKey,
+      &quot;profileCompletionPercentage&quot;: profileCompletionPercentage,
+      &quot;education&quot;: education == null
+          ? null
+          : List&lt;dynamic&gt;.from(education!.map((x) =&gt; x.toMap())),
+      &quot;candidateSkills&quot;: candidateSkills == null
+          ? null
+          : List&lt;dynamic&gt;.from(candidateSkills!.map((x) =&gt; x.toMap())),
+      &quot;candidateWorkHistories&quot;: candidateWorkHistories == null
+          ? null
+          : List&lt;dynamic&gt;.from(candidateWorkHistories!.map((x) =&gt; x.toMap())),
+      &quot;jobId&quot;: jobId,
+      &quot;candidateId&quot;: candidateId,
+      &quot;candidateProcessStatus&quot;: candidateProcessStatus,
+      &quot;applicationRemarks&quot;: applicationRemarks,
+      &quot;appliedDate&quot;: appliedDate == null
+          ? null
+          : &quot;${appliedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${appliedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${appliedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;savedDate&quot;: savedDate == null
+          ? null
+          : &quot;${savedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${savedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${savedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;hiddenDate&quot;: hiddenDate == null
+          ? null
+          : &quot;${hiddenDate!.year.toString().padLeft(4, &#39;0&#39;)}-${hiddenDate!.month.toString().padLeft(2, &#39;0&#39;)}-${hiddenDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;offerAcceptedDate&quot;: offerAcceptedDate == null
+          ? null
+          : &quot;${offerAcceptedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${offerAcceptedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${offerAcceptedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;enterpriseProcessStatus&quot;: enterpriseProcessStatus,
+      &quot;shortlistRemarks&quot;: shortlistRemarks,
+      &quot;shortlistedDate&quot;: shortlistedDate == null
+          ? null
+          : &quot;${shortlistedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${shortlistedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${shortlistedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;offeredDate&quot;: offeredDate == null
+          ? null
+          : &quot;${offeredDate!.year.toString().padLeft(4, &#39;0&#39;)}-${offeredDate!.month.toString().padLeft(2, &#39;0&#39;)}-${offeredDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;offerExpiryDate&quot;: offerExpiryDate == null
+          ? null
+          : &quot;${offerExpiryDate!.year.toString().padLeft(4, &#39;0&#39;)}-${offerExpiryDate!.month.toString().padLeft(2, &#39;0&#39;)}-${offerExpiryDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;onboardedDate&quot;: onboardedDate == null
+          ? null
+          : &quot;${onboardedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${onboardedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${onboardedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;completedDate&quot;: completedDate == null
+          ? null
+          : &quot;${completedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${completedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${completedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;offboardedDate&quot;: offboardedDate == null
+          ? null
+          : &quot;${offboardedDate!.year.toString().padLeft(4, &#39;0&#39;)}-${offboardedDate!.month.toString().padLeft(2, &#39;0&#39;)}-${offboardedDate!.day.toString().padLeft(2, &#39;0&#39;)}&quot;,
+      &quot;offboardingStatus&quot;: offboardingStatus,
+      &quot;offerDocumentUrl&quot;: offerDocumentUrl,
+      &quot;offerDocumentSignedUrl&quot;: offerDocumentUrlSigned,
+      &quot;offerAcceptedDocumentUrl&quot;: offerAcceptedDocumentUrl,
+      &quot;offerAcceptedDocumentUrlSigned&quot;: offerAcceptedDocumentUrlSigned,
+      &quot;answers&quot;: answers,
+      &quot;ratePerHour&quot;: ratePerHour,
+      &quot;overallYearsOfExperience&quot;: overallYearsOfExperience,
+      &quot;matchedFilters&quot;: matchedFilters,
+      &quot;unmatchedFilters&quot;: unmatchedFilters,
+      &quot;matchingScore&quot;: matchingScore,
+      &quot;noOfRatings&quot;: noOfRatings,
+      &quot;candidateRating&quot;: candidateRating,
+      &quot;currency&quot;: currency,
+      &quot;hidePhoneEmail&quot;: hidePhoneEmail,
+      &quot;candidateSkillChecklistResponse&quot;:
+          candidateSkillChecklistResponse == null
+              ? null
+              : candidateSkillChecklistResponse!.toMap(),
+      &quot;resume&quot;: resume == null
+          ? null
+          : List&lt;dynamic&gt;.from(resume!.map((x) =&gt; x.toMap())),
+    };</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_enterprise_pool_status_model/model_enterprise_pool_status_model-library.html">enterprise_pool_status_model</a></li>
+    <li><a href="../../model_enterprise_pool_status_model/PoolStatus-class.html">PoolStatus</a></li>
+    <li class="self-crumb">toMap method</li>
+</ol>
+
+
+    <h5>PoolStatus class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

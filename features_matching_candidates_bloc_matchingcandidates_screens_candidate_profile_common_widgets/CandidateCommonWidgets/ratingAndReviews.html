@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ratingAndReviews method from the CandidateCommonWidgets class, for the Dart programming language.">
+  <title>ratingAndReviews method - CandidateCommonWidgets class - candidate_profile_common_widgets library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets/features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets-library.html">candidate_profile_common_widgets</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets/CandidateCommonWidgets-class.html">CandidateCommonWidgets</a></li>
+    <li class="self-crumb">ratingAndReviews method</li>
+  </ol>
+  <div class="self-name">ratingAndReviews</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets&#47;CandidateCommonWidgets-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">ratingAndReviews</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">dynamic</span>
+<span class="name ">ratingAndReviews</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="ratingAndReviews-param-ratingReviewModel"><span class="type-annotation">dynamic</span> <span class="parameter-name">ratingReviewModel</span>, </span></li>
+<li><span class="parameter" id="ratingAndReviews-param-_isExpanded"><span class="type-annotation">dynamic</span> <span class="parameter-name">_isExpanded</span>, </span></li>
+<li><span class="parameter" id="ratingAndReviews-param-setState"><span class="type-annotation">dynamic</span> <span class="parameter-name">setState</span>, </span></li>
+<li><span class="parameter" id="ratingAndReviews-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="ratingAndReviews-param-ratingReviewController"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/ScrollController-class.html">ScrollController</a>?</span> <span class="parameter-name">ratingReviewController</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">ratingAndReviews(ratingReviewModel, _isExpanded, setState,
+    BuildContext context, ScrollController? ratingReviewController) {
+  return ListView(
+    primary: false,
+    physics: const NeverScrollableScrollPhysics(),
+    shrinkWrap: true,
+    children: [
+      horizontalProgressRatingBar(
+          context,
+          &#39;5 &#39; + EnterpriseStrings.star,
+          ratingReviewModel == null ||
+                  ratingReviewModel!.ratingPercentage == null
+              ? 0
+              : ratingReviewModel!.ratingPercentage![4]),
+      horizontalProgressRatingBar(
+          context,
+          &#39;4 &#39; + EnterpriseStrings.star,
+          ratingReviewModel == null ||
+                  ratingReviewModel!.ratingPercentage == null
+              ? 0
+              : ratingReviewModel!.ratingPercentage![3]),
+      horizontalProgressRatingBar(
+          context,
+          &#39;3 &#39; + EnterpriseStrings.star,
+          ratingReviewModel == null ||
+                  ratingReviewModel!.ratingPercentage == null
+              ? 0
+              : ratingReviewModel!.ratingPercentage![2]),
+      horizontalProgressRatingBar(
+          context,
+          &#39;2 &#39; + EnterpriseStrings.star,
+          ratingReviewModel == null ||
+                  ratingReviewModel!.ratingPercentage == null
+              ? 0
+              : ratingReviewModel!.ratingPercentage![1]),
+      horizontalProgressRatingBar(
+          context,
+          &#39;1 &#39; + EnterpriseStrings.star,
+          ratingReviewModel == null ||
+                  ratingReviewModel!.ratingPercentage == null
+              ? 0
+              : ratingReviewModel!.ratingPercentage![0]),
+      &#47;&#47; const SizedBox(height: 30),
+      ExpansionTile(
+        onExpansionChanged: (value) {
+          setState(() {
+            _isExpanded = value;
+          });
+        },
+        trailing: const Icon(null),
+        tilePadding: EdgeInsets.zero,
+        collapsedIconColor: AppColors.subTitleColor,
+        iconColor: AppColors.subTitleColor,
+        title: Row(
+          children: [
+            Text(EnterpriseStrings.rating_l009,
+                style: AppStyle().regularStyle.copyWith(
+                    fontSize: AppStyle.fontSize14,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.midBlue)),
+            const SizedBox(width: 10),
+            Padding(
+              padding: const EdgeInsets.only(top: 2.0),
+              child: Icon(
+                _isExpanded
+                    ? Icons.keyboard_arrow_down
+                    : Icons.keyboard_arrow_right,
+                color: AppColors.subTitleColor,
+              ),
+            )
+          ],
+        ),
+        children: [
+          horizontalRatingStars(context, EnterpriseStrings.rating_l003,
+              ratingReviewModel?.deliveryQuality ?? 0),
+          horizontalRatingStars(context, EnterpriseStrings.rating_l004,
+              ratingReviewModel?.scheduleAdherence ?? 0),
+          horizontalRatingStars(context, EnterpriseStrings.rating_l005,
+              ratingReviewModel?.stickingToCommitment ?? 0),
+          horizontalRatingStars(context, EnterpriseStrings.rating_l006,
+              ratingReviewModel?.valueForMoney ?? 0),
+        ],
+      ),
+      &#47;&#47; const SizedBox(height: 24),
+      ConstrainedBox(
+        constraints: const BoxConstraints(
+          maxHeight: 260.0,
+        ),
+        child: Scrollbar(
+          thumbVisibility: (ratingReviewModel != null)
+              ? ratingReviewModel!.reviews!.length &gt; 3
+                  ? true
+                  : false
+              : false,
+          controller: ratingReviewController,
+          child: ListView.builder(
+            controller: ratingReviewController,
+            shrinkWrap: true,
+            primary: false,
+            itemCount: ratingReviewModel == null ||
+                    ratingReviewModel!.reviews == null
+                ? 0
+                : ratingReviewModel!.reviews!.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          decoration: AppStyle().imageBorderStyle,
+                          padding: AppStyle().imageBorderPadding,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: CircleAvatar(
+                              radius: 16,
+                              child: (ratingReviewModel!.reviews![index]
+                                          .logoFile!.isNotEmpty &amp;&amp;
+                                      ratingReviewModel!
+                                              .reviews![index].logoFile !=
+                                          null)
+                                  ? Image.network(ratingReviewModel!
+                                      .reviews![index].logoFile
+                                      .toString())
+                                  : Image.network(AppUrl
+                                      .DEFAULT_ENTERPRISE_PROFILE_IMAGE),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Flexible(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                ratingReviewModel!
+                                    .reviews![index].establishmentName
+                                    .toString(),
+                                style: AppStyle().regularStyle.copyWith(
+                                      fontSize: AppStyle.fontSize14,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                              ),
+                              getRatingBarWithRating(
+                                  20,
+                                  ratingReviewModel!
+                                      .reviews![index].ratingOverall
+                                      .toDouble(),
+                                  false),
+                              const SizedBox(height: 12),
+                              Text(
+                                EnterpriseStrings.rating_l012 +
+                                    DateConvertions().createdTimeStamp(
+                                        ratingReviewModel!
+                                            .reviews![index].offboardedDate
+                                            .toString()),
+                                style: AppStyle().regularStyle.copyWith(
+                                    fontSize: AppStyle.fontSize12,
+                                    color: AppColors.subTitleColor),
+                              ),
+                              &#47;&#47; const SizedBox(height: 16),
+                              (ratingReviewModel!
+                                          .reviews![index]
+                                          .ratingRemarksByEnterprise!
+                                          .isNotEmpty &amp;&amp;
+                                      ratingReviewModel!.reviews![index]
+                                              .ratingRemarksByEnterprise !=
+                                          null)
+                                  ? Padding(
+                                      padding:
+                                          const EdgeInsets.only(top: 16.0),
+                                      child: Text(
+                                          ratingReviewModel!.reviews![index]
+                                              .ratingRemarksByEnterprise
+                                              .toString(),
+                                          maxLines: 5,
+                                          style: AppStyle()
+                                              .regularStyle
+                                              .copyWith(
+                                                  fontSize:
+                                                      AppStyle.fontSize14,
+                                                  fontWeight:
+                                                      FontWeight.w400)),
+                                    )
+                                  : const SizedBox.shrink(),
+                              ratingReviewModel!.reviews![index]
+                                          .candidateRepliedOn !=
+                                      null
+                                  ? Padding(
+                                      padding: const EdgeInsets.only(top: 16),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            decoration:
+                                                AppStyle().imageBorderStyle,
+                                            padding:
+                                                AppStyle().imageBorderPadding,
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
+                                              child: CircleAvatar(
+                                                radius: 16,
+                                                child: ratingReviewModel!
+                                                                .reviews![
+                                                                    index]
+                                                                .mediaFile !=
+                                                            null &amp;&amp;
+                                                        ratingReviewModel!
+                                                                .reviews![
+                                                                    index]
+                                                                .mediaFile !=
+                                                            &#39;&#39;
+                                                    ? Image.network(
+                                                        ratingReviewModel!
+                                                            .reviews![index]
+                                                            .mediaFile
+                                                            .toString())
+                                                    : getDefaultProfileImageWithInitials(
+                                                        name: candidatesModel!
+                                                            .firstName
+                                                            .toString()),
+                                                &#47;&#47; Image.network(AppUrl
+                                                &#47;&#47;         .DEFAULT_PROFILE_IMAGE_URL),
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 10),
+                                          Flexible(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  ratingReviewModel!
+                                                      .reviews![index]
+                                                      .candidateName
+                                                      .toString(),
+                                                  style: AppStyle()
+                                                      .regularStyle
+                                                      .copyWith(
+                                                        fontSize: AppStyle
+                                                            .fontSize14,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                ),
+                                                const SizedBox(height: 8),
+                                                ratingReviewModel!
+                                                            .reviews![index]
+                                                            .candidateRepliedOn !=
+                                                        null
+                                                    ? Text(
+                                                        EnterpriseStrings
+                                                                .rating_l013 +
+                                                            DateConvertions().createdTimeStamp(
+                                                                ratingReviewModel!
+                                                                    .reviews![
+                                                                        index]
+                                                                    .candidateRepliedOn
+                                                                    .toString()),
+                                                        style: AppStyle()
+                                                            .regularStyle
+                                                            .copyWith(
+                                                                fontSize: 12,
+                                                                color: AppColors
+                                                                    .subTitleColor),
+                                                      )
+                                                    : const SizedBox.shrink(),
+                                                const SizedBox(height: 12),
+                                                Text(
+                                                    ratingReviewModel!
+                                                        .reviews![index]
+                                                        .ratingRemarksByCandidate
+                                                        .toString(),
+                                                    maxLines: 5,
+                                                    style: AppStyle()
+                                                        .regularStyle
+                                                        .copyWith(
+                                                            fontSize: AppStyle
+                                                                .fontSize14,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w400)),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  : const SizedBox.shrink(),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    ],
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets/features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets-library.html">candidate_profile_common_widgets</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_candidate_profile_common_widgets/CandidateCommonWidgets-class.html">CandidateCommonWidgets</a></li>
+    <li class="self-crumb">ratingAndReviews method</li>
+</ol>
+
+
+    <h5>CandidateCommonWidgets class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

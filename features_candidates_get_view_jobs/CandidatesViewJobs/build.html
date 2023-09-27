@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the CandidatesViewJobs class, for the Dart programming language.">
+  <title>build method - CandidatesViewJobs class - get_view_jobs library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_candidates_get_view_jobs/features_candidates_get_view_jobs-library.html">get_view_jobs</a></li>
+    <li><a href="../../features_candidates_get_view_jobs/CandidatesViewJobs-class.html">CandidatesViewJobs</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_candidates_get_view_jobs&#47;CandidatesViewJobs-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../features_candidates_get_view_jobs/CandidatesViewJobs/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  return GetBuilder&lt;MyCandidatesController&gt;(builder: (logic) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 22.0),
+        child: Card(
+          color: AppColors.transparent,
+          child: Container(
+            constraints: BoxConstraints(
+                maxHeight: Get.height &#47; 2, minHeight: 0),
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: AppColors.white,
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 0, right: 0, top: 2),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        modeOfJobs == &#39;PA&#39;
+                            ? EnterpriseStrings.my_candidates_associated_project +
+                                &quot; (&quot; +
+                            (logic.getCandidates[mainListIndex].projectsAssociatedList!.length
+                                &#47;&#47; + logic.getCandidates[mainListIndex].projectCompletedList!.length
+                            )
+                                    .toString() +
+                                &quot;)&quot;
+                            : modeOfJobs == &#39;PC&#39;
+                                ? EnterpriseStrings
+                                        .my_candidates_completed_project +
+                                    &quot; (&quot; +
+                                    logic.getCandidates[mainListIndex]
+                                        .projectCompletedList!.length
+                                        .toString() +
+                                    &quot;)&quot;
+                                : EnterpriseStrings
+                                        .my_candidates_working_project +
+                                    &quot; (&quot; +
+                                    logic.getCandidates[mainListIndex]
+                                        .projectWorkingList!.length
+                                        .toString() +
+                                    &quot;)&quot;,
+                        style: AppStyle().regularStyle.copyWith(
+                              fontSize: AppStyle.fontSize16,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.black,
+                              decoration: TextDecoration.none,
+                            ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(
+                          Icons.clear_outlined,
+                          color: AppColors.subTitleColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Flexible(
+                  child: ListView.separated(
+                    itemCount: modeOfJobs == &#39;PA&#39;
+                        ? logic.getCandidates[mainListIndex]
+                            .projectsAssociatedList!.length
+                        &#47;&#47; + logic.getCandidates[mainListIndex].projectCompletedList!.length
+                        : modeOfJobs == &#39;PC&#39;
+                            ? logic.getCandidates[mainListIndex]
+                                .projectCompletedList!.length
+                            : logic.getCandidates[mainListIndex]
+                                .projectWorkingList!.length,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (_, index) {
+                      List&lt;ProjectList&gt;? candidatesModel;
+                      &#47;&#47; bool _isCompleted = false;
+                      if (modeOfJobs == &#39;PA&#39;) {
+                        &#47;&#47;&#47;all projects - completed and associated list
+                        &#47;&#47; candidatesModel = logic.getCandidates[mainListIndex].projectCompletedList! + logic.getCandidates[mainListIndex].projectsAssociatedList!;
+                        candidatesModel =  logic.getCandidates[mainListIndex].projectsAssociatedList;
+                      } else if (modeOfJobs == &#39;PC&#39;) {
+                        candidatesModel = logic.getCandidates[mainListIndex].projectCompletedList;
+                      } else {
+                        candidatesModel = logic.getCandidates[mainListIndex].projectWorkingList;
+                      }
+                      &#47;&#47; if(candidatesModel!.length &gt; logic.getCandidates[mainListIndex].projectsAssociatedList!.length) {
+                      &#47;&#47;   if (index &lt; logic.getCandidates[mainListIndex].projectCompletedList!.length) {
+                      &#47;&#47;     if(modeOfJobs != &#39;PC&#39;){
+                      &#47;&#47;       _isCompleted = true;
+                      &#47;&#47;     }
+                      &#47;&#47;   }
+                      &#47;&#47; }
+                      return Container(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: SizedBox(
+                            width: Get.width - 32,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 2),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Expanded(
+                                            child: Wrap(
+                                              runSpacing: 4.0,
+                                              children: [
+                                                InkWell(
+                                                  onTap: () =&gt; Navigator.push(context, MaterialPageRoute(builder: (context) =&gt; ViewMatchingCandidatesScreen(jobId: candidatesModel![index].jobId.toString()))),
+                                                  child: Text(
+                                                    candidatesModel![index]
+                                                        .jobTitle
+                                                        .toString()+&quot; &quot;,
+                                                    maxLines: 2,
+                                                    overflow: TextOverflow.ellipsis,
+                                                    style: AppStyle().regularStyle.copyWith(
+                                                      fontWeight: FontWeight.w700,
+                                                      fontSize: AppStyle.fontSize16,
+                                                      color: AppColors.primaryButtonColor,
+                                                      decoration: TextDecoration.none
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            width: 5,
+                                          ),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: (candidatesModel[index].jobStatus.toString()
+                                                  ==&#39;COMPLETED_JOB&#39;
+                                              )?AppColors.successOpacity:(candidatesModel[index].jobStatus.toString() ==&#39;ONBOARDED_JOB&#39;)?
+                                                  AppColors.infoNoteBlueColor:AppColors.errorOpacity,
+                                              borderRadius: BorderRadius.circular(7.0)
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+                                              child: Text(
+                                                  (candidatesModel[index].jobStatus.toString()
+                                                  ==&#39;COMPLETED_JOB&#39;
+                                                  )?EnterpriseStrings.myJobs_l0011:(candidatesModel[index].jobStatus.toString()==&#39;ONBOARDED_JOB&#39;)?
+                                                  EnterpriseStrings.myJobs_l0015: EnterpriseStrings.viewJobsStatusL006,
+                                              style: AppStyle().regularStyle.copyWith(
+                                                color: AppColors.black,
+                                                fontWeight: FontWeight.w400,
+                                                decoration: TextDecoration.none,
+                                                fontSize: AppStyle.fontSize14
+                                              ),
+                                              ),
+                                            ),
+                                          ),
+                                          &#47;*GestureDetector(
+                                              behavior: HitTestBehavior.opaque,
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =&gt;
+                                                            ViewMatchingCandidatesScreen(
+                                                                jobId: candidatesModel![
+                                                                        index]
+                                                                    .jobId
+                                                                    .toString())));
+                                              },
+                                              child: Text(
+                                                EnterpriseStrings
+                                                    .my_candidates_view_jobs,
+                                                style: AppStyle()
+                                                    .regularStyle
+                                                    .copyWith(
+                                                      fontSize:
+                                                          AppStyle.fontSize17,
+                                                      fontWeight:
+                                                          FontWeight.w200,
+                                                      color: AppColors
+                                                          .primaryButtonColor,
+                                                      decoration:
+                                                          TextDecoration.none,
+                                                    ),
+                                              )),*&#47;
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Row(
+                                        children: [
+                                          SvgPicture.asset(ImagePaths.ic_MyCandidatesLocationSVG,
+                                            height: 16.0,
+                                            width: 16.0,
+                                            color: AppColors.black,
+                                          ),
+                                          const SizedBox(width: 8.0),
+                                          Text(
+                                            ((candidatesModel[index].city == null || candidatesModel[index].city!.isEmpty)
+                                                &amp;&amp;
+                                                (candidatesModel[index].state == null || candidatesModel[index].state!.isEmpty)
+                                            &amp;&amp;
+                                                (candidatesModel[index].country == null || candidatesModel[index].country!.isEmpty))?
+                                            &quot;-&quot;: (
+                                                ((candidatesModel[index].city == null || candidatesModel[index].city!.isEmpty)? &#39;&#39;: (candidatesModel[index].city.toString()+&quot;, &quot;))
+                                                 + ((candidatesModel[index].state == null || candidatesModel[index].state!.isEmpty)? &#39;&#39;: (candidatesModel[index].state.toString()+&quot;, &quot;))
+                                                    + ((candidatesModel[index].country == null || candidatesModel[index].country!.isEmpty)? &#39;&#39;: (candidatesModel[index].country.toString()))
+                                          ),
+                                          style: AppStyle().regularStyle.copyWith(
+                                            color: AppColors.subTitleColor,
+                                              fontSize: AppStyle.fontSize14),),
+                                        ],
+                                      ),
+                                      const SizedBox(height: 10.0),
+                                      Row(
+                                        children: [
+                                          SvgPicture.asset(ImagePaths.ic_clock_posted_onSVG,
+                                          height: 15.0,
+                                          width: 15.0,
+                                            color: AppColors.black,
+                                          ),
+                                          const SizedBox(width: 8.0),
+                                          Text(EnterpriseStrings.rating_l012 + _getPostedOnText(candidatesModel[index].postedOn!),
+                                          style: AppStyle().regularStyle.copyWith(
+                                            color: AppColors.subTitleColor,
+                                            fontSize: AppStyle.fontSize14
+                                          ),
+                                          ),
+                                        ],
+                                      ),
+                                      &#47;*(candidatesModel![
+                                      index]
+                                          .jobStatus==&#39;COMPLETED_JOB&#39;&amp;&amp;  modeOfJobs == &#39;PA&#39;)? Padding(
+                                        padding: const EdgeInsets.only(bottom: 5.0),
+                                        child: Container(
+                                            decoration: const BoxDecoration(
+                                                color: AppColors.successOpacity
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(4.0),
+                                              child: Text(EnterpriseStrings.myJobs_l0011,
+                                                style: AppStyle().regularStyle.copyWith(
+                                                  decoration: TextDecoration.none,
+                                                  fontSize: AppStyle.fontSize13,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                            )),
+                                      ): Container()*&#47;
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ));
+                    },
+                    separatorBuilder: (context, index) {
+                      return const Divider(thickness: 1);
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_candidates_get_view_jobs/features_candidates_get_view_jobs-library.html">get_view_jobs</a></li>
+    <li><a href="../../features_candidates_get_view_jobs/CandidatesViewJobs-class.html">CandidatesViewJobs</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>CandidatesViewJobs class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

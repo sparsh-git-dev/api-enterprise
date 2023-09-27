@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the EnterprisesViewJobsDataModel.fromMap constructor from Class EnterprisesViewJobsDataModel from the enterprises_view_jobs_model library, for the Dart programming language.">
+  <title>EnterprisesViewJobsDataModel.fromMap constructor - EnterprisesViewJobsDataModel - enterprises_view_jobs_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_enterprises_view_jobs_model/model_enterprises_view_jobs_model-library.html">enterprises_view_jobs_model</a></li>
+    <li><a href="../../model_enterprises_view_jobs_model/EnterprisesViewJobsDataModel-class.html">EnterprisesViewJobsDataModel</a></li>
+    <li class="self-crumb">EnterprisesViewJobsDataModel.fromMap factory constructor</li>
+  </ol>
+  <div class="self-name">EnterprisesViewJobsDataModel.fromMap</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="model_enterprises_view_jobs_model&#47;EnterprisesViewJobsDataModel-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">EnterprisesViewJobsDataModel.fromMap</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">EnterprisesViewJobsDataModel.fromMap</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromMap-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+    </section>
+
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory EnterprisesViewJobsDataModel.fromMap(Map&lt;String, dynamic&gt; json) {
+  try {
+    json[&#39;jobType&#39;] = json[&#39;jobType&#39;]
+        .replaceAll(&#39;[&#39;, &#39;&#39;)
+        .replaceAll(&#39;]&#39;, &#39;&#39;)
+        .replaceAll(&#39; &#39;, &#39;&#39;)
+        .split(&quot;,&quot;);
+  } catch (e) {}
+  return EnterprisesViewJobsDataModel(
+    id: json[&quot;id&quot;] ?? &#39;&#39;,
+    enterprisePublicDto: json[&quot;enterprisePublicDto&quot;] == null
+        ? null
+        : EnterprisePublicDto.fromMap(json[&quot;enterprisePublicDto&quot;]),
+    jobDescriptionUrl: json[&quot;jobDescriptionUrl&quot;] ?? &#39;&#39;,
+    jobDescriptionText: json[&quot;jobDescriptionText&quot;] ?? &#39;&#39;,
+    jobTitle: json[&quot;jobTitle&quot;] ?? &#39;&#39;,
+    budget: json[&quot;budget&quot;] ?? 0,
+    currency: json[&quot;currency&quot;] ?? &#39;&#39;,
+    jobType: List&lt;String&gt;.from(json[&quot;jobType&quot;].map((x) =&gt; x)),
+    city: json[&quot;city&quot;] ?? &#39;&#39;,
+    neuroClassification: json[&quot;neuroClassification&quot;] == &quot;ND&quot;,
+    state: json[&quot;state&quot;] ?? &#39;&#39;,
+    country: json[&quot;country&quot;] ?? &#39;&#39;,
+    paymentTerm: json[&quot;paymentTerm&quot;] ?? &#39;&#39;,
+    minimumEducation: json[&quot;minimumEducation&quot;],
+    nameOfHiringManager: json[&quot;nameOfHiringManager&quot;] ?? &#39;&#39;,
+    numberOfOpenings: json[&quot;numberOfOpenings&quot;] ?? &#39;&#39;,
+    benefits: json[&quot;benefits&quot;] ?? &#39;&#39;,
+    aboutToExpire: json[&quot;aboutToExpire&quot;] ?? &#39;&#39;,
+    jobManager: json[&quot;jobManager&quot;] ?? &#39;&#39;,
+    jobSkills: json[&quot;jobSkills&quot;] == null
+        ? null
+        : List&lt;JobSkill&gt;.from(
+            json[&quot;jobSkills&quot;].map((x) =&gt; JobSkill.fromMap(x))),
+    status: json[&quot;status&quot;] ?? &#39;&#39;,
+    numberOfApplicants: json[&quot;numberOfApplicants&quot;] ?? &#39;&#39;,
+    validFrom:
+        json[&quot;validFrom&quot;] == null ? null : DateTime.parse(json[&quot;validFrom&quot;]),
+    validTill:
+        json[&quot;validTill&quot;] == null ? null : DateTime.parse(json[&quot;validTill&quot;]),
+    createdBy: json[&quot;createdBy&quot;] ?? &#39;&#39;,
+    createdTimestamp: json[&quot;createdTimestamp&quot;] == null
+        ? null
+        : DateTime.parse(json[&quot;createdTimestamp&quot;]),
+    lastUpdatedBy: json[&quot;lastUpdatedBy&quot;] ?? &#39;&#39;,
+    lastUpdatedTimestamp: json[&quot;lastUpdatedTimestamp&quot;] == null
+        ? null
+        : DateTime.parse(json[&quot;lastUpdatedTimestamp&quot;]),
+    refreshedOn: json[&quot;refreshedOn&quot;] == null
+        ? null
+        : DateTime.parse(json[&quot;refreshedOn&quot;]),
+    minimumBudgetPerPaymentTerm: json[&quot;minimumBudgetPerPaymentTerm&quot;] ?? &#39;&#39;,
+    maximumBudgetPerPaymentTerm: json[&quot;maximumBudgetPerPaymentTerm&quot;] ?? &#39;&#39;,
+    limitForApplications: json[&quot;limitForApplications&quot;] ?? &#39;&#39;,
+    limitForShortlists: json[&quot;limitForShortlists&quot;] ?? &#39;&#39;,
+    overallExperienceMinimum: json[&quot;overallExperienceMinimum&quot;] ?? &#39;&#39;,
+    overallExperienceMaximum: json[&quot;overallExperienceMaximum&quot;] ?? &#39;&#39;,
+    budgetMinimum: json[&quot;budgetMinimum&quot;] ?? &#39;&#39;,
+    checkListId: json[&quot;checkListId&quot;] ?? -1,
+    budgetMaximum: json[&quot;budgetMaximum&quot;] ?? &#39;&#39;,
+    workFrom: json[&quot;workFrom&quot;] ?? &#39;&#39;,
+    jobEducationalQualificationsDtoList:
+        json[&quot;jobEducationalQualificationsDtoList&quot;] == null
+            ? []
+            : List&lt;JobEducationalQualificationsDtoList&gt;.from(
+                json[&quot;jobEducationalQualificationsDtoList&quot;]!.map(
+                  (x) =&gt; JobEducationalQualificationsDtoList.fromMap(x),
+                ),
+              ),
+    &#47;&#47;neuroClassifications: json[&quot;neuroClassification&quot;] ?? &#39;&#39;
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../model_enterprises_view_jobs_model/model_enterprises_view_jobs_model-library.html">enterprises_view_jobs_model</a></li>
+    <li><a href="../../model_enterprises_view_jobs_model/EnterprisesViewJobsDataModel-class.html">EnterprisesViewJobsDataModel</a></li>
+    <li class="self-crumb">EnterprisesViewJobsDataModel.fromMap factory constructor</li>
+</ol>
+
+
+    <h5>EnterprisesViewJobsDataModel class</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

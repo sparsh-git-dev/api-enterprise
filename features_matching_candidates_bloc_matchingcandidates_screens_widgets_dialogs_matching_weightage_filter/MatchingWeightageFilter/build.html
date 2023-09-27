@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the MatchingWeightageFilter class, for the Dart programming language.">
+  <title>build method - MatchingWeightageFilter class - matching_weightage_filter library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter/features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter-library.html">matching_weightage_filter</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter/MatchingWeightageFilter-class.html">MatchingWeightageFilter</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter&#47;MatchingWeightageFilter-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter/MatchingWeightageFilter/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  final MatchingCandidateController matchingCandidateController =
+      Get.put(MatchingCandidateController());
+
+  &#47;&#47;&#47;INPUT DECORATION FOR PAY RATE
+  final InputDecoration payRateInputDecoration = InputDecoration(
+    border: OutlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.grey),
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+    errorBorder: OutlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.error),
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.error),
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 6.0),
+    focusedBorder: OutlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.grey),
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.grey),
+      borderRadius: BorderRadius.circular(4),
+    ),
+    disabledBorder: UnderlineInputBorder(
+      borderSide: const BorderSide(color: AppColors.grey),
+      borderRadius: BorderRadius.circular(10.0),
+    ),
+  );
+  return GetBuilder&lt;MatchingCandidateController&gt;(builder: (logic) {
+    return GestureDetector(
+      onTap: () {
+        if (!logic.isLocationSelectedFromAutoSuggestion) {
+          logic.getCompanyInputController.text = &#39;&#39;;
+        }
+        if (!logic.isCompanyNameSelectedFromAutoSuggestion) {
+          logic.getLocationTextEditingController.text = &#39;&#39;;
+        }
+      },
+      child: Container(
+        width: Get.width,
+        constraints: BoxConstraints(
+          maxHeight: Get.height * 0.59,
+          minHeight: Get.height * 0.1,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 0.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(height: 6.0),
+            Expanded(
+              child: ListView(
+                controller: logic.getScrollController,
+                children: [
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.viewCandidate_l002,
+                      isRequired: false),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 40,
+                    child: GridView.extent(
+                      physics: NeverScrollableScrollPhysics(),
+                      maxCrossAxisExtent: 350,
+                      children: List.generate(2, (index) {
+                        return Theme(
+                          data: ThemeData(
+                              unselectedWidgetColor:
+                                  AppColors.radioButtonInactive),
+                          child: ListTile(
+                            onTap: () {
+                              logic.updateCandidateTypes(index);
+                            },
+                            title: Transform.translate(
+                              offset: const Offset(-20, 0),
+                              child:
+                                  Text(logic.getCandidateTypes[index][&#39;type&#39;],
+                                      style: AppStyle().regularStyle.copyWith(
+                                            fontSize: AppStyle.fontSize14,
+                                            fontWeight: FontWeight.w400,
+                                          )),
+                            ),
+                            leading: Transform.scale(
+                              scale: 1,
+                              child: Theme(
+                                data: Theme.of(context),
+                                child: Radio(
+                                  visualDensity: const VisualDensity(
+                                      horizontal:
+                                          VisualDensity.minimumDensity,
+                                      vertical: VisualDensity.minimumDensity),
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  value: index,
+                                  toggleable: true,
+                                  groupValue: logic.candidateValue,
+                                  &#47;&#47; activeColor: AppColors.primaryPurple,
+                                  onChanged: (int? i) {
+                                    logic.updateCandidateTypes(index);
+                                  },
+                                ),
+                              ),
+                            ),
+                            contentPadding: EdgeInsets.zero,
+                            dense: true,
+                            visualDensity: const VisualDensity(
+                              horizontal: -3,
+                              vertical: -3,
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  &#47;&#47; SizedBox(width: 10,),
+                  SizedBox(
+                      height: 50,
+                      child: GridView.extent(
+                        physics: NeverScrollableScrollPhysics(),
+                        maxCrossAxisExtent: 350,
+                        children: List.generate(2, (index) {
+                          return Theme(
+                            data: ThemeData(
+                                unselectedWidgetColor:
+                                    AppColors.radioButtonInactive),
+                            child: ListTile(
+                              onTap: () {
+                                logic.updateCandidateTypes(index + 2);
+                              },
+                              title: Transform.translate(
+                                offset: const Offset(-20, 0),
+                                child: Text(
+                                    logic.getCandidateTypes[index + 2]
+                                        [&#39;type&#39;],
+                                    style: AppStyle().regularStyle.copyWith(
+                                          fontSize: AppStyle.fontSize14,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                              ),
+                              leading: Transform.scale(
+                                scale: 1,
+                                child: Theme(
+                                  data: Theme.of(context),
+                                  child: Radio(
+                                    visualDensity: const VisualDensity(
+                                        horizontal:
+                                            VisualDensity.minimumDensity,
+                                        vertical:
+                                            VisualDensity.minimumDensity),
+                                    materialTapTargetSize:
+                                        MaterialTapTargetSize.shrinkWrap,
+                                    value: index + 2,
+                                    toggleable: true,
+                                    groupValue: logic.candidateValue,
+                                    &#47;&#47; activeColor: AppColors.primaryPurple,
+                                    onChanged: (int? i) {
+                                      logic.updateCandidateTypes(index + 2);
+                                    },
+                                  ),
+                                ),
+                              ),
+                              contentPadding: EdgeInsets.zero,
+                              dense: true,
+                              visualDensity: const VisualDensity(
+                                horizontal: -3,
+                                vertical: -3,
+                              ),
+                            ),
+                          );
+                        }),
+                      )),
+                  const SizedBox(height: 20),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.l008, isRequired: false),
+                  const SizedBox(height: 8),
+
+                  &#47;&#47;&#47;Location TypeAhead
+                  Form(
+                    child: Focus(
+                      onFocusChange: (isFocused) {
+                        if (!logic.isLocationSelectedFromAutoSuggestion &amp;&amp;
+                            !isFocused) {
+                          logic.getLocationTextEditingController.text = &#39;&#39;;
+                        }
+                      },
+                      child:
+                          GetBuilder&lt;ThemeController&gt;(builder: (themeLogic) {
+                        return TypeAheadFormField(
+                          getImmediateSuggestions: false,
+                          textFieldConfiguration: TextFieldConfiguration(
+                            style: AppStyle().regularStyle,
+                            controller:
+                                logic.getLocationTextEditingController,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: AppColors.grey),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: AppColors.error),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: AppColors.error),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              hintText: EnterpriseStrings.viewCandidate_h0013,
+                              hintStyle: AppStyle().textStyleHint,
+                              &#47;&#47; filled: true,
+                              &#47;&#47; fillColor: AppColors.textFormFieldFill,
+                              contentPadding: const EdgeInsets.only(
+                                  left: 20.0, bottom: 6.0, top: 8.0),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: themeLogic
+                                        .getSelectedPrimaryThemeColor),
+                                borderRadius: BorderRadius.circular(4.0),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: AppColors.grey),
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              disabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: AppColors.grey),
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
+                          ),
+                          suggestionsCallback: (pattern) {
+                            return GoogleApiServices()
+                                .getCitiesFromAPI(pattern, context);
+                          },
+                          itemBuilder: (context,
+                              CustomAutocompletePredictionModal suggestion) {
+                            return Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Text(
+                                suggestion.description.toString(),
+                                style: AppStyle().regularStyle,
+                              ),
+                            );
+                          },
+                          hideOnLoading: true,
+                          hideOnError: true,
+                          suggestionsBoxDecoration:
+                              const SuggestionsBoxDecoration(
+                            elevation: 4,
+                            constraints: BoxConstraints(maxHeight: 200.0),
+                          ),
+                          noItemsFoundBuilder: (value) {
+                            return Padding(
+                              padding: const EdgeInsets.all(5),
+                              child: Text(
+                                EnterpriseStrings.e015,
+                                style: AppStyle().regularStyle.copyWith(
+                                      color: AppColors.error,
+                                      fontSize: AppStyle.fontSize14,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                              ),
+                            );
+                          },
+                          onSuggestionSelected:
+                              (CustomAutocompletePredictionModal
+                                  suggestion) async {
+                            logic.updateIsLocationSelectedFromAutoSuggestion(
+                                true);
+                            final List _stateCountry =
+                                await GoogleApiServices()
+                                    .getStateCountryShortForms(
+                                        suggestion.description.toString(),
+                                        context);
+                            logic.addLocation(
+                                suggestion, _stateCountry, context);
+                          },
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: List.generate(
+                              logic.getSelectedCities.length, (i) {
+                            return Container(
+                              margin: const EdgeInsets.only(right: 6.0),
+                              padding: const EdgeInsets.all(8.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4.0),
+                                color: AppColors.textFormFieldFill,
+                              ),
+                              child: Center(
+                                child: Row(
+                                  children: [
+                                    Text(logic.getSelectedCities[i]),
+                                    const SizedBox(width: 10),
+                                    GestureDetector(
+                                      onTap: () =&gt; logic.removeLocation(i),
+                                      child: const Icon(Icons.clear_rounded,
+                                          color: AppColors.subTitleColor,
+                                          size: 16.0),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                        )),
+                  ),
+                  const SizedBox(height: 20),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.assessment_b002,
+                      isRequired: false),
+                  const SizedBox(height: 8.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(2, (index) {
+                      StatusColorController _statusColorController =
+                          Get.put(StatusColorController());
+                      return Expanded(
+                        child: buildCheckBoxWithTitle(
+                          context,
+                          index == 0
+                              ? _statusColorController
+                                  .statusModel.statusA.value
+                              : _statusColorController
+                                  .statusModel.statusM.value,
+                          logic.getCandidateAvailabilityMenuList[index]
+                              [&#39;isSelected&#39;],
+                          (value) {
+                            if (value != null) {
+                              logic.updateCandidateAvailability(index);
+                            }
+                          },
+                        ),
+                      );
+                    }),
+                  ),
+                  const SizedBox(height: 20),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.profile_l088,
+                      isRequired: false),
+                  const SizedBox(height: 8.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        &quot;0&quot;,
+                        style: AppStyle().regularStyle.copyWith(
+                              color: AppColors.subTitleColor,
+                            ),
+                      ),
+                      Expanded(
+                        child: GetBuilder&lt;ThemeController&gt;(
+                            builder: (themeLogic) {
+                          return SfRangeSlider(
+                            min: 0.0,
+                            max: 100000.0,
+                            enableTooltip: true,
+                            inactiveColor: AppColors.greyBorder,
+                            activeColor: themeLogic
+                                .getSelectedPrimaryThemeColor
+                                .withOpacity(0.2),
+                            values: logic.getSfRangeValuesForCompensation,
+                            thumbShape: EnterprisesSfThumbShape(),
+                            tooltipTextFormatterCallback:
+                                (dynamic actualValue, String formattedText) {
+                              return int.parse(actualValue.round().toString())
+                                  .toString();
+                            },
+                            onChanged: (SfRangeValues newValues) {
+                              logic.updateCompensation(newValues);
+                            },
+                          );
+                        }),
+                      ),
+                      Text(
+                        &quot;100K+&quot;,
+                        style: AppStyle().regularStyle.copyWith(
+                              color: AppColors.subTitleColor,
+                            ),
+                      ),
+                    ],
+                  ),
+
+                  &#47;&#47;&#47;This will be uncommmented if input field is required  for Pay Rate
+                  &#47;*const SizedBox(height: 8.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          SizedBox(
+                            height: 40,
+                            width: 80,
+                            child: TextField(
+                              controller: logic.getPayRateStartController,
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                              ],
+                              onChanged: (e) {
+                                logic.updateStartCompensationFromTextField(e);
+                                &#47;&#47; logic.updateCompensationFromTextField(e);
+                              },
+                              decoration: payRateInputDecoration,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                            width: 80,
+                            child: TextField(
+                              controller: logic.getPayRateEndController,
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                              ],
+                              onChanged: (e) {
+                                logic.updateEndCompensationFromTextField(e);
+                                &#47;&#47; logic.updateCompensationFromTextField(e);
+                              },
+                              decoration: payRateInputDecoration,
+                            ),
+                          ),
+                        ],
+                      ),*&#47;
+                  const SizedBox(height: 20.0),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.profile_l092,
+                      isRequired: false),
+                  const SizedBox(height: 8),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Wrap(
+                      spacing: 2.0,
+                      runSpacing: 2.0,
+                      children:
+                          List.generate(logic.workTypeList.length, (index) {
+                        return Container(
+                          width: Get.width &#47; 2.4,
+                          padding: const EdgeInsets.only(left: 0.0),
+                          child: buildCheckBoxWithTitle(
+                            context,
+                            logic.workTypeList[index][&#39;label&#39;],
+                            logic.workTypeList[index][&#39;isSelected&#39;],
+                            (value) {
+                              if (value != null) {
+                                logic.updateWorkTypeList(index, value);
+                              }
+                            },
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.profile_l077,
+                      isRequired: false),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:
+                        List.generate(logic.workPlaceList.length, (index) {
+                      return Expanded(
+                        child: buildCheckBoxWithTitle(
+                          context,
+                          logic.workPlaceList[index][&#39;label&#39;],
+                          logic.workPlaceList[index][&#39;isSelected&#39;],
+                          (value) {
+                            if (value != null) {
+                              logic.updateWorkPlaceList(index + 1);
+                            }
+                          },
+                        ),
+                      );
+                    }),
+                  ),
+                  const SizedBox(height: 20.0),
+                  Padding(
+                    padding: EdgeInsets.zero,
+                    child: const BoldTextLabel(
+                        label: EnterpriseStrings.profile_l089,
+                        isRequired: false),
+                  ),
+                  const SizedBox(height: 8.0),
+
+                  &#47;&#47;&#47;Company TypeAhead
+                  Focus(
+                    onFocusChange: (isFocused) {
+                      if (!logic.isCompanyNameSelectedFromAutoSuggestion &amp;&amp;
+                          !isFocused) {
+                        logic.getCompanyInputController.text = &#39;&#39;;
+                      }
+                    },
+                    child: GetBuilder&lt;ThemeController&gt;(builder: (themeLogic) {
+                      return TypeAheadFormField(
+                        getImmediateSuggestions: false,
+                        textFieldConfiguration: TextFieldConfiguration(
+                          style: AppStyle().regularStyle,
+                          controller: logic.getCompanyInputController,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderSide:
+                                  const BorderSide(color: AppColors.grey),
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                            errorBorder: OutlineInputBorder(
+                              borderSide:
+                                  const BorderSide(color: AppColors.error),
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                            focusedErrorBorder: OutlineInputBorder(
+                              borderSide:
+                                  const BorderSide(color: AppColors.error),
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                            hintText: EnterpriseStrings.viewCandidate_h0011,
+                            hintStyle: AppStyle().textStyleHint,
+                            contentPadding: const EdgeInsets.only(
+                                left: 20.0, bottom: 6.0, top: 8.0),
+                            focusedBorder: AppStyle()
+                                .getFocusedBorder()
+                                .copyWith(
+                                    borderSide: BorderSide(
+                                        color: themeLogic
+                                            .getSelectedPrimaryThemeColor)),
+                            enabledBorder: AppStyle().getEnabledBorder(),
+                            disabledBorder: UnderlineInputBorder(
+                              borderSide:
+                                  const BorderSide(color: AppColors.grey),
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                        ),
+                        suggestionsCallback: (pattern) async {
+                          &#47;&#47; BuildContext? targetContext = logic.getSearchSkillAutoCompleteKey.currentContext;
+                          &#47;&#47; Scrollable.ensureVisible(
+                          &#47;&#47;   targetContext!,
+                          &#47;&#47;   duration: const Duration(milliseconds: 400),
+                          &#47;&#47;   curve: Curves.easeInOut,
+                          &#47;&#47; );
+                          return await logic.getEnterpriseNames(
+                              pattern, context);
+                        },
+                        itemBuilder:
+                            (context, Map&lt;String, dynamic&gt; suggestion) {
+                          return Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(
+                              suggestion[&#39;name&#39;].toString(),
+                              style: AppStyle().regularStyle,
+                            ),
+                          );
+                        },
+                        hideOnLoading: true,
+                        hideOnError: true,
+                        suggestionsBoxDecoration:
+                            const SuggestionsBoxDecoration(
+                          elevation: 4,
+                          constraints: BoxConstraints(maxHeight: 200.0),
+                        ),
+                        noItemsFoundBuilder: (value) {
+                          return Padding(
+                            padding: const EdgeInsets.all(5),
+                            child: Text(
+                              EnterpriseStrings.e015,
+                              style: AppStyle().regularStyle.copyWith(
+                                    color: AppColors.error,
+                                    fontSize: AppStyle.fontSize14,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                            ),
+                          );
+                        },
+                        onSuggestionSelected:
+                            (Map&lt;String, dynamic&gt; suggestion) {
+                          logic.addSelectedCompany(suggestion, context);
+                        },
+                      );
+                    }),
+                  ),
+                  const SizedBox(height: 8),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: List.generate(
+                              logic.getSelectedCompanies.length, (i) {
+                            return Container(
+                              margin: const EdgeInsets.only(right: 6.0),
+                              padding: const EdgeInsets.all(8.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4.0),
+                                color: AppColors.textFormFieldFill,
+                              ),
+                              child: Center(
+                                child: Row(
+                                  children: [
+                                    Text(logic.getSelectedCompanies[i]),
+                                    const SizedBox(width: 10),
+                                    GestureDetector(
+                                      onTap: () =&gt;
+                                          logic.removeSelectedCompany(i),
+                                      child: const Icon(Icons.clear_rounded,
+                                          color: AppColors.subTitleColor,
+                                          size: 16.0),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                        )),
+                  ),
+                  const SizedBox(height: 16),
+                  const BoldTextLabel(
+                      label: EnterpriseStrings.rating_l017,
+                      isRequired: false),
+                  const SizedBox(height: 8),
+                  GetBuilder&lt;ThemeController&gt;(builder: (themeLogic) {
+                    return DropdownButtonFormField&lt;String&gt;(
+                      icon: const Padding(
+                        padding: EdgeInsets.only(right: 2),
+                        child: Icon(Icons.keyboard_arrow_down),
+                      ),
+                      value: logic.ratingsValue.toString(),
+                      iconSize: 20,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: const EdgeInsets.only(
+                            left: 20, bottom: 16, top: 6, right: 10),
+                        fillColor: AppColors.white,
+                        focusedBorder: AppStyle().getFocusedBorder().copyWith(
+                            borderSide: BorderSide(
+                                color:
+                                    themeLogic.getSelectedPrimaryThemeColor)),
+                        enabledBorder: AppStyle().getEnabledBorder(),
+                      ),
+                      alignment: AlignmentDirectional.centerStart,
+                      style: AppStyle().regularStyle.copyWith(
+                            fontSize: AppStyle.fontSize16,
+                            fontWeight: FontWeight.w400,
+                          ),
+                      items: logic.getRatingsList.map(buildMenuItem).toList(),
+                      onChanged: (value) {
+                        if (logic.ratingsValue != value.toString()) {
+                          logic.updateRatingsList(value!.toString());
+                        }
+                      },
+                    );
+                  }),
+                  const SizedBox(height: 24.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () async {
+                          changeGreySpace();
+                          matchingCandidateController.resetFilter();
+                          resetAllCallback();
+                          logic.resetFilter(willPop: false);
+                        },
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: GetBuilder&lt;ThemeController&gt;(
+                              builder: (themeLogic) {
+                            return Text(
+                              EnterpriseStrings.viewCandidate_b022,
+                              style: AppStyle().regularStyleLink.copyWith(
+                                    fontSize: AppStyle.fontSize14,
+                                    fontWeight: FontWeight.w400,
+                                    color: themeLogic
+                                        .getSelectedPrimaryThemeColor,
+                                  ),
+                            );
+                          }),
+                        ),
+                      ),
+                      const SizedBox(width: 12.0),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            changeGreySpace();
+                            for (int i = 0;
+                                i &lt;
+                                    matchingCandidateController
+                                        .previousCandidateType.length;
+                                i++) {
+                              if (matchingCandidateController
+                                      .getCandidateTypes[i][&#39;isSelected&#39;] ==
+                                  true) {
+                                matchingCandidateController.tempIndex = i;
+                              }
+                            }
+                            &#47;*logic.updateFilterApply(true);
+                                Get.dialog(const Center(child: Loader()));
+                                await logic.getMyCandidatesList(context);
+                                Get.back();
+                                Get.back();*&#47;
+                            matchingCandidateController.previousCandidateType
+                                .clear();
+                            matchingCandidateController.previousCandidateType
+                                .addAll(matchingCandidateController
+                                    .getCandidateTypes);
+                            matchingCandidateController
+                                .updateFilterApplied(true);
+                            await matchingCandidateController.applyFilter(
+                                modeOfSort,
+                                savePreviousData: true);
+                            &#47;&#47; Navigator.pop(context);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ).copyWith(
+                            backgroundColor: MaterialStateProperty.all(null),
+                            overlayColor: MaterialStateProperty.all(null),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 16, horizontal: 25),
+                            child: Text(
+                              EnterpriseStrings.viewCandidate_b011,
+                              style: AppStyle().regularStyle.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: AppStyle.fontSize16,
+                                    color: AppColors.white,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+
+                  &#47;&#47;&#47;Demo,,Will delete onc development is done
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter/features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter-library.html">matching_weightage_filter</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_filter/MatchingWeightageFilter-class.html">MatchingWeightageFilter</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>MatchingWeightageFilter class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

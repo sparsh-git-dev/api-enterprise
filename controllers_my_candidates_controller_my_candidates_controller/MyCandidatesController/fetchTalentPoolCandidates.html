@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the fetchTalentPoolCandidates method from the MyCandidatesController class, for the Dart programming language.">
+  <title>fetchTalentPoolCandidates method - MyCandidatesController class - my_candidates_controller library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_my_candidates_controller_my_candidates_controller/controllers_my_candidates_controller_my_candidates_controller-library.html">my_candidates_controller</a></li>
+    <li><a href="../../controllers_my_candidates_controller_my_candidates_controller/MyCandidatesController-class.html">MyCandidatesController</a></li>
+    <li class="self-crumb">fetchTalentPoolCandidates method</li>
+  </ol>
+  <div class="self-name">fetchTalentPoolCandidates</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="controllers_my_candidates_controller_my_candidates_controller&#47;MyCandidatesController-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">fetchTalentPoolCandidates</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">fetchTalentPoolCandidates</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fetchTalentPoolCandidates-param-talentPoolId"><span class="type-annotation">dynamic</span> <span class="parameter-name">talentPoolId</span>, </span></li>
+<li><span class="parameter" id="fetchTalentPoolCandidates-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="fetchTalentPoolCandidates-param-append">{<span class="type-annotation">dynamic</span> <span class="parameter-name">append</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="fetchTalentPoolCandidates-param-showLoader"><span class="type-annotation">dynamic</span> <span class="parameter-name">showLoader</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="fetchTalentPoolCandidates-param-queryParams"><span class="type-annotation">dynamic</span> <span class="parameter-name">queryParams</span> = <span class="default-value">&#39;&#39;</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; fetchTalentPoolCandidates(talentPoolId, BuildContext context,
+    {append = false, showLoader = true, queryParams = &#39;&#39;}) async {
+  &#47;&#47; setIsLoading(true);
+  if (!append) setInitialLoad(true);
+  String url = ApiUrlConstants.TALENT_POOL_CREATE +
+      &quot;&#47;&quot; +
+      talentPoolId.toString() +
+      &quot;&#47;candidates&#47;&quot; +
+      (candidates.length &#47; 10).ceil().toString() +
+      &#39;&#47;10&#39; +
+      (queryParams != &#39;&#39; ? queryParams : &#39;&#39;);
+  final GlobalKey&lt;State&gt; _keyLoader = GlobalKey&lt;State&gt;();
+  final usersResponse;
+  if (showLoader) {
+    usersResponse =
+        await ApiServices().apiGetCallerWithLoader(url, context, _keyLoader);
+  } else {
+    usersResponse =
+        await ApiServices().apiGetCallerWithoutLoader(url, context);
+  }
+  var response =
+      await ApiServices().apiGetCallerWithoutLoaderFullResponse(url, context);
+  totalCount = json.decode(response.body)[&#39;totalCount&#39;].toString();
+  if (usersResponse == []) {
+    setPaginationFlag(true);
+  }
+  setCandidatesList(myCandidatesResponseModelFromMap(usersResponse),
+      append: append);
+  setIsLoading(false);
+  setInitialLoad(false);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../controllers_my_candidates_controller_my_candidates_controller/controllers_my_candidates_controller_my_candidates_controller-library.html">my_candidates_controller</a></li>
+    <li><a href="../../controllers_my_candidates_controller_my_candidates_controller/MyCandidatesController-class.html">MyCandidatesController</a></li>
+    <li class="self-crumb">fetchTalentPoolCandidates method</li>
+</ol>
+
+
+    <h5>MyCandidatesController class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

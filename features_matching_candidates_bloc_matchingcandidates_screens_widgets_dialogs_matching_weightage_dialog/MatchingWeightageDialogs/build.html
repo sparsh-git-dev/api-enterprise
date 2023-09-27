@@ -1,0 +1,2714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the MatchingWeightageDialogs class, for the Dart programming language.">
+  <title>build method - MatchingWeightageDialogs class - matching_weightage_dialog library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog/features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog-library.html">matching_weightage_dialog</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog/MatchingWeightageDialogs-class.html">MatchingWeightageDialogs</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog&#47;MatchingWeightageDialogs-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog/MatchingWeightageDialogs/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  dynamic data;
+  List _reqSkill = [];
+  List _candidateSkill = [];
+  List _reqExperience = [];
+  List _candidateExperience = [];
+  List _reqIndustry = [];
+  List _candidateIndustry = [];
+  List _reqProfile = [];
+  List _candidateProfile = [];
+  List _reqEducation = [];
+  List _candidateEducation = [];
+  List _reqCertificate = [];
+  List _candidateCertificate = [];
+
+  if (viewJobsModel == null &amp;&amp; matchingPercentageBreakdownModel == null) {
+    &#47;&#47;&#47;Below one is for Skill
+    if (job!.matchingPercentage!.skill!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.matched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;:
+              job!.matchingPercentage!.skill!.matched![i].jobSkill.toString(),
+          &quot;isMatched&quot;: true,
+          &quot;lastUsed&quot;:
+              job!.matchingPercentage!.skill!.matched![i].lastUsed.toString()
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.matched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.skill!.matched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: true,
+          &quot;lastUsed&quot;:
+              job!.matchingPercentage!.skill!.matched![i].lastUsed.toString()
+        });
+      }
+    }
+    if (job!.matchingPercentage!.skill!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.partialMatched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.skill!.partialMatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.partialMatched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.skill!.partialMatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true,
+          &quot;lastUsed&quot;:
+              job!.matchingPercentage!.skill!.partialMatched![i].lastUsed,
+          &quot;reason&quot;: job!.matchingPercentage!.skill!.partialMatched![i].reason
+                  ?.join(&quot;; &quot;) ??
+              &quot;&quot;
+        });
+      }
+    }
+    if (job!.matchingPercentage!.skill!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.unmatched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;: job!.matchingPercentage!.skill!.unmatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.skill!.unmatched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.skill!.unmatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;lastUsed&quot;: job!.matchingPercentage!.skill!.unmatched![i].lastUsed
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Experience
+    if (job!.matchingPercentage!.experience!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.matched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.matched![i]
+                  .yearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!.matched![i]
+                          .yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.matched!.length;
+          i++) {
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.matched![i]
+                  .candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!.matched![i]
+                          .candidateYearsOfExperience
+                          .toString())) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.experience!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.partialMatched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.partialMatched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.partialMatched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.partialMatched![i]
+                  .yearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!
+                          .partialMatched![i].yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.partialMatched!.length;
+          i++) {
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.partialMatched![i]
+                  .candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!
+                          .partialMatched![i].candidateYearsOfExperience
+                          .toString()) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;)),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+      }
+    }
+    if (job!.matchingPercentage!.experience!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.unmatched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;), &quot;isMatched&quot;: false});
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.unmatched![i]
+                  .yearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!
+                          .unmatched![i].yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: false});
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.experience!.unmatched!.length;
+          i++) {
+        _candidateExperience.add({
+          &quot;required&quot;: job!.matchingPercentage!.experience!.unmatched![i]
+                  .candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(job!.matchingPercentage!.experience!
+                          .unmatched![i].candidateYearsOfExperience
+                          .toString())) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: false});
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Industry
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.matched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: job!.matchingPercentage!.industry!.matched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: true
+      });
+    }
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.matched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: job!
+            .matchingPercentage!.industry!.matched![i].candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: true
+      });
+    }
+    if (job!.matchingPercentage!.subCategory!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.matched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.subCategory!.matched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.matched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: job!.matchingPercentage!.subCategory!.matched![i]
+              .candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.partialMatched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: job!
+            .matchingPercentage!.industry!.partialMatched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: false,
+        &quot;isPartialMatched&quot;: true
+      });
+    }
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.partialMatched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: job!.matchingPercentage!.industry!.partialMatched![i]
+            .candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: false,
+        &quot;isPartialMatched&quot;: true
+      });
+    }
+    if (job!.matchingPercentage!.subCategory!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.partialMatched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.subCategory!.partialMatched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.partialMatched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: job!.matchingPercentage!.subCategory!.partialMatched![i]
+              .candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.unmatched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: job!.matchingPercentage!.industry!.unmatched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: false
+      });
+    }
+    for (int i = 0;
+        i &lt; job!.matchingPercentage!.industry!.unmatched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: job!
+            .matchingPercentage!.industry!.unmatched![i].candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: false
+      });
+    }
+    if (job!.matchingPercentage!.subCategory!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.unmatched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.subCategory!.unmatched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.subCategory!.unmatched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: job!.matchingPercentage!.subCategory!.unmatched![i]
+              .candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Profile Title
+    if (job!.matchingPercentage!.profileTitle!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.matched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.profileTitle!.matched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.matched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: job!.matchingPercentage!.profileTitle!.matched![i]
+              .candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.profileTitle!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.partialMatched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: job!.matchingPercentage!.profileTitle!
+              .partialMatched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.partialMatched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: job!.matchingPercentage!.profileTitle!
+              .partialMatched![i].candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.profileTitle!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.unmatched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.profileTitle!.unmatched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.profileTitle!.unmatched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: job!.matchingPercentage!.profileTitle!.unmatched![i]
+              .candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Education
+    if (job!.matchingPercentage!.education!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.matched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.education!.matched![i].education
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.matched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.education!.matched![i].candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.education!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.partialMatched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.education!.partialMatched![i].education
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.partialMatched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: job!.matchingPercentage!.education!.partialMatched![i]
+              .candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.education!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.unmatched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.education!.unmatched![i].education
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; job!.matchingPercentage!.education!.unmatched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.education!.unmatched![i].candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Certification
+    if (job!
+        .matchingPercentage!.certificationBreakdown!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              job!.matchingPercentage!.certificationBreakdown!.matched!
+                  .length;
+          i++) {
+        _reqCertificate.add({
+          &quot;required&quot;: job!.matchingPercentage!.certificationBreakdown
+                  ?.matched?[i].certificationName ??
+              &quot;&quot;,
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              job!.matchingPercentage!.certificationBreakdown!.matched!
+                  .length;
+          i++) {
+        _candidateCertificate.add({
+          &quot;required&quot;: job!
+              .matchingPercentage!.certificationBreakdown!.matched![i]
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (job!.matchingPercentage!.certificationBreakdown!.partialMatched !=
+        null) {
+      for (int i = 0;
+          i &lt;
+              job!.matchingPercentage!.certificationBreakdown!.partialMatched!
+                  .length;
+          i++) {
+        _reqCertificate.add({
+          &quot;required&quot;: job!.matchingPercentage!.certificationBreakdown!
+              .partialMatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              job!.matchingPercentage!.certificationBreakdown!.partialMatched!
+                  .length;
+          i++) {
+        _candidateCertificate.add({
+          &quot;required&quot;: job!.matchingPercentage!.certificationBreakdown!
+              .partialMatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (job!
+        .matchingPercentage!.certificationBreakdown!.unmatched!.isNotEmpty) {
+      if (job!.matchingPercentage!.certificationBreakdown!.unmatched !=
+          null) {
+        for (int i = 0;
+            i &lt;
+                job!.matchingPercentage!.certificationBreakdown!.unmatched!
+                    .length;
+            i++) {
+          _reqCertificate.add({
+            &quot;required&quot;: job!.matchingPercentage!.certificationBreakdown!
+                    .unmatched?[i].certificationName ??
+                &quot;&quot;,
+            &quot;isMatched&quot;: false
+          });
+          &#47;&#47; _reqCertificate.add({&quot;required&quot;: job!.matchingPercentage!.certificationBreakdown!.unmatched![0].certificationName, &quot;isMatched&quot;: false});
+        }
+        for (int i = 0;
+            i &lt;
+                job!.matchingPercentage!.certificationBreakdown!.unmatched!
+                    .length;
+            i++) {
+          _candidateCertificate.add({
+            &quot;required&quot;: job!
+                .matchingPercentage!.certificationBreakdown!.unmatched![i]
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+    }
+    if (_reqCertificate.isEmpty) {
+      _reqCertificate.add(
+          {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+    }
+    if (_candidateCertificate.isEmpty) {
+      _candidateCertificate.add(
+          {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+    }
+    data = job;
+  } else if (matchingPercentageBreakdownModel != null &amp;&amp;
+      viewJobsModel == null &amp;&amp;
+      job == null) {
+    &#47;&#47;&#47;Below one is for Skill
+    if (matchingPercentageBreakdownModel!.skill!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.matched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.matched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: true,
+          &quot;lastUsed&quot;: matchingPercentageBreakdownModel!
+              .skill!.matched![i].lastUsed
+              .toString()
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.matched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.matched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: true,
+          &quot;lastUsed&quot;: matchingPercentageBreakdownModel!
+              .skill!.matched![i].lastUsed
+              .toString()
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!.skill!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.partialMatched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.partialMatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.partialMatched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.partialMatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true,
+          &quot;lastUsed&quot;: matchingPercentageBreakdownModel!
+              .skill!.partialMatched![i].lastUsed,
+          &quot;reason&quot;: matchingPercentageBreakdownModel!
+                  .skill!.partialMatched![i].reason
+                  ?.join(&quot;; &quot;) ??
+              &quot;&quot;
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!.skill!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.unmatched!.length;
+          i++) {
+        _reqSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.unmatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.skill!.unmatched!.length;
+          i++) {
+        _candidateSkill.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .skill!.unmatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;lastUsed&quot;:
+              matchingPercentageBreakdownModel!.skill!.unmatched![i].lastUsed
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Experience
+    if (matchingPercentageBreakdownModel!.experience!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.experience!.matched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.matched![i].yearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!
+                          .experience!.matched![i].yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.experience!.matched!.length;
+          i++) {
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.matched![i].candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!
+                          .experience!.matched![i].candidateYearsOfExperience
+                          .toString())) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+        .experience!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .experience!.partialMatched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.partialMatched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.partialMatched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: true});
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.partialMatched![i].yearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!
+                          .experience!.partialMatched![i].yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .experience!.partialMatched!.length;
+          i++) {
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.partialMatched![i].candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!.experience!
+                          .partialMatched![i].candidateYearsOfExperience
+                          .toString()) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;)),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+      }
+    }
+    if (matchingPercentageBreakdownModel!.experience!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.experience!.unmatched!.length;
+          i++) {
+        &#47;&#47; _reqExperience.add({&quot;required&quot;: job!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString()+
+        &#47;&#47;     ((double.parse(job!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;), &quot;isMatched&quot;: false});
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.unmatched![i].yearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!
+                          .experience!.unmatched![i].yearsOfExperience
+                          .toString()
+                          .split(&#39;-&#39;)
+                          .last
+                          .split(&#39;.&#39;)
+                          .first)) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: false});
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.experience!.unmatched!.length;
+          i++) {
+        _candidateExperience.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+                  .experience!.unmatched![i].candidateYearsOfExperience
+                  .toString() +
+              ((double.parse(matchingPercentageBreakdownModel!.experience!
+                          .unmatched![i].candidateYearsOfExperience
+                          .toString())) &gt;
+                      1
+                  ? &quot; Years&quot;
+                  : &quot; Year&quot;),
+          &quot;isMatched&quot;: false
+        });
+        _reqExperience
+            .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: false});
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Industry
+    for (int i = 0;
+        i &lt; matchingPercentageBreakdownModel!.industry!.matched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.matched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: true
+      });
+    }
+    for (int i = 0;
+        i &lt; matchingPercentageBreakdownModel!.industry!.matched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.matched![i].candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: true
+      });
+    }
+    if (matchingPercentageBreakdownModel!.subCategory!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.subCategory!.matched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.matched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.subCategory!.matched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.matched![i].candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    for (int i = 0;
+        i &lt;
+            matchingPercentageBreakdownModel!
+                .industry!.partialMatched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.partialMatched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: false,
+        &quot;isPartialMatched&quot;: true
+      });
+    }
+    for (int i = 0;
+        i &lt;
+            matchingPercentageBreakdownModel!
+                .industry!.partialMatched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.partialMatched![i].candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: false,
+        &quot;isPartialMatched&quot;: true
+      });
+    }
+    if (matchingPercentageBreakdownModel!
+        .subCategory!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .subCategory!.partialMatched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.partialMatched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .subCategory!.partialMatched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.partialMatched![i].candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    for (int i = 0;
+        i &lt; matchingPercentageBreakdownModel!.industry!.unmatched!.length;
+        i++) {
+      _reqIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.unmatched![i].industry
+            .toString(),
+        &quot;isMatched&quot;: false
+      });
+    }
+    for (int i = 0;
+        i &lt; matchingPercentageBreakdownModel!.industry!.unmatched!.length;
+        i++) {
+      _candidateIndustry.add({
+        &quot;required&quot;: matchingPercentageBreakdownModel!
+            .industry!.unmatched![i].candidateIndustry
+            .toString(),
+        &quot;isMatched&quot;: false
+      });
+    }
+    if (matchingPercentageBreakdownModel!
+        .subCategory!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .subCategory!.unmatched!.length;
+          i++) {
+        _reqIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.unmatched![i].subCategory
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .subCategory!.unmatched!.length;
+          i++) {
+        _candidateIndustry.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .subCategory!.unmatched![i].candidateSubCategory
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Profile Title
+    if (matchingPercentageBreakdownModel!.profileTitle!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.profileTitle!.matched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.matched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.profileTitle!.matched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.matched![i].candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+        .profileTitle!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .profileTitle!.partialMatched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.partialMatched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .profileTitle!.partialMatched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.partialMatched![i].candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+        .profileTitle!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .profileTitle!.unmatched!.length;
+          i++) {
+        _reqProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.unmatched![i].profileTitle
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .profileTitle!.unmatched!.length;
+          i++) {
+        _candidateProfile.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .profileTitle!.unmatched![i].candidateProfileTitle
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Education
+    if (matchingPercentageBreakdownModel!.education!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.education!.matched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.matched![i].education
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.education!.matched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.matched![i].candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+        .education!.partialMatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .education!.partialMatched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.partialMatched![i].education
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .education!.partialMatched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.partialMatched![i].candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!.education!.unmatched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.education!.unmatched!.length;
+          i++) {
+        _reqEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.unmatched![i].education
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+      for (int i = 0;
+          i &lt; matchingPercentageBreakdownModel!.education!.unmatched!.length;
+          i++) {
+        _candidateEducation.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .education!.unmatched![i].candidateEducation
+              .toString(),
+          &quot;isMatched&quot;: false
+        });
+      }
+    }
+
+    &#47;&#47;&#47;Below one is for Certification
+    if (matchingPercentageBreakdownModel!
+        .certificationBreakdown!.matched!.isNotEmpty) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .certificationBreakdown!.matched!.length;
+          i++) {
+        _reqCertificate.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .certificationBreakdown!.matched![i]
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .certificationBreakdown!.matched!.length;
+          i++) {
+        _candidateCertificate.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .certificationBreakdown!.matched![i]
+              .toString(),
+          &quot;isMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+            .certificationBreakdown!.partialMatched !=
+        null) {
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .certificationBreakdown!.partialMatched!.length;
+          i++) {
+        _reqCertificate.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .certificationBreakdown!.partialMatched![i].jobSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+      for (int i = 0;
+          i &lt;
+              matchingPercentageBreakdownModel!
+                  .certificationBreakdown!.partialMatched!.length;
+          i++) {
+        _candidateCertificate.add({
+          &quot;required&quot;: matchingPercentageBreakdownModel!
+              .certificationBreakdown!.partialMatched![i].candidateSkill
+              .toString(),
+          &quot;isMatched&quot;: false,
+          &quot;isPartialMatched&quot;: true
+        });
+      }
+    }
+    if (matchingPercentageBreakdownModel!
+        .certificationBreakdown!.unmatched!.isNotEmpty) {
+      if (matchingPercentageBreakdownModel!
+              .certificationBreakdown!.unmatched !=
+          null) {
+        for (int i = 0;
+            i &lt;
+                matchingPercentageBreakdownModel!
+                    .certificationBreakdown!.unmatched!.length;
+            i++) {
+          _reqCertificate.add({
+            &quot;required&quot;: matchingPercentageBreakdownModel!
+                    .certificationBreakdown!
+                    .unmatched?[i]
+                    .certificationName ??
+                &quot;&quot;,
+            &quot;isMatched&quot;: false
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                matchingPercentageBreakdownModel!
+                    .certificationBreakdown!.unmatched!.length;
+            i++) {
+          _candidateCertificate.add({
+            &quot;required&quot;: matchingPercentageBreakdownModel!
+                .certificationBreakdown!.unmatched![i]
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+    }
+    if (_reqCertificate.isEmpty) {
+      _reqCertificate.add(
+          {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+    }
+    if (_candidateCertificate.isEmpty) {
+      _candidateCertificate.add(
+          {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+    }
+    data = matchingPercentageBreakdownModel;
+  } else {
+    if (viewJobsModel!.matchingPercentage != null) {
+      &#47;&#47;&#47;Below one is for Skill
+      if (viewJobsModel!.matchingPercentage != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.skill != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.skill!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.skill!.matched!.length;
+            i++) {
+          _reqSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.matched![i].jobSkill
+                .toString(),
+            &quot;isMatched&quot;: true,
+            &quot;lastUsed&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.matched![i].lastUsed
+                .toString()
+          });
+        }
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.skill!.matched!.length;
+            i++) {
+          _candidateSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.matched![i].candidateSkill
+                .toString(),
+            &quot;isMatched&quot;: true,
+            &quot;lastUsed&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.matched![i].lastUsed
+                .toString()
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.skill != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.skill!.partialMatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.skill!.partialMatched!.length;
+            i++) {
+          _reqSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.partialMatched![i].jobSkill
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.skill!.partialMatched!.length;
+            i++) {
+          _candidateSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.partialMatched![i].candidateSkill
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true,
+            &quot;lastUsed&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.partialMatched![i].lastUsed
+                .toString(),
+            &quot;reason&quot;: viewJobsModel!
+                    .matchingPercentage!.skill!.partialMatched![i].reason
+                    ?.join(&quot;; &quot;) ??
+                &quot;&quot;
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.skill != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.skill!.unmatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.skill!.unmatched!.length;
+            i++) {
+          _reqSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.unmatched![i].jobSkill
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.skill!.unmatched!.length;
+            i++) {
+          _candidateSkill.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.skill!.unmatched![i].candidateSkill
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+
+      &#47;&#47;&#47;Below one is for Experience
+      if (viewJobsModel!.matchingPercentage!.experience != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.experience!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.experience!.matched!.length;
+            i++) {
+          &#47;&#47; _reqExperience.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString() +
+          &#47;&#47;     ((double.parse(viewJobsModel!.matchingPercentage!.experience!.matched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: true});
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .matched![i].yearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .matched![i].yearsOfExperience
+                            .toString()
+                            .split(&#39;-&#39;)
+                            .last
+                            .split(&#39;.&#39;)
+                            .first)) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: true
+          });
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .matched![i].candidateYearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .matched![i].candidateYearsOfExperience
+                            .toString())) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: true
+          });
+        }
+        &#47;*for(int i = 0; i &lt; viewJobsModel!.matchingPercentage!.experience!.matched!.length; i++) {
+          _candidateExperience.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!.matched![i].candidateYearsOfExperience.toString()+
+              ((double.parse(viewJobsModel!.matchingPercentage!.experience!.matched![i].candidateYearsOfExperience.toString()))&gt;1?&quot; Years&quot;:&quot; Year&quot;), &quot;isMatched&quot;: true});
+        }*&#47;
+      }
+      if (viewJobsModel!.matchingPercentage!.experience != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.experience!.partialMatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.experience!.partialMatched!.length;
+            i++) {
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .partialMatched![i].yearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .partialMatched![i].yearsOfExperience
+                            .toString()
+                            .split(&#39;-&#39;)
+                            .last
+                            .split(&#39;.&#39;)
+                            .first)) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .partialMatched![i].candidateYearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .partialMatched![i].candidateYearsOfExperience
+                            .toString())) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+        &#47;*for(int i = 0; i &lt; viewJobsModel!.matchingPercentage!.experience!.partialMatched!.length; i++) {
+          _candidateExperience.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!.partialMatched![i].candidateYearsOfExperience.toString()+
+              ((double.parse(viewJobsModel!.matchingPercentage!.experience!.partialMatched![i].candidateYearsOfExperience.toString()))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: true});
+        }*&#47;
+      }
+      if (viewJobsModel!.matchingPercentage!.experience != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.experience!.unmatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.experience!.unmatched!.length;
+            i++) {
+          &#47;&#47; _reqExperience.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString()+
+          &#47;&#47;     ((double.parse(viewJobsModel!.matchingPercentage!.experience!.unmatched![i].yearsOfExperience.toString().split(&#39;-&#39;).last.split(&#39;.&#39;).first))&gt;1?&quot; Years&quot;:&quot; Year&quot;), &quot;isMatched&quot;: false});
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .unmatched![i].yearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .unmatched![i].yearsOfExperience
+                            .toString()
+                            .split(&#39;-&#39;)
+                            .last
+                            .split(&#39;.&#39;)
+                            .first)) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: false
+          });
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Required Experience&quot;, &quot;isMatched&quot;: true});
+          _reqExperience
+              .add({&quot;required&quot;: &quot;Candidate Experience&quot;, &quot;isMatched&quot;: true});
+          _candidateExperience.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!
+                    .unmatched![i].candidateYearsOfExperience
+                    .toString() +
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!
+                            .unmatched![i].candidateYearsOfExperience
+                            .toString())) &gt;
+                        1
+                    ? &quot; Years&quot;
+                    : &quot; Year&quot;),
+            &quot;isMatched&quot;: false
+          });
+        }
+        &#47;*for(int i = 0; i &lt; viewJobsModel!.matchingPercentage!.experience!.unmatched!.length; i++) {
+            _candidateExperience.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.experience!.unmatched![i].candidateYearsOfExperience.toString()+
+                ((double.parse(viewJobsModel!.matchingPercentage!.experience!.unmatched![i].candidateYearsOfExperience.toString()))&gt;1?&quot; Years&quot;:&quot; Year&quot;),&quot;isMatched&quot;: false});
+        }*&#47;
+      }
+
+      &#47;&#47;&#47;Below one is for Industry
+      if (viewJobsModel!.matchingPercentage!.industry != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.industry!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.industry!.matched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.matched![i].industry
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.industry!.matched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.matched![i].candidateIndustry
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!
+          .matchingPercentage!.subCategory!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.matched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.subCategory!.matched![i].subCategory
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.matched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.subCategory!
+                .matched![i].candidateSubCategory
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.industry != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.industry!.partialMatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.industry!.partialMatched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.partialMatched![i].industry
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.industry!.partialMatched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.partialMatched![i].industry
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!
+          .matchingPercentage!.subCategory!.partialMatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.partialMatched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.subCategory!
+                .partialMatched![i].subCategory
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.partialMatched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.subCategory!
+                .partialMatched![i].candidateSubCategory
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.industry != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.industry!.unmatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.industry!.unmatched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.unmatched![i].industry
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.industry!.unmatched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.industry!.unmatched![i].industry
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+      if (viewJobsModel!
+          .matchingPercentage!.subCategory!.unmatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.unmatched!.length;
+            i++) {
+          _reqIndustry.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.subCategory!.unmatched![i].subCategory
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.subCategory!.unmatched!.length;
+            i++) {
+          _candidateIndustry.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.subCategory!
+                .unmatched![i].candidateSubCategory
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+
+      &#47;&#47;&#47;Below one is for Profile Title
+      if (viewJobsModel!.matchingPercentage!.profileTitle != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.profileTitle!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.matched!.length;
+            i++) {
+          _reqProfile.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.profileTitle!.matched![i].profileTitle
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.matched!.length;
+            i++) {
+          _candidateProfile.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.profileTitle!
+                .matched![i].candidateProfileTitle
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.profileTitle != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.profileTitle!.partialMatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.partialMatched!.length;
+            i++) {
+          _reqProfile.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.profileTitle!
+                .partialMatched![i].profileTitle
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.partialMatched!.length;
+            i++) {
+          _candidateProfile.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.profileTitle!
+                .partialMatched![i].candidateProfileTitle
+                .toString(),
+            &quot;isMatched&quot;: false,
+            &quot;isPartialMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.profileTitle != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.profileTitle!.unmatched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.unmatched!.length;
+            i++) {
+          _reqProfile.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.profileTitle!.unmatched![i].profileTitle
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!
+                    .matchingPercentage!.profileTitle!.unmatched!.length;
+            i++) {
+          _candidateProfile.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!.profileTitle!
+                .unmatched![i].candidateProfileTitle
+                .toString(),
+            &quot;isMatched&quot;: false
+          });
+        }
+      }
+
+      &#47;&#47;&#47;Below one is for education
+      if (viewJobsModel!.matchingPercentage!.education != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.education!.matched!.isNotEmpty) {
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.education!.matched!.length;
+            i++) {
+          _reqEducation.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.education!.matched![i].education
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt; viewJobsModel!.matchingPercentage!.education!.matched!.length;
+            i++) {
+          _candidateEducation.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.education!.matched![i].candidateEducation
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.education != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.education!.partialMatched!.isNotEmpty) {
+        if (viewJobsModel!.matchingPercentage!.education!.partialMatched !=
+            null) {
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                      .partialMatched!.length;
+              i++) {
+            _reqEducation.add({
+              &quot;required&quot;: viewJobsModel!
+                  .matchingPercentage!.education!.partialMatched![i].education
+                  .toString(),
+              &quot;isMatched&quot;: false,
+              &quot;isPartialMatched&quot;: true
+            });
+          }
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!
+                      .matchingPercentage!.education!.partialMatched!.length;
+              i++) {
+            _candidateEducation.add({
+              &quot;required&quot;: viewJobsModel!.matchingPercentage!.education!
+                  .partialMatched![i].candidateEducation
+                  .toString(),
+              &quot;isMatched&quot;: false,
+              &quot;isPartialMatched&quot;: true
+            });
+          }
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.education != null &amp;&amp;
+          viewJobsModel!
+              .matchingPercentage!.education!.unmatched!.isNotEmpty) {
+        if (viewJobsModel!.matchingPercentage!.education!.unmatched != null) {
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!
+                      .matchingPercentage!.education!.unmatched!.length;
+              i++) {
+            _reqEducation.add({
+              &quot;required&quot;: viewJobsModel!
+                  .matchingPercentage!.education!.unmatched![i].education
+                  .toString(),
+              &quot;isMatched&quot;: false
+            });
+          }
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!
+                      .matchingPercentage!.education!.unmatched!.length;
+              i++) {
+            _candidateEducation.add({
+              &quot;required&quot;: viewJobsModel!.matchingPercentage!.education!
+                  .unmatched![i].candidateEducation
+                  .toString(),
+              &quot;isMatched&quot;: false
+            });
+          }
+        }
+      }
+
+      &#47;&#47;&#47;Below one is for Certification
+      if (viewJobsModel!.matchingPercentage!.certificationBreakdown != null &amp;&amp;
+          viewJobsModel!.matchingPercentage!.certificationBreakdown!.matched!
+              .isNotEmpty) {
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                    .matched!.length;
+            i++) {
+          _reqCertificate.add({
+            &quot;required&quot;: viewJobsModel!.matchingPercentage!
+                .certificationBreakdown!.matched![i].certificationName
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+        for (int i = 0;
+            i &lt;
+                viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                    .matched!.length;
+            i++) {
+          _candidateCertificate.add({
+            &quot;required&quot;: viewJobsModel!
+                .matchingPercentage!.certificationBreakdown!.matched![i]
+                .toString(),
+            &quot;isMatched&quot;: true
+          });
+        }
+      }
+      if (viewJobsModel!.matchingPercentage!.certificationBreakdown != null) {
+        if (viewJobsModel!
+                .matchingPercentage!.certificationBreakdown!.partialMatched !=
+            null) {
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                      .partialMatched!.length;
+              i++) {
+            _reqCertificate.add({
+              &quot;required&quot;: viewJobsModel!.matchingPercentage!
+                  .certificationBreakdown!.partialMatched![i].jobSkill
+                  .toString(),
+              &quot;isMatched&quot;: false,
+              &quot;isPartialMatched&quot;: true
+            });
+          }
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                      .partialMatched!.length;
+              i++) {
+            _candidateCertificate.add({
+              &quot;required&quot;: viewJobsModel!.matchingPercentage!
+                  .certificationBreakdown!.partialMatched![i].candidateSkill
+                  .toString(),
+              &quot;isMatched&quot;: false,
+              &quot;isPartialMatched&quot;: true
+            });
+          }
+        }
+        if (viewJobsModel!
+                .matchingPercentage!.certificationBreakdown!.unmatched !=
+            null) {
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                      .unmatched!.length;
+              i++) {
+            _reqCertificate.add({
+              &quot;required&quot;: viewJobsModel!
+                      .matchingPercentage!
+                      .certificationBreakdown!
+                      .unmatched?[i]
+                      .certificationName ??
+                  &quot;-&quot;,
+              &quot;isMatched&quot;: false
+            });
+            &#47;&#47; _reqCertificate.add({&quot;required&quot;: viewJobsModel!.matchingPercentage!.certificationBreakdown!.unmatched![i].toString(), &quot;isMatched&quot;: false});
+          }
+          for (int i = 0;
+              i &lt;
+                  viewJobsModel!.matchingPercentage!.certificationBreakdown!
+                      .unmatched!.length;
+              i++) {
+            _candidateCertificate.add({
+              &quot;required&quot;: viewJobsModel!
+                  .matchingPercentage!.certificationBreakdown!.unmatched![i]
+                  .toString(),
+              &quot;isMatched&quot;: false
+            });
+          }
+        }
+      }
+      if (_reqCertificate.isEmpty) {
+        _reqCertificate.add(
+            {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+      }
+      if (_candidateCertificate.isEmpty) {
+        _candidateCertificate.add(
+            {&quot;required&quot;: &#39;&#39;, &quot;isMatched&quot;: false, &quot;isPartialMatched&quot;: false});
+      }
+    }
+    data = viewJobsModel;
+  }
+  Widget _commonWeightageSectionRow(
+      List requireList,
+      List candidateList,
+      int index,
+      Color bgColor,
+      Color iconColor,
+      String iconStr,
+      String title,
+      dynamic value,
+      dynamic score,
+      dynamic weightage,
+      bool isMatchingPercentageNull,
+      String? bandColor,
+      {PoolStatus? viewJobsModel}) {
+    score = (score == null) ? 0 : score;
+
+    double _initialWeightage = 0.0;
+    _initialWeightage = (value ~&#47; 20) + (0.0);
+    if (value % 20 &gt;= 10) {
+      _initialWeightage = _initialWeightage + 0.49;
+
+      &#47;&#47;&#47;Here 0.3 is random below 0.5 to manage half filled circle
+    }
+    bool visible = title == &quot;Education&quot; &amp;&amp;
+        (jobEducationalQualificationsDtoList!.isEmpty);
+
+    return Visibility(
+      visible: !visible,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          title,
+                          style: AppStyle().regularStyle.copyWith(
+                              fontWeight: FontWeight.w700,
+                              fontSize: AppStyle.fontSize14,
+                              decoration: TextDecoration.none,
+                              color: AppColors.black),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 4.0),
+                  child: Text(
+                    (weightage?.toDouble()?.round() == 0 &amp;&amp;
+                            !isMatchingPercentageNull)
+                        ? EnterpriseStrings.breakDownDisabledMsg
+                        : &quot;${value?.toDouble()?.round() ?? 0}% Matched&quot;,
+                    style: AppStyle().regularStyle.copyWith(
+                        decoration: TextDecoration.none,
+                        fontSize: AppStyle.fontSize12,
+                        fontWeight: (weightage?.toDouble()?.round() == 0 &amp;&amp;
+                                !isMatchingPercentageNull)
+                            ? FontWeight.w700
+                            : FontWeight.w500,
+                        color: AppColors.subTitleColor),
+                  ),
+                ),
+                &#47;*Row(
+                  *&#47; &#47;*children: [
+                    SizedBox(
+                      width: 30,
+                      child: Text(
+                        (score!=0)?index==1?&quot;${score?.round()*1??0}%&quot;:&quot;${score?.round()??0}%&quot;:&quot;0%&quot;,
+                        textAlign: TextAlign.left,
+                        style: AppStyle().regularStyle.copyWith(
+                            fontWeight: FontWeight.w600,
+                            fontSize: AppStyle.fontSize11,
+                            decoration: TextDecoration.none,
+                            color: AppColors.success
+                        ),
+                      ),
+                    ),
+                    (isMatchingPercentageNull)?Container():(weightage!=0||(index==4  &amp;&amp; weightage!=0))?
+                    GetBuilder&lt;MatchingCandidateController&gt;(
+                        builder: (logic) {
+                          return InkWell(
+                              onTap: () {
+                                logic.updateExpansionOfMatchScoreBreakDown(!logic.isMatchingWeightageBreakDownExpansion[index], index);
+                              },
+                              child: Icon(logic.isMatchingWeightageBreakDownExpansion[index]?Icons.keyboard_arrow_up :Icons.keyboard_arrow_down));
+                        }
+                    )
+                        :Container(width: 26,),
+                  ],*&#47; &#47;*
+                  children: List.generate(5, (index) {
+                    return Padding(
+                      padding: EdgeInsets.only(right: (index==4)?0.0:2.0),
+                      child: Center(
+                        child: Container(
+                          height: 10,
+                          width: 10,
+                          decoration: const BoxDecoration(
+                            color: AppColors.primaryButtonColor,
+                            shape: BoxShape.circle
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                ),*&#47;
+                (weightage?.toDouble()?.round() == 0 &amp;&amp;
+                        !isMatchingPercentageNull)
+                    ? const SizedBox.shrink()
+                    : RatingBar(
+                        glow: false,
+                        unratedColor: Colors.black,
+                        initialRating:
+                            _initialWeightage, &#47;&#47;(value?.toDouble()??0)&#47;20,
+                        ignoreGestures: true,
+                        minRating: 0,
+                        maxRating: 20.0,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemSize: 12.0,
+                        ratingWidget: RatingWidget(
+                            full: Container(
+                              height: 9.0,
+                              width: 9.0,
+                              decoration: BoxDecoration(
+                                  color: _getColorAsValueForFull(value,
+                                      bandColor), &#47;&#47;AppColors.primaryButtonColor,
+                                  shape: BoxShape.circle),
+                            ),
+                            empty: Container(
+                              height: 9.0,
+                              width: 9.0,
+                              decoration: BoxDecoration(
+                                  color: _getColorAsValueForFull(
+                                      value, bandColor,
+                                      opacity:
+                                          0.2), &#47;&#47;AppColors.primaryButtonColor.withOpacity(0.2),
+                                  shape: BoxShape.circle),
+                            ),
+                            half: SizedBox(
+                              height: 12.0,
+                              width: 12.0,
+                              child: SvgPicture.asset(
+                                (bandColor == &#39;RED_BAND&#39;)
+                                    ? ImagePaths
+                                        .ic_redHalfCircleMatchingBreakdown
+                                    : (bandColor == &#39;AMBER_BAND&#39;)
+                                        ? ImagePaths
+                                            .ic_yellowHalfCircleMatchingBreakdown
+                                        : ImagePaths
+                                            .ic_greenHalfCircleMatchingBreakdown,
+                                fit: BoxFit.cover,
+                                height: 12.0,
+                                width: 12.0,
+                              ),
+                            )),
+                        itemPadding: const EdgeInsets.symmetric(
+                          horizontal: 2,
+                        ),
+                        onRatingUpdate: (value) {
+                          &#47;&#47; ratingCallBack(value);
+                        },
+                      )
+              ],
+            ),
+            Divider(
+              thickness: 0.5,
+              color: AppColors.subTitleColor.withOpacity(0.5),
+            ),
+            GetBuilder&lt;MatchingCandidateController&gt;(builder: (logic) {
+              if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 0) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? SkillsDetailsBreakdown(
+                        requiredColumn: _reqSkill,
+                        candidateColumn: _candidateSkill)
+                    : Container();
+              } else if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 1) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? IndustryBreakDownDetails(
+                        requiredColumn: _reqIndustry,
+                        candidateColumn: _candidateIndustry,
+                        candidateColumnHeader: &#39;Candidate Industry&#39;)
+                    : Container();
+              } else if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 2) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? IndustryBreakDownDetails(
+                        requiredColumn: _reqExperience,
+                        candidateColumn: _candidateExperience,
+                        candidateColumnHeader: &#39;Candidate Experience&#39;)
+                    : Container();
+              } else if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 3) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? IndustryBreakDownDetails(
+                        requiredColumn: _reqProfile,
+                        candidateColumn: _candidateProfile,
+                        candidateColumnHeader: &#39;Candidate Profile Title&#39;)
+                    : Container();
+              } else if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 4) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? IndustryBreakDownDetails(
+                        requiredColumn: _reqEducation,
+                        candidateColumn: _candidateEducation,
+                        candidateColumnHeader: &#39;Candidate Education&#39;)
+                    : Container();
+              } else if (logic.isMatchingWeightageBreakDownExpansion[index] &amp;&amp;
+                  index == 5) {
+                if ((weightage?.toDouble()?.round() == 0 &amp;&amp;
+                    !isMatchingPercentageNull)) {
+                  return Container();
+                }
+                return (logic.isMatchingWeightageBreakDownExpansion[index])
+                    ? IndustryBreakDownDetails(
+                        requiredColumn: _reqCertificate,
+                        candidateColumn: _candidateCertificate,
+                        candidateColumnHeader: &#39;Candidate Certification&#39;)
+                    : Container();
+              }
+              return Container();
+            }),
+          ],
+        ),
+      ),
+    );
+  }
+
+  &#47;&#47;&#47;Calling detail breakdown
+  return Center(
+    child: Card(
+      child: Container(
+        padding:
+            const EdgeInsets.only(left: 16.0, right: 16, top: 12, bottom: 16),
+        constraints: BoxConstraints(
+          maxHeight: Get.height * 0.9,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          color: AppColors.white,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: GestureDetector(
+                  onTap: () =&gt; Navigator.pop(context),
+                  child: const Icon(Icons.clear_rounded, size: 22.0)),
+            ),
+            const SizedBox(height: 12.0),
+            matchingPercentageBreakdownModel != null
+                ? Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      (mediaFile == null || mediaFile!.isEmpty)
+                          ? _getProfileWithInitialName(candidateName)
+                          : ConstantMethods.isImage(
+                                  mediaFile.toString().split(&quot;?&quot;).first)
+                              ? _getProfileWithImage(mediaFile.toString())
+                              : getVideoView(mediaFile, context, 58,
+                                  EnterpriseStrings.video_profile_video),
+                      const SizedBox(width: 12.0),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _matchingScoreBreakdownHeader(),
+                            const SizedBox(height: 8.0),
+                            Text(
+                              candidateName.toString() +
+                                  EnterpriseStrings.breakDownProfileAddOnMsg,
+                              style: AppStyle().regularStyle.copyWith(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: AppStyle.fontSize11,
+                                    decoration: TextDecoration.none,
+                                    color: AppColors.black,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      circularMatchingWeights,
+                      const SizedBox(
+                        width: 6,
+                      ),
+                    ],
+                  )
+                : Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      (data.mediaFile == null || data.mediaFile!.isEmpty)
+                          ? _getProfileWithInitialName(
+                              data?.firstName!.isNotEmpty
+                                  ? data.firstName.toString() +
+                                      &quot; &quot; +
+                                      data.lastName.toString()
+                                  : &#39;-&#39;)
+                          : ConstantMethods.isImage(
+                                  data?.mediaFile.toString().split(&quot;?&quot;).first)
+                              ? _getProfileWithImage(
+                                  data.mediaFileSigned.toString())
+                              : getVideoView(data.mediaFile, context, 58,
+                                  EnterpriseStrings.video_profile_video),
+                      const SizedBox(width: 12.0),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _matchingScoreBreakdownHeader(),
+                            const SizedBox(height: 8.0),
+                            Text(
+                              (data?.firstName ?? &#39;&#39;) +
+                                  &quot; &quot; +
+                                  (data?.lastName ?? &#39;&#39;) +
+                                  EnterpriseStrings.breakDownProfileAddOnMsg,
+                              style: AppStyle().regularStyle.copyWith(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: AppStyle.fontSize11,
+                                    decoration: TextDecoration.none,
+                                    color: AppColors.black,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      circularMatchingWeights,
+                      const SizedBox(
+                        width: 6,
+                      ),
+                    ],
+                  ),
+            const SizedBox(height: 8.0),
+            Flexible(
+              child: ListView(
+                shrinkWrap: true,
+                children: matchingPercentageBreakdownModel == null
+                    ? [
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            0,
+                            AppColors.skillIcon.withOpacity(0.2),
+                            const Color(0xff5A0085),
+                            ImagePaths.ic_settingsLogoSVG,
+                            &quot;Skill&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.skill?.percentage,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.skill?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.skill?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!.skill?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            1,
+                            AppColors.industryIcon.withOpacity(0.2),
+                            const Color(0xff6A8500),
+                            ImagePaths.ic_industryIconSVG,
+                            &quot;Industry&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : (data?.matchingPercentage!.industry
+                                            ?.percentage +
+                                        data?.matchingPercentage!.subCategory
+                                            ?.percentage) &#47;
+                                    2,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.industry?.score +
+                                    data?.matchingPercentage!.subCategory
+                                        ?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data
+                                    ?.matchingPercentage!.industry?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!.industry
+                                    ?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            2,
+                            AppColors.overallExpIcon.withOpacity(0.2),
+                            const Color(0xff850040),
+                            ImagePaths.ic_experienceSVG,
+                            &quot;Overall Experience&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.experience
+                                    ?.percentage,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.experience?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.experience
+                                    ?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!.experience
+                                    ?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            3,
+                            AppColors.profileTitleIcon.withOpacity(0.2),
+                            const Color(0xff00856D),
+                            ImagePaths.ic_profileIconSVG,
+                            &quot;Profile Title&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.profileTitle
+                                    ?.percentage,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data
+                                    ?.matchingPercentage!.profileTitle?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.profileTitle
+                                    ?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!.profileTitle
+                                    ?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            4,
+                            AppColors.educationIcon.withOpacity(0.2),
+                            const Color(0xff002585),
+                            ImagePaths.ic_educationBookSVG,
+                            &quot;Education&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.education
+                                    ?.percentage,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : (data?.matchingPercentage == null)
+                                    ? 0
+                                    : data?.matchingPercentage!.education
+                                        ?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!.education
+                                    ?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!.education
+                                    ?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            5,
+                            AppColors.certificationIcon.withOpacity(0.2),
+                            const Color(0xff006585),
+                            ImagePaths.ic_certificationIconLogoSVG,
+                            &quot;Certification&quot;,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!
+                                    .certificationBreakdown?.percentage,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!
+                                    .certificationBreakdown?.score,
+                            (data?.matchingPercentage == null)
+                                ? 0
+                                : data?.matchingPercentage!
+                                    .certificationBreakdown?.weightage,
+                            data?.matchingPercentage == null,
+                            (data?.matchingPercentage == null)
+                                ? &#39;&#39;
+                                : data?.matchingPercentage!
+                                    .certificationBreakdown?.bandColor),
+                      ]
+                    : [
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            0,
+                            AppColors.skillIcon.withOpacity(0.2),
+                            const Color(0xff5A0085),
+                            ImagePaths.ic_settingsLogoSVG,
+                            &quot;Skill&quot;,
+                            (data == null) ? 0 : data?.skill?.percentage,
+                            (data == null) ? 0 : data?.skill?.score,
+                            (data == null) ? 0 : data?.skill?.weightage,
+                            data == null,
+                            (data == null) ? &#39;&#39; : data?.skill?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            1,
+                            AppColors.industryIcon.withOpacity(0.2),
+                            const Color(0xff6A8500),
+                            ImagePaths.ic_industryIconSVG,
+                            &quot;Industry&quot;,
+                            (data == null)
+                                ? 0
+                                : (data?.industry?.percentage +
+                                        data?.subCategory?.percentage) &#47;
+                                    2,
+                            (data == null)
+                                ? 0
+                                : data?.industry?.score +
+                                    data?.subCategory?.score,
+                            (data == null) ? 0 : data?.industry?.weightage,
+                            data == null,
+                            (data == null) ? &#39;&#39; : data?.industry?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            2,
+                            AppColors.overallExpIcon.withOpacity(0.2),
+                            const Color(0xff850040),
+                            ImagePaths.ic_experienceSVG,
+                            &quot;Overall Experience&quot;,
+                            (data == null) ? 0 : data?.experience?.percentage,
+                            (data == null) ? 0 : data?.experience?.score,
+                            (data == null) ? 0 : data?.experience?.weightage,
+                            data == null,
+                            (data == null)
+                                ? &#39;&#39;
+                                : data?.experience?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            3,
+                            AppColors.profileTitleIcon.withOpacity(0.2),
+                            const Color(0xff00856D),
+                            ImagePaths.ic_profileIconSVG,
+                            &quot;Profile Title&quot;,
+                            (data == null)
+                                ? 0
+                                : data?.profileTitle?.percentage,
+                            (data == null) ? 0 : data?.profileTitle?.score,
+                            (data == null)
+                                ? 0
+                                : data?.profileTitle?.weightage,
+                            data == null,
+                            (data == null)
+                                ? &#39;&#39;
+                                : data?.profileTitle?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            4,
+                            AppColors.educationIcon.withOpacity(0.2),
+                            const Color(0xff002585),
+                            ImagePaths.ic_educationBookSVG,
+                            &quot;Education&quot;,
+                            (data == null) ? 0 : data?.education?.percentage,
+                            (data == null)
+                                ? 0
+                                : (data == null)
+                                    ? 0
+                                    : data?.education?.score,
+                            (data == null) ? 0 : data?.education?.weightage,
+                            data == null,
+                            (data == null) ? &#39;&#39; : data?.education?.bandColor),
+                        _commonWeightageSectionRow(
+                            _reqIndustry,
+                            _candidateIndustry,
+                            5,
+                            AppColors.certificationIcon.withOpacity(0.2),
+                            const Color(0xff006585),
+                            ImagePaths.ic_certificationIconLogoSVG,
+                            &quot;Certification&quot;,
+                            (data == null)
+                                ? 0
+                                : data?.certificationBreakdown?.percentage,
+                            (data == null)
+                                ? 0
+                                : data?.certificationBreakdown?.score,
+                            (data == null)
+                                ? 0
+                                : data?.certificationBreakdown?.weightage,
+                            data == null,
+                            (data == null)
+                                ? 0
+                                : data?.certificationBreakdown?.bandColor),
+                      ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">dsaas</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog/features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog-library.html">matching_weightage_dialog</a></li>
+    <li><a href="../../features_matching_candidates_bloc_matchingcandidates_screens_widgets_dialogs_matching_weightage_dialog/MatchingWeightageDialogs-class.html">MatchingWeightageDialogs</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>MatchingWeightageDialogs class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dsaas
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
